@@ -41,6 +41,7 @@ header > .menu-bar > * {
 
 .main {
     scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
     height: 100vh;
     overflow: scroll;
 }
