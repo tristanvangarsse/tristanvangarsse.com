@@ -38,19 +38,31 @@
 
     <div class="main">
         <div class="image-container">
-            <img draggable="false" src="images/0001.png">
+            <img class="lazyload" draggable="false" src="images/JPG/placeholder.jpg" data-src="images/JPG/img0001.jpg">
         </div>
         <div class="image-container">
-            <img draggable="false" src="images/0002.png">
+            <img class="lazyload" draggable="false" src="images/JPG/placeholder.jpg" data-src="images/JPG/img0002.jpg">
         </div>
         <div class="image-container">
-            <img draggable="false" src="images/0003.png">
+            <img class="lazyload" draggable="false" src="images/JPG/placeholder.jpg" data-src="images/JPG/img0003.jpg">
         </div>
         <div class="image-container">
-            <img draggable="false" src="images/0004.jpg">
+            <img class="lazyload" draggable="false" src="images/JPG/placeholder.jpg" data-src="images/JPG/img0004.jpg">
         </div>
     </div>
      
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+    <script>lazyload();</script>
+    <script>
+        let images = document.querySelectorAll(".lazyload");
+        new LazyLoad(images, {
+            root: null,
+            rootMargin: "1000px",
+            threshold: 0
+        });
+    </script>
       
 </body>
 </html>
