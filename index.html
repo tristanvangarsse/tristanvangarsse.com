@@ -26,14 +26,15 @@
     <meta name="theme-color" content="#ffffff">
     <title>Tristan Van Garsse | Graphic Designer</title>
 </head>
-<body>
+
+<body onload="init()">
 
     <!-- page loader
     -->
     <div class="overlay-loader"></div>
 
     <header>
-        <a href="index.html"><h1>tristan van garsse</h1></a>
+        <a href="#index"><h1>tristan van garsse</h1></a>
         <div class="menu-btn" id="menuBtn">
             <span class="line"></span>
             <span class="line"></span>
@@ -42,10 +43,10 @@
             <ul>
                 <li class="contact-info">tristanvangarsse@pm.me</li>
                 <li class="contact-info">Brussels, Belgium</li>
-                <li><a href="sanguine.html">SANGUINE</a></li>
-                <li><a href="sfumato.html">SFUMATO</a></li>
-                <li><a href="design.html">DESIGN</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#sanguine">SANGUINE</a></li>
+                <li><a href="#sfumato">SFUMATO</a></li>
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">ABOUT</a></li>
             </ul>
         </div>
     </header>
@@ -54,19 +55,35 @@
         <h2>sanguine</h2>
     </div>
 
-
-    <div class="main">
-        <div class="image-container">
+    <main>
+        <div id="index">
             <div class="dynamic-background"></div>
         </div>
-    </div>
+    
+        <div id="sanguine">
+            <img src="images/JPG/img0001.png" alt="">
+            <img src="images/JPG/img0002.png" alt="">
+            <img src="images/JPG/img0003.png" alt="">
+            <img src="images/JPG/img0004.jpg" alt="">
+        </div>
 
+        <div id="sfumato">
+            <img src="images/JPG/img0001.png" alt="">
+            <img src="images/JPG/img0002.png" alt="">
+            <img src="images/JPG/img0003.png" alt="">
+            <img src="images/JPG/img0004.jpg" alt="">
+        </div>
+        <div id="bottom-margin"></div>
+
+    </main>
      
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
-    <script src="scripts/lazyload.js"></script>
-    <script src="scripts/burgermenu.js"></script>
+    <script src="scripts/lazy-load.js"></script>
+    <script src="scripts/burger-menu.js"></script>
+    <script src="scripts/smooth-scroll-mouse.js"></script>
+    <script src="scripts/smooth-scroll-anchor.js"></script>
       
 </body>
 </html>
