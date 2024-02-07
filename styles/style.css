@@ -1,10 +1,8 @@
 
 * {
-  margin: 0;
-  padding: 0;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;
-  /*outline: 1px solid blue;*/
+  /*outline: 1px solid rgba(0, 0, 255, 0.22);*/
 }
 
 *::-webkit-scrollbar { display: none; }
@@ -14,6 +12,14 @@
   background: white;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*-------------------------------------------------*/
 body {
   font-family: 'Chivo Mono', monospace;
 }
@@ -32,7 +38,7 @@ a {text-decoration: none;}
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: overlay-loader 1s ease 0.5s 1 normal forwards;
+  animation: overlay-loader 1s ease 0.8s 1 normal forwards;
 }
 
 @keyframes overlay-loader {
@@ -134,37 +140,39 @@ header h1 {
 }
 /*-------------------------------------------------*/
 
-#page-popup {
+#paralax {
   z-index: 1;
+  position: absolute;
+  width: calc(100vw - 60px);
+  height: calc(100vh - 60px);
+  top: 30px;
+  left: 30px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  width: 100%;
-  height: 90%;
-  animation: page-popup 6s linear 0s 1 normal forwards;
+  pointer-events: none;
+  overflow: hidden;
+  clip-path: rect(5px 5px 160px 145px round 20%);
 }
 
-#page-popup h2 {
-  font-size: 10vw;
-  font-weight: 600;
+#paralax div {
+  width: 100%;
+  height: 100%;
   color: white;
   text-align: center;
   text-transform: uppercase;
   user-select: none;
+  background-attachment: fixed;
+  background-position: bottom 55px left 140px;
+  background-repeat: no-repeat;
+  background-size: 200px;
 }
 
-@keyframes page-popup {
-  0% {filter: opacity(0%);}
-  37% {filter: opacity(0%);}
-  38% {filter: opacity(100%);}
-  70% {filter: opacity(100%);}
-  72% {filter: opacity(0%);}
-  100% {filter: opacity(0%);}
-}
-
-
-
+#paralax #p-sanguine {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/sanguine.svg");}
+#paralax #p-sfumato {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/sfumato.svg");}
+#paralax #p-design {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/design.svg");}
+#paralax #p-about {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/about.svg");}
 /*-------------------------------------------------*/
 main {
   position: absolute;
@@ -172,50 +180,66 @@ main {
   height: 100%;
 }
 
-main > div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.dynamic-background {
-  width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
-  margin: 20px;
-  border-radius: 100px;
-  object-fit: cover;
-  overflow: hidden;
-  background-color: rgb(36, 36, 36);
-}
-
-main > * > img {
-    width: calc(100vw - 40px);
-    height: calc(100vh - 40px);
-    margin: 20px;
-    border-radius: 100px;
-    object-fit: cover;
-    overflow: hidden;
-}
-
 #bottom-margin {
   width: 100%;
   height: 10px;
 }
-
-#sanguine {
-  animation: moveRowSanguine 50s infinite linear; 
-}
-
-@keyframes moveRowSanguine {
-  0% {
-      transform: translate3d(0, 0, 0)
-  }
-
-  100% {
-      transform: translate3d(-60%, 0, 0)
-  }
-}
-
-
 /*-------------------------------------------------*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slider {
+  display: flex;
+  transition: 0.3s;
+}
+
+.carousel-slide {
+  flex: 1 0 100%;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  border-radius: 130px; /* Moet 30px meer zijn dan de index div radius door de extra 30px padding */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.carousel button {
+  font-size: 18px;
+}
+
+.carousel-prev,
+.carousel-next {
+  display: none;
+}
+
+.carousel-navigation {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.carousel-bullet {
+  width: 17px;
+  height: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: all;
+}
+
+.carousel-bullet.is-active {
+  background-color: white;
+}
