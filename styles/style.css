@@ -169,10 +169,10 @@ header h1 {
   background-size: 200px;
 }
 
-#paralax #p-sanguine {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/sanguine.svg");}
-#paralax #p-sfumato {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/sfumato.svg");}
-#paralax #p-design {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/design.svg");}
-#paralax #p-about {background-image: url("/Users/tristan/Documents/GitHub/tristanvangarsse.github.io/images/SVG/Paralax/about.svg");}
+#paralax #p-sanguine {background-image: url("../images/SVG/Paralax/sanguine.svg");}
+#paralax #p-sfumato {background-image: url("../images/SVG/Paralax/sfumato.svg");}
+#paralax #p-design {background-image: url("../images/SVG/Paralax/design.svg");}
+#paralax #p-about {background-image: url("../images/SVG/Paralax/about.svg");}
 /*-------------------------------------------------*/
 main {
   position: absolute;
