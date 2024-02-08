@@ -225,7 +225,7 @@ main {
   right: 0;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   pointer-events: none;
 }
 
