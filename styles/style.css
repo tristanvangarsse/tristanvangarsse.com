@@ -22,6 +22,11 @@
 /*-------------------------------------------------*/
 body {
   font-family: 'Chivo Mono', monospace;
+  background: rgb(251,251,251);
+  background: linear-gradient(148deg, rgba(251,251,251,1) 2%, rgba(230,211,198,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 a {text-decoration: none;}
@@ -38,7 +43,7 @@ a {text-decoration: none;}
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: overlay-loader 1s ease 0.8s 1 normal forwards;
+  animation: overlay-loader 0.5s ease-out 0.5s 1 normal forwards;
 }
 
 @keyframes overlay-loader {
@@ -168,9 +173,9 @@ header h1 {
   background-size: 200px;
 }
 
-#paralax #p-sanguine {background-image: url("../images/SVG/Paralax/sanguine.svg");}
-#paralax #p-sfumato {background-image: url("../images/SVG/Paralax/sfumato.svg");}
-#paralax #p-design {background-image: url("../images/SVG/Paralax/design.svg");}
+#paralax #p-slide-1 {background-image: url("../images/SVG/Paralax/slide-1.svg");}
+#paralax #p-slide-2 {background-image: url("../images/SVG/Paralax/slide-2.svg");}
+#paralax #p-slide-3 {background-image: url("../images/SVG/Paralax/slide-3.svg");}
 #paralax #p-about {background-image: url("../images/SVG/Paralax/about.svg");}
 /*-------------------------------------------------*/
 main {
@@ -182,37 +187,41 @@ main {
   height: 10px;
 }
 /*-------------------------------------------------*/
-.pointer {
+.chevron {
   position: absolute;
   z-index: 2;
-  bottom: 100px;
-  left: 50%;
-  padding: 8px 12px 0px 12px;
-  border: 2px solid white;
-  border-radius: 200px;
-  color: white;
-  font-size: 50px;
-  font-weight: 100;
-  animation: pointer-budge 3s ease 0s forwards infinite, pointer-opacity 1s ease 7s forwards 1;
+  width: 25px;
+  bottom: 70px;
+  left: 47%;
+  opacity: 0;
+  animation: /*pointer-budge 3s ease 1s forwards 2,*/ chevron-opacity 8s ease 3s forwards 1;
 }
-
+/*                              <-- Keyframes downwards bobbing
 @keyframes pointer-budge {
   0% {transform: translateY(0px);}
   10% {transform: translateY(15px);}
   20% {transform: translateY(0px);}
   100% {transform: translateY(0px);}
 }
+*/
 
-@keyframes pointer-opacity {
-  0% {opacity:1;}
+@keyframes chevron-opacity {
+  0% {
+    opacity:0;
+    pointer-events: none;
+  }
+  20% {
+    opacity:1;
+    pointer-events: all;
+  }
+  80% {
+    opacity:1;
+    pointer-events: all;
+  }
   100% {
     opacity:0;
     pointer-events: none;
   }
-}
-
-.pointer > img {
-  width: 20px;
 }
 /*-------------------------------------------------*/
 .carousel {
@@ -275,7 +284,7 @@ main {
 }
 
 .carousel-navigation {
-  display: none; /* use flex instead of none */
+  display: none; /* use flex instead of none for use */
   justify-content: center;
   position: absolute;
   bottom: 60px;
@@ -297,4 +306,55 @@ main {
 
 .carousel-bullet.is-active {
   background-color: white;
+}
+
+
+
+
+
+@media (max-width: 640px) {
+  header {
+    top: 50px;
+    left: 70px;
+  }
+
+  header h1 {
+    margin: 0 0 9px 0;
+    font-size: 20px;
+  }
+
+  #paralax {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    top: 10px;
+    left: 10px;
+  }
+
+  .carousel-container > * {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    object-fit: cover;
+    border-radius: 70px;
+  } 
+
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    bottom: 130px;
+    padding: 10px;
+    border: 3px solid white;
+    border-radius: 200px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .carousel-prev {
+    left: 40vw;
+  }
+  
+  .carousel-next {
+    left: calc(40vw + 50px);
+  }
+
 }
