@@ -312,7 +312,7 @@ main {
 
 
 
-@media (max-width: 640px) {
+/*@media (max-width: 640px) {
   header {
     top: 50px;
     left: 70px;
@@ -357,4 +357,4 @@ main {
     left: calc(40vw + 50px);
   }
 
-}
+}*/
