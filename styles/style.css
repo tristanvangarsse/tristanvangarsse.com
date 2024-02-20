@@ -177,6 +177,7 @@ header h1 {
 #paralax #p-slide-2 {background-image: url("../images/SVG/Paralax/slide-2.svg");}
 #paralax #p-slide-3 {background-image: url("../images/SVG/Paralax/slide-3.svg");}
 #paralax #p-about {background-image: url("../images/SVG/Paralax/about.svg");}
+#paralax #p-contact {background-image: url("../images/SVG/Paralax/contact.svg");}
 /*-------------------------------------------------*/
 main {
   height: 100vw;
