@@ -195,16 +195,9 @@ main {
   bottom: 70px;
   left: 47%;
   opacity: 0;
-  animation: /*pointer-budge 3s ease 1s forwards 2,*/ chevron-opacity 8s ease 3s forwards 1;
+  animation: chevron-opacity 8s ease 3s forwards 1;
 }
-/*                              <-- Keyframes downwards bobbing
-@keyframes pointer-budge {
-  0% {transform: translateY(0px);}
-  10% {transform: translateY(15px);}
-  20% {transform: translateY(0px);}
-  100% {transform: translateY(0px);}
-}
-*/
+
 
 @keyframes chevron-opacity {
   0% {
@@ -248,11 +241,56 @@ main {
   overflow: hidden;
 }
 
-.carousel-container > * {
+.carousel-container > img {
   width: calc(100vw - 60px);
   height: calc(100vh - 60px);
   object-fit: cover;
   border-radius: 100px;
+}
+
+.carousel-container > div {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  white-space: nowrap;
+  width: 100vw;
+  padding-right: 120px;
+}
+
+.container-header {
+  font-size: 65px;
+  font-weight: 100;
+  color: white;
+}
+
+.container-subheader {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
+.container-link {
+  font-size: 15px;
+  font-weight: 100;
+  text-transform: lowercase;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 70px;
+  margin-top: 40px;
+  text-decoration: none;
+  padding: 2px 0px;
+  transition: 0.3s;
+}
+
+.container-link:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
 }
 
 .carousel button {
@@ -311,8 +349,6 @@ main {
 
 
 
-
-
 @media only screen and (min-width:10px) and (max-width: 640px) {
   header {
     top: 50px;
@@ -329,19 +365,74 @@ main {
     height: calc(100vh - 20px);
     top: 10px;
     left: 10px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    clip-path: none;
+  }
+  
+  #paralax div {
+    width: 100%;
+    height: 100%;
+    background-attachment: scroll;
+    background-position: bottom 30px center ;
+    background-repeat: no-repeat;
+    background-size: 50vw;
   }
 
-  .carousel-container > * {
+  .carousel-container > img {
     width: calc(100vw - 20px);
     height: calc(100vh - 20px);
     object-fit: cover;
     border-radius: 70px;
-  } 
+  }
+
+  .carousel-container > div {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap;
+    width: 100vw;
+    padding-right: 0;
+    padding-top: 130px;
+  }
+  
+  .container-header {
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+  }
+  
+  .container-subheader {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  .container-link {
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: lowercase;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 70px;
+    margin-top: 40px;
+    text-decoration: none;
+    padding: 2px 0px;
+    transition: 0.3s;
+  }
 
   .carousel-prev,
   .carousel-next {
     position: absolute;
-    bottom: 130px;
+    bottom: 100px;
     padding: 10px;
     border: 3px solid white;
     border-radius: 200px;
@@ -351,11 +442,11 @@ main {
   }
   
   .carousel-prev {
-    left: 40vw;
+    left: calc(50vw - 50px);
   }
   
   .carousel-next {
-    left: calc(40vw + 50px);
+    right: calc(50vw - 50px);
   }
 
 }
