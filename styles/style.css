@@ -270,6 +270,7 @@ main {
   font-weight: 700;
   text-transform: uppercase;
   color: white;
+  margin-bottom: 34px;
 }
 
 .container-link {
@@ -281,15 +282,14 @@ main {
   border: 1px solid white;
   border-radius: 20px;
   width: 70px;
-  margin-top: 40px;
   text-decoration: none;
   padding: 2px 0px;
   transition: 0.3s;
+  margin: 6px 0;
 }
 
 .container-link:hover {
   background-color: white;
-  border: 1px solid black;
   color: black;
 }
 
@@ -347,9 +347,24 @@ main {
   background-color: white;
 }
 
+@media only screen and (min-width:641px) and (max-width: 900px) {
+  .container-header {
+    font-size: 38px;
+  }
+  
+  .container-subheader {
+    font-size: 30px;
+  }
+  
+  .container-link {
+    font-size: 15px;
+    border-radius: 20px;
+    width: 70px;
+  }
 
+}
 
-@media only screen and (min-width:10px) and (max-width: 640px) {
+@media only screen and (min-width:0px) and (max-width: 640px) {
   header {
     top: 50px;
     left: 70px;
@@ -402,31 +417,17 @@ main {
   }
   
   .container-header {
-    font-size: 50px;
-    font-weight: 100;
-    color: white;
+    font-size: 38px;
   }
   
   .container-subheader {
     font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: white;
   }
   
   .container-link {
     font-size: 15px;
-    font-weight: 100;
-    text-transform: lowercase;
-    text-align: center;
-    color: white;
-    border: 1px solid white;
     border-radius: 20px;
     width: 70px;
-    margin-top: 40px;
-    text-decoration: none;
-    padding: 2px 0px;
-    transition: 0.3s;
   }
 
   .carousel-prev,
