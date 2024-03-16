@@ -22,7 +22,7 @@
 /*-------------------------------------------------*/
 body {
   font-family: 'Chivo Mono', monospace;
-  background: rgb(251,251,251);
+  background: rgb(65, 65, 65);
   /*background: linear-gradient(148deg, rgba(251,251,251,1) 2%, rgba(230,211,198,1) 100%);*/
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -393,8 +393,8 @@ main {
 
 @media only screen and (min-width:0px) and (max-width: 640px) {
   header {
-    top: 50px;
-    left: 70px;
+    top: 40px;
+    left: 40px;
   }
 
   header h1 {
@@ -424,7 +424,19 @@ main {
     background-size: 50vw;
   }
 
-  .carousel-container > img {
+  .introduction-text {
+    margin-bottom: 0px;
+  }
+
+  .introduction-text > * {
+    color: white;
+    font-weight: 400;
+    font-size: 6vw;
+    opacity: 0;
+  }
+
+  .carousel-container > img,
+  .carousel-container > video {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
