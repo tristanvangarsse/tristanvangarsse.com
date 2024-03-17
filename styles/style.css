@@ -393,13 +393,29 @@ main {
 
 @media only screen and (min-width:0px) and (max-width: 640px) {
   header {
-    top: 40px;
-    left: 40px;
+    top: 30px;
+    left: 30px;
   }
 
   header h1 {
     margin: 0 0 9px 0;
     font-size: 20px;
+  }
+
+  .menu-btn.active .line:nth-child(2) {
+    transform: translateY(165px);
+  }
+  
+  .menu-btn:hover:not(.active) .line:nth-child(2) {
+    transform: translateY(0px);
+  }
+    
+  .menu-content {
+    padding: 19px 0 0 0;
+  }
+
+  .menu-content a:hover {
+    text-decoration: none;
   }
 
   #paralax {
@@ -433,6 +449,11 @@ main {
     font-weight: 400;
     font-size: 6vw;
     opacity: 0;
+  }
+
+  .chevron {
+    width: 20px;
+    bottom: 40px;
   }
 
   .carousel-container > img,
