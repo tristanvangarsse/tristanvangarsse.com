@@ -48,7 +48,3 @@ function changeLanguage() {
 window.onload = function() {
     changeLanguage();
 };
-
-jQuery(document).ready(function() {
-    jQuery('#page-loader').fadeOut(2000);
-});
