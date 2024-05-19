@@ -12,13 +12,6 @@
     padding: 0;
 }
 
-#page-loader {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bg-main);
-    }
-
 #safety-color-overlay{
     position: fixed;
     display: flex;
