@@ -16,29 +16,35 @@
     <header>
         <a draggable="false" href="https://www.tristanvangarsse.com"><img draggable="false" class="wordmark" src="images/wordmark.svg" alt=""></a>
         <nav>
-            <a>Work</a>
-            <a>Contact</a>
-            <a>Events</a>
-            <a>EN</a>
+            <a id="nav1"></a>
+            <a id="nav2"></a>
+            <a id="nav3"></a>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">EN</option>
+                <option value="nl">NL</option>
+                <option value="fr">FR</option>
+            </select>
         </nav>
     </header>
-    <main>
-        <h1>Own a business?</h1>
-        <h1>You need a website.</h1>
+    <main lang="en, nl, fr">
+        <h1 id="heading1"></h1>
+        <h1 id="heading2"></h1>
         <a href="#block"><button id="hook">hell yeah</button></a>
     </main>
     <div class="collaboration">
-        <h2>Collaboration.</h2>
+        <h2 id="collab1">Collaboration.</h2>
         <div class="social-media">
             <a target="_blank" href="https://www.instagram.com/tristanvangarsse">Instagram</a>
-            <a target="_blank" >LinkedIn</a>
-            <a target="_blank" >Medium</a>
-            <a target="_blank" >Pinterest</a>
-            <a target="_blank" >Dribble</a>
+            <a target="_blank" href="https://www.linkedin.com/in/tristanvangarsse/">LinkedIn</a>
+            <a target="_blank" href="https://www.pinterest.com/vangarssetristan/" >Pinterest</a>
+            <a target="_blank" href="https://www.facebook.com/tristanvangarsse" >Facebook</a>
             <a target="_blank" >Behance</a>
         </div>
-        <h3>I collaborate with ambitious people.<br> Let's grow your business together.</h3>
-        <h4>&#x74;&#x72;&#x69;&#x73;&#x74;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x67;&#x61;&#x72;&#x73;&#x73;&#x65;&#x40;&#x70;&#x6D;&#x2E;&#x6D;&#x65;</h4>
+        <div class="collab-sentence">
+            <h3 id="collab2"></h3>
+            <h3 id="collab3"></h3>
+            <h4>&#x74;&#x72;&#x69;&#x73;&#x74;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x67;&#x61;&#x72;&#x73;&#x73;&#x65;&#x40;&#x70;&#x6D;&#x2E;&#x6D;&#x65;</h4>
+        </div>
         <div id="collab-color-overlay"></div>
         <div id="block">
             <img draggable="false" src="images/projects/project-image-0001.jpg">
@@ -52,6 +58,7 @@
         </div>
     </div>
 
+    <script src="scripts/language-switcher.js"></script>
     <script src="scripts/burger-menu.js"></script>
     <script src="scripts/smooth-scroll-mouse.js"></script>
     <script src="scripts/smooth-scroll-anchor.js"></script>

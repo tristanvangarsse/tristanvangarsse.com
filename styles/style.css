@@ -69,26 +69,33 @@ header {
     width: 250px;
 }
 
-nav > a {
+nav > * {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 500;
     font-size: 24px;
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
-    cursor: default;
+    cursor: pointer;
 }
 
-nav > a:not(:first-child) {
+nav > *:not(:first-child) {
     margin: 0 0 0 40px;
 }
 
-nav > a:last-child {
+select::-ms-expand {
+    display: none;
+}
+
+nav > select {
     color: var(--accent-blue);
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    appearance: none;
 }
 
 nav > a:not(:last-child):hover {
-    /*border-bottom: 3px solid black;*/
+    border-bottom: 3px solid black;
 }
 
 main {
@@ -102,7 +109,12 @@ main {
 h1 { /* hook */
     font-size: 70px;
     text-align: center;
-    max-width: 700px;
+    line-height:1.1em;
+    margin: 0 40px;
+}
+
+h1#heading2 {
+    margin-top: 15px;
 }
 
 #hook {
@@ -164,23 +176,26 @@ h2 {
 
 .social-media > a:not(:first-child) { margin-top: 10px; }
 
-h3 {
+.collab-sentence {
     position: absolute;
     z-index: 2;
+    left: 90px;
+    bottom: 50px;
+}
+
+h3 {
     font-size: 40px;
     font-weight: 400;
     text-align: right;
-    left: 90px;
-    top: 65vh;
 }
 
 h4 {
-    position: absolute;
-    z-index: 2;
     font-size: 25px;
     font-weight: 300;
     left: 435px;
     top: 80vh;
+    margin-top: 20px;
+    text-align: right;
     text-decoration: underline;
 }
 
