@@ -1,5 +1,3 @@
-<script>
 jQuery(document).ready(function() {
-    jQuery('#safety-color-overlay').fadeOut(3000);
+    jQuery('#page-loader').fadeOut(2000);
 });
-</script>

@@ -12,6 +12,13 @@
     padding: 0;
 }
 
+#page-loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-main);
+    }
+
 #safety-color-overlay{
     position: fixed;
     display: flex;
@@ -230,12 +237,13 @@ h4 {
 
 
 @media only screen and (max-height:420px) {
-
+    body:not(#safety-color-overlay) {visibility: hidden;}
     #safety-color-overlay{visibility: visible;}
 }
 
 
 @media only screen and (max-width:900px) {
 
+    body:not(#safety-color-overlay) {visibility: hidden;}
     #safety-color-overlay{visibility: visible;}
 }
