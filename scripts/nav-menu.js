@@ -1,5 +1,5 @@
 function openNav() {
-  document.getElementById("side-nav").style.height = "100svh";
+  document.getElementById("side-nav").style.height = "100%";
   document.body.style.overflow = 'hidden';
 }
 
