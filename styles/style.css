@@ -12,16 +12,9 @@
     padding: 0;
 }
 
-#safety-color-overlay{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index:100;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bg-main);
-    visibility: hidden;
+html {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
 }
 
 image,a {
@@ -32,20 +25,20 @@ image,a {
     user-select: none
 }
 
-/*              MAIN
+/*------------------   Main
 */
 
 main *::selection {
     background-color: var(--accent-blue);
     color: white;
 }
-.collaboration *::selection {background-color: var(--bg-main);}
+.collaboration *::selection {
+    background-color: var(--bg-main);
+}
 
-body,html {font-family: "Roboto", sans-serif;} /* remove later */
 
 body {
     position: relative;
-    z-index: -2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,17 +62,22 @@ header {
     width: 250px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav > * {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-nav > *:not(:first-child) {
+nav > *:not(:first-child):not(:last-child) {
     margin: 0 0 0 40px;
 }
 
@@ -87,16 +85,25 @@ select::-ms-expand {
     display: none;
 }
 
-nav > select {
+select {
     color: var(--accent-blue);
     border: none;
     background-color: rgba(255, 255, 255, 0);
     appearance: none;
 }
 
-nav > a:not(:last-child):hover {
-    border-bottom: 3px solid black;
-}
+nav > *:not(:nth-last-child(-n+2)):hover { border-bottom: 3px solid black; }
+
+
+
+/*------------------   Top navigation
+*/
+
+.burger-menu { display: none; }
+
+
+/*------------------   Front page
+*/
 
 main {
     display: flex;
@@ -107,18 +114,16 @@ main {
 }
 
 h1 { /* hook */
-    font-size: 70px;
+    font-size: 5rem;
     text-align: center;
     line-height:1.1em;
     margin: 0 40px;
 }
 
-h1#heading2 {
-    margin-top: 15px;
-}
+h1#heading2 { margin-top: 15px; }
 
 #hook {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     color: black;
     background-color: var(--bg-main);
@@ -130,7 +135,7 @@ h1#heading2 {
 }
 
 
-/*              COLLABORATION SECTION
+/*------------------   Collaboration footer
 */
 
 .collaboration {
@@ -167,7 +172,7 @@ h2 {
 }
 
 .social-media > a {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 200;
     letter-spacing: 0.5px;
     text-decoration: underline;
@@ -184,13 +189,13 @@ h2 {
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 2.9rem;
     font-weight: 400;
     text-align: right;
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 1.8rem;
     font-weight: 300;
     left: 435px;
     top: 80vh;
@@ -228,15 +233,64 @@ h4 {
 
 #block > img::selection {background-color: rgba(255, 255, 255, 0);}
 
+@media only screen and (max-width: 900px) {
 
-@media only screen and (max-height:420px) {
-    body:not(#safety-color-overlay) {visibility: hidden;}
-    #safety-color-overlay{visibility: visible;}
-}
+    .wordmark {
+        width: 220px;
+    }
+
+    nav > *:not(:nth-last-child(-n+2)) {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        height: 16px;
+        margin-left: 5vw;
+    }
+
+    nav {padding-bottom: 2px;} /* to align with wordmark */
+
+    #side-nav {
+        display: flex;
+        position: fixed;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: 0;
+        transition: 0.2s;
+        z-index: 10; /* number might be too high */
+    }
+
+    #side-nav * {
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+    #side-nav *:nth-child(2) {
+        margin-top: 7vh; /* couldn't give parents padding for some reason. */
+    }
+    
+    #side-nav *:nth-child(4) {
+        margin-bottom: 35vh;/* couldn't give parents padding for some reason. */
+    }
+
+    #side-nav .closebtn {
+        position: absolute;
+        bottom: 10vh;
+        left: auto;
+        right: auto;
+        font-size: 4rem;
+        font-weight: 300;
+        color: white;
+    }
 
 
-@media only screen and (max-width:900px) {
-
-    body:not(#safety-color-overlay) {visibility: hidden;}
-    #safety-color-overlay{visibility: visible;}
 }
