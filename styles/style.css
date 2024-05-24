@@ -1,98 +1,166 @@
 :root {
-    --bg-main: #ffcc00;
-    --bg-collab: #00375F;
-    --accent-blue: #005490;
-  }
+  --clr-primary-500: hsl(48,100%,50%);
 
-* {
-    outline: 1px dotted rgba(255,0,0,0);
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
-    margin: 0;
-    padding: 0;
+  --clr-accent-200: hsl(205,100%,19%);
+  --clr-accent-300: hsl(205,100%,28%);
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Roboto Condensed", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-100: 1rem;
+  --fs-150: 1.2rem;
+  --fs-200: 1.5rem;
+  --fs-300: 1.8rem;
+  --fs-350: 2rem;
+  --fs-400: 2.5rem;
+  --fs-500: 2.9rem;
+  --fs-550: 4rem;
+  --fs-600: 5rem;
+  --fs-700: 12rem;
+
 }
 
+
+/*===================================================*/
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  outline: 1px dotted rgba(255,0,0,0);
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Prevent font size inflation */
 html {
-    font-size: 14px;
-    font-family: "Roboto", sans-serif;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Balance text wrapping on headings */
+* { text-wrap: balance }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) { min-height: 10em }
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target { scroll-margin-block: 5ex }
+
+
+/*===================================================*/
+
 
 image,a {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none
 }
 
 /*------------------   Main
 */
 
 main *::selection {
-    background-color: var(--accent-blue);
-    color: white;
+  background-color: var(--clr-accent-300);
+  color: white;
 }
-.collaboration *::selection {
-    background-color: var(--bg-main);
-}
+.collaboration *::selection { background-color: var(--clr-primary-500) }
 
+body * { font-family: var(--ff-primary) }
 
 body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--bg-main);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-primary-500);
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 40px 0 0 0;
-    width: 92vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 0 0;
+  width: 92vw;
 }
 
-.wordmark {
-    width: 250px;
-}
+.wordmark { width: 250px }
 
 nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
+nav * { font-family: var(--ff-heading) }
 
 nav > * {
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: inherit;
-    text-transform: uppercase;
-    cursor: pointer;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-200);
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-nav > *:not(:first-child):not(:last-child) {
-    margin: 0 0 0 40px;
-}
+nav > *:not(:first-child):not(:last-child) { margin: 0 0 0 40px }
 
-select::-ms-expand {
-    display: none;
-}
+select::-ms-expand { display: none }
 
 select {
-    color: var(--accent-blue);
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-    appearance: none;
+  color: var(--clr-accent-300);
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  appearance: none;
 }
 
-nav > *:not(:nth-last-child(-n+2)):hover { border-bottom: 3px solid black; }
+nav > *:not(:nth-last-child(-n+2)):hover { border-bottom: 3px solid black }
 
 
 
@@ -100,40 +168,41 @@ nav > *:not(:nth-last-child(-n+2)):hover { border-bottom: 3px solid black; }
 */
 
 
-#side-nav {display: none;}
-.burger-menu { display: none; }
+#dropdown-nav { display: none }
+.burger-menu { display: none }
 
 
 /*------------------   Front page
 */
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: calc(40vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: calc(40vh - 200px);
 }
 
-h1 { /* hook */
-    font-size: 5rem;
-    text-align: center;
-    line-height:1.1em;
-    margin: 0 40px;
+h1 { /* CALL TO ACTION */
+  font-size:  var(--fs-600);
+  font-weight:  var(--fw-bold);
+  text-align: center;
+  line-height:1.1em;
+  margin: 0 40px;
 }
 
-h1#heading2 { margin-top: 15px; }
+h1#heading2 { margin-top: 15px }
 
 #hook {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: black;
-    background-color: var(--bg-main);
-    padding: 10px 20px;
-    border: 5px solid black;
-    border-radius: 20px;
-    margin-top: calc(45vh - 150px);
-    cursor: pointer;
+  font-size:  var(--fs-400);
+  font-weight: var(--fw-bold);
+  color: black;
+  background-color: var(--clr-primary-500);
+  padding: 10px 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin-top: calc(45vh - 150px);
+  cursor: pointer;
 }
 
 
@@ -141,77 +210,76 @@ h1#heading2 { margin-top: 15px; }
 */
 
 .collaboration {
-    position: absolute;
-    top: calc(100vh - 20px);
-    width: 100%;
-    height: calc(100vh - 20px); 
-    background-color: var(--bg-collab);
+  position: absolute;
+  top: calc(100vh - 20px);
+  width: 100%;
+  height: calc(100vh - 20px); 
+  background-color: var(--clr-accent-200);
 }
 
-.collaboration * {
-    color: white;
-}
+.collaboration * { color: white }
 
 
 h2 {
-    position: absolute;
-    z-index: 2;
-    top: 12vh;
-    right: 40px;
-    font-size: 12vh;
-    font-weight: 500;
-    text-align: center;
-    writing-mode: vertical-rl;
+  position: absolute;
+  z-index: 2;
+  top: 12vh;
+  right: 40px;
+  font-size: 12vh;
+  font-weight: var(--fw-medium);
+  text-align: center;
+  writing-mode: vertical-rl;
 }
 
 .social-media {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    top: 132px;
-    right: 210px;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  top: 132px;
+  right: 210px;
 }
 
 .social-media > a {
-    font-size: 1rem;
-    font-weight: 200;
-    letter-spacing: 0.5px;
-    text-decoration: underline;
-    text-align: right;
+  font-size:  var(--fs-100);
+  font-weight: var(--fw-thin);
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+  text-align: right;
 }
 
-.social-media > a:not(:first-child) { margin-top: 10px; }
+.social-media > a:not(:first-child) { margin-top: 10px }
 
 .collab-sentence {
-    position: absolute;
-    z-index: 2;
-    left: 90px;
-    bottom: 50px;
+  position: absolute;
+  z-index: 2;
+  left: 90px;
+  bottom: 50px;
 }
 
 h3 {
-    font-size: 2.9rem;
-    font-weight: 400;
-    text-align: right;
+  font-size:  var(--fs-500);
+  font-weight: var(--fw-regular);
+  text-align: right;
 }
 
 h4 {
-    font-size: 1.8rem;
-    font-weight: 300;
-    left: 435px;
-    margin-top: 20px;
-    text-align: right;
-    text-decoration: underline;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-light);
+  left: 435px;
+  margin-top: 20px;
+  text-align: right;
+  text-decoration: underline;
 }
 
-/*
+/*------------------   Collaboration footer
+
 #collab-color-overlay {
     position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-collab);
+    background-color: var(--clr-accent-200);
     opacity: 0.6;
 }
 
@@ -234,109 +302,108 @@ h4 {
 }
 
 #block > img::selection {background-color: rgba(255, 255, 255, 0);}
+
 */
 
 
+/*===================================================*/
 
 
 @media only screen and (max-width: 900px) {
+  header { margin: 20px 0 0 0 }
 
-    header { margin: 20px 0 0 0; }
+  .wordmark { width: 220px }
 
-    .wordmark { width: 220px; }
+  nav > *:not(:nth-last-child(-n+2)) { display: none }
 
-    nav > *:not(:nth-last-child(-n+2)) { display: none; }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    height: 16px;
+    margin-left: 5vw;
+  }
 
-    .burger-menu {
-        display: block;
-        cursor: pointer;
-        height: 16px;
-        margin-left: 5vw;
-    }
+  nav { padding-bottom: 2px } /* to align with wordmark */
 
-    nav {padding-bottom: 2px;} /* to align with wordmark */
+  #dropdown-nav {
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 0;
+    transition: 0.2s;
+    z-index: 10; /* number might be too high */
+  }
 
-    #side-nav {
-        display: flex;
-        position: fixed;
-        overflow: hidden;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: black;
-        width: 100%;
-        height: 0;
-        transition: 0.2s;
-        z-index: 10; /* number might be too high */
-    }
+  #dropdown-nav * {
+    font-size:  var(--fs-350);
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
 
-    #side-nav * {
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: white;
-        margin: 0;
-        padding: 0;
-      }
-
-    #side-nav *:nth-child(2) {
-        margin-top: 10vh; /* couldn't give parents padding for some reason. */
+  #dropdown-nav *:nth-child(2) {
+    margin-top: 10vh; /* couldn't give parents padding for some reason. */
     }
     
-    #side-nav *:nth-child(4) {
-        margin-bottom: 40vh;/* couldn't give parents padding for some reason. */
-    }
+  #dropdown-nav *:nth-child(4) {
+    margin-bottom: 40vh;/* couldn't give parents padding for some reason. */
+  }
 
-    #side-nav .closebtn {
-        position: absolute;
-        bottom: 10vh;
-        left: auto;
-        right: auto;
-        font-size: 4rem;
-        font-weight: 300;
-        color: white;
-    }
+  #dropdown-nav .closebtn {
+    position: absolute;
+    bottom: 10vh;
+    left: auto;
+    right: auto;
+    font-size: var(--fs-550);
+    font-weight: var(--fw-light);
+    color: white;
+  }
 
-    h1 { font-size: 3rem; }
+  h1 { font-size: var(--fs-500); }
 
-    #hook { font-size: 2rem; }
+  #hook { font-size: var(--fs-350); }
 
-    h2 {
-        width: 100%;
-        top: 5vh;
-        left: 0;
-        font-size: 12vw;
-        font-weight: 500;
-        text-align: center;
-        writing-mode: horizontal-tb;
-    }
+  h2 {
+    width: 100%;
+    top: 5vh;
+    left: 0;
+    font-size: 12vw;
+    font-weight: var(--fw-medium);
+    text-align: center;
+    writing-mode: horizontal-tb;
+  }
 
-    .social-media {
-        z-index: 2;
-        top: 132px;
-        right: 20px;
-    }
+  .social-media {
+    z-index: 2;
+    top: 132px;
+    right: 20px;
+  }
 
-    .collab-sentence {
-        position: absolute;
-        z-index: 2;
-        width: 80vw;
-        padding: 0 20px;
-        left: 0;
-        bottom: 80px;
-    }
+  .collab-sentence {
+    position: absolute;
+    z-index: 2;
+    width: 80vw;
+    padding: 0 20px;
+    left: 0;
+    bottom: 80px;
+  }
 
-    h3 {
-        font-size: 2rem;
-        text-align: left;
-    }
+  h3 {
+    font-size: var(--fs-350);
+    text-align: left;
+  }
 
-    h4 {
-        font-size: 1.2rem;
-        left: 0;
-        margin-top: 20px;
-        text-align: right;
-        text-decoration: underline;
-    }
-
-
+  h4 {
+    font-size: var(--fs-150);
+    left: 0;
+    margin-top: 20px;
+    text-align: right;
+    text-decoration: underline;
+  }
 }
