@@ -26,12 +26,31 @@
   --fs-550: 4rem;
   --fs-600: 5rem;
   --fs-700: 12rem;
-
 }
 
+/*================== RED OUTLINE ====================*/
+/*
+@media only screen and (min-width: 1800px) and (max-width: 1900px) {
+  * { outline: 1px dotted rgba(255,0,0,0) !important; }
+}
+*/
+/*==================== ANIMATIONS ===================*/
+
+.load-in { animation: page-load-in 0.4s ease-in 0s 1 normal forwards }
+
+@keyframes page-load-in {
+	0% { opacity: 1 }
+  100% { opacity: 0	}
+}
+
+.works-image .works-link:hover ~ .works-hover-element { animation: works-hover-effect 0.8s cubic-bezier(0,1,0,1) 0s 1 normal forwards; }
+
+@keyframes works-hover-effect {
+	0% { transform: scaleX(0) }
+	100% { transform: scaleX(1) }
+}
 
 /*===================================================*/
-
 
 /* Box sizing rules */
 *,
@@ -61,7 +80,7 @@ ol[role='list'] {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* Balance text wrapping on headings */
@@ -81,15 +100,13 @@ svg {
   display: block;
 }
 
+a { display:inline-block }
+
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) { min-height: 10em }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target { scroll-margin-block: 5ex }
-
-
-/*===================================================*/
-
 
 image,a {
   -webkit-user-select: none;
@@ -98,15 +115,6 @@ image,a {
   -o-user-select: none;
   user-select: none
 }
-
-/*------------------   Main
-*/
-
-main *::selection {
-  background-color: var(--clr-accent-300);
-  color: white;
-}
-.collaboration *::selection { background-color: var(--clr-primary-500) }
 
 body * { font-family: var(--ff-primary) }
 
@@ -122,6 +130,32 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/*===================================================*/
+
+.load-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+  background-color: var(--clr-primary-500);
+}
+
+
+
+/*------------------   Main
+*/
+
+main *::selection {
+  background-color: var(--clr-accent-300);
+  color: white;
+}
+
+footer *::selection { background-color: var(--clr-primary-500) }
 
 header {
   display: flex;
@@ -153,24 +187,33 @@ nav > *:not(:first-child):not(:last-child) { margin: 0 0 0 40px }
 
 select::-ms-expand { display: none }
 
-select {
+select { /* language selector desktop */
   color: var(--clr-accent-300);
   border: none;
   background-color: rgba(255, 255, 255, 0);
   appearance: none;
 }
 
-nav > *:not(:nth-last-child(-n+2)):hover { border-bottom: 3px solid black }
+nav > a:not(.focus-nav):after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px black;  
+  transform: scaleX(0);  
+  transition: transform 150ms ease-in-out;
+}
+nav > a:not(.focus-nav):hover:after {
+  transform: scaleX(1);
+  transform-origin:  0% 50%; 
+}
 
+.focus-nav { border-bottom: 3px solid black }
 
 
 /*------------------   Top navigation
 */
 
-
 #dropdown-nav { display: none }
 .burger-menu { display: none }
-
 
 /*------------------   Front page
 */
@@ -180,15 +223,16 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: calc(40vh - 200px);
 }
+
+main.homepage { height: calc(100vh - 20px - 74px); /* takes header height into account */ }
 
 h1 { /* CALL TO ACTION */
   font-size:  var(--fs-600);
   font-weight:  var(--fw-bold);
   text-align: center;
   line-height:1.1em;
-  margin: 0 40px;
+  margin: 15vh 40px 0 40px;
 }
 
 h1#heading2 { margin-top: 15px }
@@ -201,31 +245,68 @@ h1#heading2 { margin-top: 15px }
   padding: 10px 20px;
   border: 5px solid black;
   border-radius: 20px;
-  margin-top: calc(45vh - 150px);
+  margin-top: 20vh;
   cursor: pointer;
 }
 
 
-/*------------------   Collaboration footer
+
+/*------------------   WORKS
 */
 
-.collaboration {
-  position: absolute;
-  top: calc(100vh - 20px);
-  width: 100%;
-  height: calc(100vh - 20px); 
-  background-color: var(--clr-accent-200);
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 60px 30px;
+  max-width: 1400px;
+  margin: 200px 40px 300px 40px;
 }
 
-.collaboration * { color: white }
+.works-image {
+  position: relative;
+  object-fit: cover;
+}
 
+.works-hover-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  bottom: 4px;
+  height: 10px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.works-grid p {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-medium);
+  margin: 10px 0 0 0;
+}
+  
+
+
+/*------------------   FOOTER 
+*/
+
+footer {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 20px);
+  background-color: var(--clr-accent-200);
+  overflow: hidden;
+}
+
+footer * { color: white }
 
 h2 {
   position: absolute;
   z-index: 2;
-  top: 12vh;
-  right: 40px;
-  font-size: 12vh;
+  top: 60px;
+  right: 30px;
+  font-size: 90px;
   font-weight: var(--fw-medium);
   text-align: center;
   writing-mode: vertical-rl;
@@ -272,7 +353,7 @@ h4 {
   text-decoration: underline;
 }
 
-/*------------------   Collaboration footer
+/*------------------   Collaboration footer extra
 
 #collab-color-overlay {
     position: absolute;
@@ -309,7 +390,7 @@ h4 {
 /*===================================================*/
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   header { margin: 20px 0 0 0 }
 
   .wordmark { width: 220px }
@@ -336,7 +417,7 @@ h4 {
     width: 100%;
     height: 0;
     transition: 0.2s;
-    z-index: 10; /* number might be too high */
+    z-index: 4; /* number might be too high */
   }
 
   #dropdown-nav * {
@@ -406,4 +487,19 @@ h4 {
     text-align: right;
     text-decoration: underline;
   }
+
+
+
+
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: auto;
+    margin: 200px 20px 300px 20px;
+  }
+
+
+
 }

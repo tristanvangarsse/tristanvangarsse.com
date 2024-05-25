@@ -49,11 +49,11 @@ function changeLanguage() {
     document.getElementById('nav1').innerText = translations[language].nav1;
     document.getElementById('nav2').innerText = translations[language].nav2;
     document.getElementById('nav3').innerText = translations[language].nav3;
-    document.getElementById('heading1').innerText = translations[language].heading1;
-    document.getElementById('heading2').innerText = translations[language].heading2;
     document.getElementById('collab1').innerText = translations[language].collab1;
     document.getElementById('collab2').innerText = translations[language].collab2;
     document.getElementById('collab3').innerText = translations[language].collab3;
+    document.getElementById('heading1').innerText = translations[language].heading1;
+    document.getElementById('heading2').innerText = translations[language].heading2;
 }
 
 // Set default language to English on page load
