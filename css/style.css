@@ -25,10 +25,11 @@
   --fs-300: 1.8rem;
   --fs-350: 2rem;
   --fs-400: 2.5rem;
-  --fs-500: 2.9rem;
-  --fs-550: 4rem;
+  --fs-500: 4rem;
   --fs-600: 5rem;
   --fs-700: 12rem;
+
+  --max-width-500: 1300px;
 }
 
 /*================== RED OUTLINE ====================*/
@@ -136,11 +137,12 @@ a {
 
 .page-home { background-color: var(--clr-primary-500) }
 .page-work { background-color: var(--clr-primary-500) }
-.page-works { background-color: var(--clr-neutral-100) }
+.page-works { background-color: var(--clr-accent-200) }
 
 .page-home > * { color: var(--clr-neutral-100);}
 .page-work > * { color: var(--clr-neutral-100);}
 .page-works > * { color: var(--clr-neutral-900);}
+.page-works .works > * { color: var(--clr-neutral-100);}
 
 .page-home main *::selection,
 .page-work main *::selection {
@@ -189,7 +191,7 @@ header {
   justify-content: space-between;
   padding: 40px 40px 0 40px;
   width: 100%;
-  max-width: 1400px;
+  max-width: var(--max-width-500);
 }
 
 .wordmark { width: 250px }
@@ -237,7 +239,13 @@ nav > a:not(.focus-nav):hover:after {
   transform-origin: 0% 50%; 
 }
 
-.focus-nav { border-bottom: 3px solid var(--clr-neutral-100) }
+.page-home nav > a:not(.focus-nav):after,
+.page-work nav > a:not(.focus-nav):after { border-bottom: 3px solid var(--clr-neutral-100) }
+.page-works nav > a:not(.focus-nav):after { border-bottom: 3px solid var(--clr-neutral-900) }
+
+.page-home .focus-nav,
+.page-work .focus-nav { border-bottom: 3px solid var(--clr-neutral-100) }
+.page-works .focus-nav { border-bottom: 3px solid var(--clr-neutral-900) }
 
 
 /*------------------   Top navigation
@@ -259,7 +267,7 @@ main {
 .page-home main { height: calc(100vh - 20px - 74px); /* takes header height into account */ }
 .page-works .banner {
   width: 100%;
-  max-width: 1400px;
+  max-width: var(--max-width-500);
   padding: 260px 40px 60px 40px;
 }
 
@@ -287,10 +295,10 @@ main {
 
 .page-works h1 {
   font-size: var(--fs-400);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-light);
   text-align: center;
-  line-height:1.1em;
-  margin: 0 0 280px 0;
+  line-height: 1.1em;
+  margin: 0 0 250px 0;
 }
 
 .page-works h2 {
@@ -300,16 +308,15 @@ main {
 }
 
 
-
-/*------------------   WORKS
+/*------------------   WORK GRID
 */
 
-.works-grid {
+.work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 60px 30px;
-  max-width: 1400px;
+  max-width: var(--max-width-500);
   margin: 200px 40px 300px 40px;
 }
 
@@ -330,12 +337,60 @@ main {
   transform-origin: left center;
 }
 
-.works-grid p {
+.work-grid p {
   font-size: var(--fs-200);
   font-weight: var(--fw-medium);
   margin: 10px 0 0 0;
 }
-  
+
+
+
+
+/*------------------   WORKS 
+*/
+
+.works {
+  display: flex;
+  justify-content: center;
+  padding: 50px 40px 300px 40px; /* remove later */
+  width: 100%;
+  background-color: var(--clr-neutral-900);
+}
+
+.works > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  max-width: var(--max-width-500);
+}
+
+.works .single-column {
+  flex: 1 1 100%
+}
+
+.works .double-column {
+  flex: 1 1 calc(50% - 40px);
+}
+
+.works p {
+  font-size: var(--fs-150);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+}
+
+.works p b {
+  font-weight: var(--fw-medium);
+}
+
+.works img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
 
 
 /*------------------   FOOTER 
@@ -389,7 +444,7 @@ h3 {
 }
 
 h4 {
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
   font-weight: var(--fw-regular);
   text-align: right;
 }
@@ -491,12 +546,12 @@ h5 {
     bottom: 10vh;
     left: auto;
     right: auto;
-    font-size: var(--fs-550);
+    font-size: var(--fs-500);
     font-weight: var(--fw-light);
     color: var(--clr-neutral-900);
   }
 
-  h1 { font-size: var(--fs-500); }
+  .page-home h1 { font-size: var(--fs-400); }
 
   #hook { font-size: var(--fs-350); }
 
@@ -538,18 +593,11 @@ h5 {
     text-decoration: underline;
   }
 
-
-
-
-
-  .works-grid {
+  .work-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
     width: auto;
     margin: 200px 20px 300px 20px;
   }
-
-
-
 }
