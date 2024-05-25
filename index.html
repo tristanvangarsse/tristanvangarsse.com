@@ -30,19 +30,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body onload="init()">
+<body class="page-home" onload="init()">
 
   <div id="dropdown-nav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="mobile-menu" id="mobnav1" href="works/">WORK</a>
+    <a class="mobile-menu" id="mobnav1" href="work/">WORK</a>
     <a class="mobile-menu" id="mobnav2" href="contact/">CONTACT</a>
     <a class="mobile-menu" id="mobnav3" href="events/">EVENTS</a>
   </div>
 
   <header>
-    <a draggable="false" href="/"><img draggable="false" class="wordmark" src="images/wordmark.svg" alt=""></a>
+    <a draggable="false" href="/"><img draggable="false" class="wordmark" src="images/SVG/wordmark-neutral-100.svg" alt=""></a>
     <nav>
-      <a id="nav1" href="works/">WORK</a>
+      <a id="nav1" href="work/">WORK</a>
       <a id="nav2" href="contact/">CONTACT</a>
       <a id="nav3" href="events/">EVENTS</a>
       <select id="language" onchange="changeLanguage()">
@@ -50,18 +50,18 @@
         <option value="nl">NL</option>
         <option value="fr">FR</option>
       </select>
-      <img class="burger-menu" src="images/SVG/icon-hamburger.svg" onclick="openNav()">
+      <img class="burger-menu" src="images/SVG/icon-hamburger-neutral-100.svg" onclick="openNav()">
     </nav>
   </header>
 
-  <main class="homepage" lang="en, nl, fr">
+  <main lang="en, nl, fr">
     <h1 id="heading1">Own a business?</h1>
     <h1 id="heading2">You need a website.</h1>
     <a href="#bottom-anchor"><button id="hook">hell yeah</button></a>
   </main>
 
   <footer>
-    <h2 id="collab1">Collaboration.</h2>
+    <h3 id="collab1">Collaboration.</h3>
     <div class="social-media">
       <a target="_blank" href="https://www.instagram.com/tristanvangarsse">Instagram</a>
       <a target="_blank" href="https://www.linkedin.com/in/tristanvangarsse/">LinkedIn</a>
@@ -70,9 +70,9 @@
       <a target="_blank" >Behance</a>
     </div>
     <div id="bottom-anchor" class="collab-sentence">
-      <h3 id="collab2">I collaborate with ambitious people.</h3>
-      <h3 id="collab3">Let's grow your business together.</h3>
-      <h4><a href="mailto:someone@example.com">tristanvangarsse@proton.me</a></h4>
+      <h4 id="collab2">I collaborate with ambitious people.</h4>
+      <h4 id="collab3">Let's grow your business together.</h4>
+      <h5><a href="mailto:someone@example.com">tristanvangarsse@proton.me</a></h5>
     </div>
         
         <!--
