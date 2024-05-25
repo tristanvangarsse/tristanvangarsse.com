@@ -33,11 +33,11 @@
 }
 
 /*================== RED OUTLINE ====================*/
-
+/*
 @media only screen and (min-width: 1800px) and (max-width: 1900px) {
   * { outline: 1px dotted rgba(255,0,0,1) !important; }
 }
-
+*/
 /*==================== ANIMATIONS ===================*/
 
 .load-in { animation: page-load-in 0.4s ease-in 0s 1 normal forwards }
