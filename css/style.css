@@ -551,7 +551,7 @@ h5 {
     color: var(--clr-neutral-900);
   }
 
-  .page-home h1 { font-size: var(--fs-400); }
+  .page-home h1 { font-size: var(--fs-350); }
 
   #hook { font-size: var(--fs-350); }
 
