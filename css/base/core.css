@@ -1,0 +1,28 @@
+body {
+  background-color: var(--clr-primary-bg);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.page-home main {
+  height: calc(100vh - 20px - 74px); /* takes header height into account */
+}
+
+.page-works .banner {
+  width: 100%;
+  max-width: var(--max-width-500);
+  padding: 260px 40px 60px 40px;
+}
+
+.page-home h1 { /* call to action */
+  margin: 15vh 40px 0 40px;
+}
+
+.page-home h1:nth-child(2) {
+  margin-top: 15px;
+}

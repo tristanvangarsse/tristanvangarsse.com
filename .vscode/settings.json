@@ -1,4 +1,6 @@
 {
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.editor.decorations.colors": true
+    "workbench.editor.decorations.colors": true,
+    "editor.hover.above": false,
+    "editor.hover.enabled": false
 }

@@ -1,0 +1,48 @@
+:root {
+  --clr-yellow-500: hsl(48,100%,50%);
+  --clr-blue-200: hsl(205,100%,19%);
+  --clr-blue-300: hsl(205, 100%, 32%);
+
+  --clr-monochrome-100: hsl(0, 0%, 0%);
+  --clr-monochrome-200: hsl(0, 0%, 10%);
+  --clr-monochrome-800: hsl(0, 0%, 80%);
+  --clr-monochrome-900: hsl(0, 0%, 100%);
+
+  --clr-transparent: hsla(0, 0, 0, 0);
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Roboto Condensed", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-100: 1rem;
+  --fs-120: 1.1rem;
+  --fs-150: 1.2rem;
+  --fs-200: 1.5rem;
+  --fs-300: 1.8rem;
+  --fs-350: 2rem;
+  --fs-400: 2.5rem;
+  --fs-500: 4rem;
+  --fs-600: 5rem;
+  --fs-700: 12rem;
+
+  --max-width-500: 1300px;
+}
+
+
+.page-home,
+.page-work {
+  --clr-primary-bg: var(--clr-yellow-500);
+}
+
+.page-works {
+  --clr-primary-bg: var(--clr-blue-200);
+  --clr-primary-text: var(--clr-monochrome-900);
+}
