@@ -37,3 +37,9 @@
 .landing-page a {
   margin-top: 20vh;
 }
+
+
+
+@media only screen and (max-width: 1000px) {
+  .page-home h1 { font-size: var(--fs-350); } 
+}
