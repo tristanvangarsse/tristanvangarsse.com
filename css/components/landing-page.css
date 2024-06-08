@@ -1,7 +1,3 @@
-.page-home main {
-  height: calc(100vh - 20px - 74px); /* takes header height into account */
-}
-
 .landing-page {
   background-color: var(--clr-primary-bg);
 }

@@ -11,12 +11,16 @@
   max-width: var(--max-width-500);
 }
 
+.see-more > div > p {
+  margin: 0 40px;
+}
+
 .see-more .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px 30px;
   max-width: var(--max-width-500);
-  margin: 70px 0 150px 0;
+  margin: 70px 40px 150px 40px;
 }
 
 .see-more .grid p {
@@ -57,6 +61,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: auto;
-    margin: 200px 20px 300px 20px;
+    margin: 70px 20px 200px 20px;
   }
 }
