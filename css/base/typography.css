@@ -5,7 +5,8 @@ nav * {
   text-transform: uppercase;
 }
 
-.page-works nav > * {
+.page-works nav > *,
+.page-contact nav > * {
   font-weight: var(--fw-regular);
 }
 
@@ -27,7 +28,8 @@ nav * {
   font-weight: var(--fw-medium);
 }
 
-.page-works h1 {
+.page-works h1,
+.page-contact h1 {
   font-size: var(--fs-400);
   font-weight: var(--fw-light);
   text-align: center;

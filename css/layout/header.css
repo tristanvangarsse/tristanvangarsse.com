@@ -16,19 +16,12 @@ nav {
   align-items: center;
 }
 
-nav * { font-family: var(--ff-heading) }
 
 nav > * {
-  font-weight: var(--fw-medium);
-  font-size: var(--fs-200);
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.page-works nav > * {
-  font-weight: var(--fw-regular);
 }
 
 nav > *:not(:first-child):not(:last-child) {
@@ -39,7 +32,6 @@ nav > *:not(:first-child):not(:last-child) {
 select { /* DISABLED language selector */
   display: none;
 }
-
 
 select { /* language selector desktop */
   border: none;
@@ -70,11 +62,13 @@ nav > a:not(.focus-nav):hover:after {
 
 .page-home nav > a:not(.focus-nav):after,
 .page-work nav > a:not(.focus-nav):after { border-bottom: 3px solid var(--clr-monochrome-100) }
-.page-works nav > a:not(.focus-nav):after { border-bottom: 3px solid var(--clr-monochrome-900) }
+.page-works nav > a:not(.focus-nav):after,
+.page-contact nav > a:not(.focus-nav):after { border-bottom: 3px solid var(--clr-monochrome-900) }
 
 .page-home .focus-nav,
 .page-work .focus-nav { border-bottom: 3px solid var(--clr-monochrome-100) }
-.page-works .focus-nav { border-bottom: 3px solid var(--clr-monochrome-900) }
+.page-works .focus-nav,
+.page-contact .focus-nav { border-bottom: 3px solid var(--clr-monochrome-900) }
 
 #dropdown-nav { display: none }
 .burger-menu { display: none }
@@ -111,7 +105,6 @@ nav > a:not(.focus-nav):hover:after {
   }
 
   #dropdown-nav * {
-    font-size: var(--fs-350);
     text-transform: uppercase;
     color: var(--clr-monochrome-900);
     margin: 0;
@@ -131,8 +124,6 @@ nav > a:not(.focus-nav):hover:after {
     bottom: 10vh;
     left: auto;
     right: auto;
-    font-size: var(--fs-500);
-    font-weight: var(--fw-light);
     color: var(--clr-monochrome-900);
   }
 }

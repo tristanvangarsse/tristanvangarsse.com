@@ -1,8 +1,11 @@
-.page-works .banner {
+.banner {
+  width: 100%;
+  max-width: var(--max-width-500);
+  padding: 260px 40px 60px 40px;
   background-color: var(--clr-primary-bg);
 }
 
-.page-works .banner * {
+.banner * {
   color: var(--clr-monochrome-900);
 }
 
@@ -11,9 +14,10 @@
   color: var(--clr-monochrome-100);
 }
 
-
-/*-----------------------------------------------------*/
-
+.page-contact  *::selection {
+  background-color: var(--clr-yellow-500);
+  color: var(--clr-monochrome-100);
+}
 
 main {
   display: flex;
@@ -22,12 +26,7 @@ main {
   width: 100%;
 }
 
-.page-works .banner {
-  width: 100%;
-  max-width: var(--max-width-500);
-  padding: 260px 40px 60px 40px;
-}
-
-.page-works h1 {
+.page-works h1,
+.page-contact h1 {
   margin: 0 0 250px 0;
 }

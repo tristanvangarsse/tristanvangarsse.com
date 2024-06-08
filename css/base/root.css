@@ -1,7 +1,10 @@
 :root {
   --clr-yellow-500: hsl(48,100%,50%);
+
   --clr-blue-200: hsl(205,100%,19%);
   --clr-blue-300: hsl(205, 100%, 32%);
+
+  --clr-green-300: hsl(103, 71%, 30%);
 
   --clr-monochrome-100: hsl(0, 0%, 0%);
   --clr-monochrome-200: hsl(0, 0%, 10%);
@@ -44,5 +47,9 @@
 
 .page-works {
   --clr-primary-bg: var(--clr-blue-200);
+  --clr-primary-text: var(--clr-monochrome-900);
+}
+.page-contact {
+  --clr-primary-bg: var(--clr-green-300);
   --clr-primary-text: var(--clr-monochrome-900);
 }
