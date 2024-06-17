@@ -1,4 +1,4 @@
-[![Preview](readme_preview/portfolio-preview.png)]
+![Preview](readme_preview/portfolio-preview.png)
 
 ## Overview
 
