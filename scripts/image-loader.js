@@ -1,6 +1,6 @@
 let images = document.querySelectorAll(".lazyload");
 new LazyLoad(images, {
     root: null,
-    rootMargin: "1000px",
+    rootMargin: "1px",
     threshold: 0
 });
