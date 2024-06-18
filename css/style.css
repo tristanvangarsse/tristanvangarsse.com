@@ -10,12 +10,9 @@
 @import 'layout/footer.css';
 
 /* Import component styles */
+@import 'components/dropdown-menu.css';
 @import 'components/landing-page.css';
 @import 'components/page-loader.css';
-@import 'components/banner.css';
-@import 'components/work-grid.css';
-@import 'components/works-article.css';
-@import 'components/see-more.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
@@ -24,9 +21,11 @@
 
 
 /*================== RED OUTLINE ====================*/
+
 /*
-@media only screen and (min-width: 1700px) and (max-width: 1900px) {
-  * { outline: 1px dotted rgba(255,0,0,1) !important; }
+@media only screen and (min-width: 1700px) and (max-width: 2000px) {
+  * { outline: 1px dotted rgba(255,0,0,0.1) !important; }
 }
 */
+
 /*====================================================*/

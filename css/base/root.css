@@ -1,55 +1,33 @@
 :root {
-  --clr-yellow-500: hsl(48,100%,50%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-white: hsl(0, 0%, 100%);
 
-  --clr-blue-200: hsl(205,100%,19%);
-  --clr-blue-300: hsl(205, 100%, 32%);
-
-  --clr-green-300: hsl(103, 71%, 30%);
-
-  --clr-monochrome-100: hsl(0, 0%, 0%);
-  --clr-monochrome-200: hsl(0, 0%, 10%);
-  --clr-monochrome-800: hsl(0, 0%, 80%);
-  --clr-monochrome-900: hsl(0, 0%, 100%);
+  --clr-mono-300: hsl(0, 0%, 30%);
+  --clr-mono-500: hsl(0, 0%, 50%);
+  --clr-mono-950: hsl(0, 0%, 95%);
 
   --clr-transparent: hsla(0, 0, 0, 0);
 
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Roboto Condensed", sans-serif;
+  --ff-primary: "Inter", sans-serif;
 
   --ff-body: var(--ff-primary);
-  --ff-heading: var(--ff-secondary);
+  --ff-heading: var(--ff-primary);
 
-  --fw-thin: 100;
+  --fw-thin: 100; /* currently unused */
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
-  --fw-bold: 700;
+  --fw-bold: 700; /* currently unused */
 
-  --fs-100: 1rem;
-  --fs-120: 1.1rem;
-  --fs-150: 1.2rem;
-  --fs-200: 1.5rem;
-  --fs-300: 1.8rem;
-  --fs-350: 2rem;
-  --fs-400: 2.5rem;
-  --fs-500: 4rem;
-  --fs-600: 5rem;
-  --fs-700: 12rem;
+  --fs-100: 0.5rem; /* currently unused */
+  --fs-200: 1rem;
+  --fs-300: 1.5rem; /* currently unused */
+  --fs-400: 2.3rem;
 
-  --max-width-500: 1300px;
-}
+  --max-width-100: 1000px;
+  --max-width-200: 1400px;
 
-
-.page-home,
-.page-work {
-  --clr-primary-bg: var(--clr-yellow-500);
-}
-
-.page-works {
-  --clr-primary-bg: var(--clr-blue-200);
-  --clr-primary-text: var(--clr-monochrome-900);
-}
-.page-contact {
-  --clr-primary-bg: var(--clr-green-300);
-  --clr-primary-text: var(--clr-monochrome-900);
+  --border-rad-100: 10px; /* currently unused */
+  --border-rad-200: 20px; /* currently unused */
+  --border-rad-300: 30px;
 }

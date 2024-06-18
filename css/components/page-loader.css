@@ -6,12 +6,12 @@
   height: 100vh;
   overflow: hidden;
   pointer-events: none;
-  z-index: 50;
-  background-color: var(--clr-primary-bg);
+  z-index: 100;
+  background-color: var(--clr-white);
 }
 
 .page-loader {
-  animation: page-loader 0.4s ease-in 0.5s 1 normal forwards
+  animation: page-loader 0.8s ease-in 0.5s 1 normal forwards
 }
 
 @keyframes page-loader {

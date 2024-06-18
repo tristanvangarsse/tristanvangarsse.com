@@ -1,0 +1,40 @@
+
+#dropdown-nav { display: none }
+
+@media only screen and (max-width: 600px) {
+  #dropdown-nav {
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--clr-black);
+    width: 100%;
+    height: 0;
+    transition: 0.2s;
+    z-index: 4; /* number might be too high */
+  }
+
+  #dropdown-nav * {
+    color: var(--clr-white);
+    margin: 0;
+    padding: 0;
+  }
+
+  #dropdown-nav *:nth-child(2) {
+    margin-top: 10vh; /* couldn't give parents padding for some reason. */
+    }
+    
+  #dropdown-nav *:nth-child(4) {
+    margin-bottom: 40vh;/* couldn't give parents padding for some reason. */
+  }
+
+  #dropdown-nav .closebtn {
+    position: absolute;
+    bottom: 10vh;
+    left: auto;
+    right: auto;
+    color: var(--clr-white);
+  }
+}
