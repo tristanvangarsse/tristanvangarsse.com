@@ -1,6 +1,6 @@
 .landing-page {
   max-width: var(--max-width-100);
-  margin: 210px 50px 160px 50px;
+  padding: 210px 50px 160px 50px;
 }
 
 /* The following css shouldn't be in this file
@@ -41,7 +41,7 @@ main img {
 @media only screen and (max-width: 600px) {
 
   .landing-page {
-    margin: 80px 30px 60px 30px;
+    padding: 80px 30px 60px 30px;
   }
 
 /* The following css shouldn't be in this file
