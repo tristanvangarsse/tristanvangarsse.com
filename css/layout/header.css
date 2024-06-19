@@ -2,12 +2,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 90px 50px 0 50px;
+  padding: 90px 50px 0 50px; /* margin doesn't work because width: 100%*/
   width: 100%;
   max-width: var(--max-width-100);
 }
 
-.wordmark { width: 182px }
+.wordmark {
+  width: 182px
+}
 
 nav {
   display: flex;
@@ -59,21 +61,25 @@ nav > a:not(.focus-nav):after {
   border-bottom: 1px solid var(--clr-black)
 }
 
-.burger-menu { display: none }
+.burger-menu {
+  display: none
+}
 
 @media only screen and (max-width: 600px) {
 
-  header { padding: 20px 20px 0 20px }
+  header {
+    padding: 30px 30px 0 30px;
+  }
 
-  .wordmark { width: 200px }
-
-  nav > *:not(:nth-last-child(-n+2)) { display: none }
+  nav > *:not(:nth-last-child(-n+2)) {
+    display: none
+  }
 
   .burger-menu {
     display: block;
     cursor: pointer;
-    height: 16px;
-    margin-left: 5vw;
+    height: 14px;
+    margin: 4px 0 0 0;
   }
 
   nav { padding-bottom: 2px } /* to align with wordmark */

@@ -19,9 +19,10 @@
   --fw-medium: 500;
   --fw-bold: 700; /* currently unused */
 
-  --fs-100: 0.5rem; /* currently unused */
+  --fs-50: 0.6rem; /* currently unused */
+  --fs-100: 0.8rem; /* currently unused */
   --fs-200: 1rem;
-  --fs-300: 1.5rem; /* currently unused */
+  --fs-300: 1.8rem;
   --fs-400: 2.3rem;
 
   --max-width-100: 1000px;

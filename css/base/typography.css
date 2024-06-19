@@ -9,13 +9,32 @@ nav * {
   font-weight: var(--fw-regular);
 }
 
+.temporary-message {
+  font-size: var(--fs-100);
+}
+
 .landing-page b,
 .temporary-message b {
   font-weight: var(--fw-light);
 }
 
-@media only screen and (max-width: 1000px) {
-  .closebtn {
+@media only screen and (max-width: 600px) {
+
+  .landing-page {
     font-size: var(--fs-300);
+  }
+
+  .temporary-message {
+    font-size: var(--fs-50);
+  }
+
+
+  .mobile-menu {
+    font-size: var(--fs-400);
+  }
+
+  .closebtn {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-light);
   }
 }

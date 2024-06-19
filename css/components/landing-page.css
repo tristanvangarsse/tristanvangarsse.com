@@ -3,8 +3,12 @@
   margin: 210px 50px 160px 50px;
 }
 
-/* The following css shouldn't be in this component
+/* The following css shouldn't be in this file
 */
+
+.centered {
+  text-align: center;
+}
 
 main img {
   max-width: var(--max-width-200);
@@ -15,7 +19,7 @@ main img {
 
 .temporary-message {
   margin: 160px 0 70px 0;
-  padding: 35px 45px;
+  padding: 25px 32px;
   border-radius: var(--border-rad-300);
   background-color: var(--clr-mono-950);
 }
@@ -31,4 +35,28 @@ main img {
 .temporary-message::selection {
   color: var(--clr-white);
   background-color: var(--clr-mono-300);
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .landing-page {
+    margin: 80px 30px 60px 30px;
+  }
+
+/* The following css shouldn't be in this file
+*/
+
+  main img {
+    border-radius: var(--border-rad-200);
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .temporary-message {
+    margin: 50px 0 30px 0;
+    padding: 20px 28px;
+    border-radius: var(--border-rad-200);
+  }
+
 }
