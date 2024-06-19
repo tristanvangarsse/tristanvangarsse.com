@@ -10,7 +10,7 @@ nav * {
 }
 
 .temporary-message {
-  font-size: var(--fs-100);
+  font-size: var(--fs-200);
 }
 
 .landing-page b,

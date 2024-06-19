@@ -1,6 +1,11 @@
 .landing-page {
   max-width: var(--max-width-100);
   padding: 210px 50px 160px 50px;
+  transition: transform 0.3s ease; /* Transition for smooth transform */
+}
+
+.transformed {
+  transform: scale(3);
 }
 
 .fade-in-move {
@@ -19,8 +24,6 @@
     transform: translate(0, 0);
   }
 }
-
-
 
 /* The following css shouldn't be in this file
 */
