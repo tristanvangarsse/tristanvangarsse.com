@@ -8,7 +8,8 @@ header {
 }
 
 .wordmark {
-  width: 182px
+  width: 182px;
+  padding-bottom:2px;
 }
 
 nav {

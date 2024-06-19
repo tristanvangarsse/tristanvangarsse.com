@@ -29,7 +29,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body onload="init()">
+<body>
 
   <div class="page-loader"></div>
 
@@ -56,12 +56,18 @@
   </header>
 
   <main lang="en, nl, fr">
-    <div class="landing-page">
+    <div class="landing-page fade-in-move" id="box">
       Hello, I’m Tristan.
       <br>
       <b>An experienced design researcher with motion and front-end development skills.</b>
     </div>
-    <img src="images/Work/tristanvangarsse-work-3.jpg" alt="">
+    <div class="slideshow-container">
+      <img class="slide" src="images/Work/tristanvangarsse-work-3.jpg" alt="">
+      <img class="slide" src="images/Work/tristanvangarsse-work-2.jpg" alt="">
+      <img class="slide" src="images/Work/tristanvangarsse-work-4.jpg" alt="">
+      <img class="slide" src="images/Work/tristanvangarsse-work-5.jpg" alt="">
+      <img class="slide" src="images/Work/tristanvangarsse-work-1.jpg" alt="">
+    </div>
     <div class="temporary-message">
       <b>
       This portfolio isn’t finished.
@@ -83,6 +89,9 @@
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script src="scripts/nav-menu.js"></script>
   <script src="scripts/smooth-scroll-anchor.js"></script>
+  <script src="scripts/fading-slideshow.js"></script>
+  <script src="scripts/parent-image-scaler.js"></script>
+  <script src="scripts/move-div-to-mouse.js"></script>
 
 </body>
 </html>

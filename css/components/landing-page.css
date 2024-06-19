@@ -3,6 +3,25 @@
   padding: 210px 50px 160px 50px;
 }
 
+.fade-in-move {
+  opacity: 0;
+  transform: translate(20px, 20px);
+  animation: fadeInMove 1.5s cubic-bezier(0,.8,1,1) 1.2s 1 normal forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+
 /* The following css shouldn't be in this file
 */
 
@@ -10,11 +29,27 @@
   text-align: center;
 }
 
-main img {
-  max-width: var(--max-width-200);
-  border-radius: var(--border-rad-300);
-  width: 95vw;
+.slideshow-container {
   margin: 0 50px;
+  border-radius: var(--border-rad-300);
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  max-width: var(--max-width-200);
+  width: 95vw;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.show {
+  opacity: 1;
 }
 
 .temporary-message {
