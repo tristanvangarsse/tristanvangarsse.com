@@ -1,0 +1,95 @@
+.fadeinmove-br { /* Fade in from Bottom Right */
+  animation: fadeInMove-br 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
+}
+
+@keyframes fadeInMove-br {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 20px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+
+.fadeinmove-bc { /* Fade in from Bottom Center */
+  animation: fadeInMove-bc 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
+}
+
+@keyframes fadeInMove-bc {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+.fadein { /* Fade in */
+  animation: fadeIn 2s ease 1s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+
+.scale-hover,
+.scale-hover .partner,
+.scale-hover .description { /* Scale in */
+  transition: 0.7s cubic-bezier(0,0,0,1);
+}
+
+.scale-hover:hover {
+  scale: 0.95;
+
+}
+
+.scale-hover:hover .partner, .scale-hover:hover .description {
+  scale: 1.15;
+  transform: translate(30px,10px);
+}
+
+@keyframes scaleOnHover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  } 
+}
+
+
+/* --- close button in project view --- */
+
+.rotate-hover {
+  transition: 0.7s cubic-bezier(0,0,0,1);  
+}
+
+.rotate-hover:hover {
+  transform: rotate(90deg);
+}
+
+/* --- left and right arrows in project view --- */
+
+.budge-left-hover,
+.budge-right-hover {
+  transition: 0.7s cubic-bezier(0,0,0,1);  
+}
+
+.budge-left-hover:hover {
+  transform: translateX(-10px);
+}
+
+.budge-right-hover:hover {
+  transform: translateX(10px);
+}

@@ -30,11 +30,20 @@
     margin-bottom: 40vh;/* couldn't give parents padding for some reason. */
   }
 
-  #dropdown-nav .closebtn {
+  #dropdown-nav .mobile-menu-closebtn {
     position: absolute;
     bottom: 10vh;
     left: auto;
     right: auto;
     color: var(--clr-white);
+  }
+
+  .mobile-menu {
+    font-size: var(--fs-400);
+  }
+
+  .mobile-menu-closebtn {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-thin);
   }
 }

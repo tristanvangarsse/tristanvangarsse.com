@@ -21,12 +21,17 @@
 
   --fs-50: 0.6rem; /* currently unused */
   --fs-100: 0.8rem; /* currently unused */
+  --fs-150: 0.9rem;
   --fs-200: 1rem;
+  --fs-220: 1.2rem;
+  --fs-250: 1.4rem;
   --fs-300: 1.8rem;
   --fs-400: 2.3rem;
+  --fs-500: 3rem;
 
   --max-width-100: 1000px;
-  --max-width-200: 1400px;
+  --max-width-200: 1200px;
+  --max-width-300: 1400px;
 
   --border-rad-100: 10px; /* currently unused */
   --border-rad-200: 20px; /* currently unused */

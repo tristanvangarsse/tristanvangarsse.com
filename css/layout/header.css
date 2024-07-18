@@ -15,6 +15,9 @@ header {
 nav {
   display: flex;
   align-items: center;
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-200);
 }
 
 nav > * {

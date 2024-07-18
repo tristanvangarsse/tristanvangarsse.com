@@ -8,3 +8,8 @@ main {
   align-items: center;
   width: 100%;
 }
+
+*::selection {
+  color: var(--clr-white);
+  background-color: var(--clr-mono-300);
+}
