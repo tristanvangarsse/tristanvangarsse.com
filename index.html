@@ -29,7 +29,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="init()" id="anchor">
 
   <div class="page-loader"></div>
 
@@ -55,9 +55,13 @@
     </nav>
   </header>
 
+  <!-- back to top arrow -->
+  <a href="#anchor" class="project-arrowupbtn portal-effect"><img src="images/SVG/arrow-up-neutral-100.svg"></a>
+
+  <!-- main content -->
   <main lang="en, nl, fr">
     <div class="landing-page fadeinmove-br">
-      Hello, I’m Tristan.
+      Hello, I'm Tristan.
       <br>
       <b>An experienced design researcher with motion and front-end development skills.</b>
     </div>
@@ -70,7 +74,7 @@
     </div>
     <div class="temporary-message">
       <b>
-      This portfolio isn’t finished.
+      This portfolio isn't finished.
       <br>
       You can reach me at:
       <br>
@@ -79,12 +83,18 @@
     </div>
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="title">If you're enthousiastic about creating exceptional user experiences, perhaps we should have a conversation?</div>
+      <a href="mailto:tristanvangarsse@proton.me" class="button">Get in Touch</a>
+      <div class="information">
+        <div class="subtitle">© 2024. All rights reserved.</div>
+        <a href="mailto:tristanvangarsse@proton.me" class="subtitle underscored">tristanvangarsse@proton.me</a>
+        <!-- Add socials later on -->
+      </div>
+    </div>
+  </footer>
 
-  
-<!--
-  <script src="scripts/language-switcher.js"></script>
-  <script src="scripts/image-loader.js"></script>
--->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script src="scripts/nav-menu.js"></script>
@@ -92,6 +102,8 @@
   <script src="scripts/fading-slideshow.js"></script>
   <script src="scripts/parent-image-scaler.js"></script>
   <script src="scripts/scroll-transform.js"></script>
+  <script src="scripts/back-to-top.js"></script>
+  <script src="scripts/scroll-anchor-visibility.js"></script>
 
 </body>
 </html>

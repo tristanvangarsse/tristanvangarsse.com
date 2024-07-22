@@ -4,6 +4,7 @@
 
   --clr-mono-300: hsl(0, 0%, 30%);
   --clr-mono-500: hsl(0, 0%, 50%);
+  --clr-mono-900: hsl(0, 0%, 90%); /* unused */
   --clr-mono-950: hsl(0, 0%, 95%);
 
   --clr-transparent: hsla(0, 0, 0, 0);
@@ -29,6 +30,7 @@
   --fs-400: 2.3rem;
   --fs-500: 3rem;
 
+  --max-width-50: 900px;
   --max-width-100: 1000px;
   --max-width-200: 1200px;
   --max-width-300: 1400px;

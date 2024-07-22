@@ -93,3 +93,34 @@
 .budge-right-hover:hover {
   transform: translateX(10px);
 }
+
+/* --- back to top arrow in project view --- */
+
+
+.portal-effect > img { /* Fade in */
+    animation: portalUp 3s cubic-bezier(.73,.15,.25,.82) 0s infinite normal forwards;
+}
+  
+  @keyframes portalUp {
+    0% {
+      transform: translate(0px,0px) scale(1);
+    }
+    70% {
+      transform: translate(0px,15px) scale(1);
+    }
+    84.98% {
+      transform: translate(0px,-50px) scale(0);
+    }
+    84.99% {
+      transform: translate(40px,-50px) scale(0);
+    } 
+    85% {
+      transform: translate(40px,50px) scale(0);
+    } 
+    85.01% {
+      transform: translate(0px,50px) scale(0);
+    } 
+    100% {
+      transform: translate(0px,0px) scale(1);
+    }
+}

@@ -30,6 +30,17 @@
   right: 11vw;
 }
 
+.project-arrowupbtn {
+  position: fixed;
+  width: 45px;
+  bottom: 10%;
+  right: 11vw;
+  padding: 0 10px;
+  clip-path: inset(100%, 100%, 100%, 100%);
+  overflow: hidden;
+  display: none;
+}
+
 .project .title,
 .project .subtitle,
 .project .paragraph,
@@ -47,7 +58,6 @@
   text-transform: uppercase;
   text-align: center;
   font-size: var(--fs-500);
-
 }
 
 .project .subtitle {
