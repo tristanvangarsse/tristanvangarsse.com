@@ -3,13 +3,13 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 90vh;
   background-color: var(--clr-mono-950);
 }
 
 footer .container {
   max-width: var(--max-width-50);
-  margin: 0 10vw;
+  min-width: 30px;
+  margin: 180px 10vw;
 }
 
 footer .title {
@@ -26,8 +26,9 @@ footer .button {
 
 footer .information {
   display: flex;
+  flex-wrap: wrap;
   margin: 100px 0 0 0;
-  gap: 0 50px;
+  gap: 10px 50px;
 }
 
 footer .subtitle {
@@ -37,4 +38,18 @@ footer .subtitle {
 footer .underscored {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  footer .title {
+    font-size: var(--fs-300);
+  }
+
+  footer .container {
+    margin: 100px 10vw;
+  }
+
 }
