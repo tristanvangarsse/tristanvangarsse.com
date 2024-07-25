@@ -1,11 +1,11 @@
 .fadeinmove-br { /* Fade in from Bottom Right */
-  animation: fadeInMove-br 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
+  animation: fadeInMove-br 3s cubic-bezier(0,.7,0,1) 0.7s 1 normal forwards;
 }
 
 @keyframes fadeInMove-br {
   0% {
     opacity: 0;
-    transform: translate(30px, 20px) scale(1);
+    transform: translate(50px, 40px) scale(1);
   }
   100% {
     opacity: 1;
@@ -54,7 +54,8 @@
 
 }
 
-.scale-hover:hover .partner, .scale-hover:hover .description {
+.scale-hover:hover .partner,
+.scale-hover:hover .description {
   scale: 1.15;
   transform: translate(30px,10px);
 }
@@ -94,8 +95,8 @@
   transform: translateX(10px);
 }
 
-/* --- back to top arrow in project view --- */
 
+/* --- back to top arrow in project view --- */
 
 .portal-effect > img { /* Fade in */
     animation: portalUp 3s cubic-bezier(.73,.15,.25,.82) 0s infinite normal forwards;
