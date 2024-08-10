@@ -45,9 +45,13 @@
   font-size: var(--fs-200);
 }
 
-.landing-page b,
+.landing-page b {
+  color: var(--clr-mono-460);
+  font-weight: var(--fw-light);
+}
+
 .temporary-message b {
-  color: var(--clr-mono-500);
+  color: var(--clr-mono-300);
   font-weight: var(--fw-light);
 }
 

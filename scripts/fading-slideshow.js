@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function startSlideshow() {
       if (!hasScrolled) {
-          slideInterval = setInterval(showNextSlide, 7000); // Change slide every 3 seconds
+          slideInterval = setInterval(showNextSlide, 5000); // Change slide every 5 seconds
           hasScrolled = true;
       }
   }
