@@ -87,12 +87,17 @@
 @media only screen and (max-width: 900px) {
 
   .project {
-    width: 80%;
+    width: 85%;
     padding-top: 90px;
   }
 
   .project-closebtn {
     top: 2rem;
+  }
+
+  .project .image {
+    padding: 0;
+    margin: 40px 0;
   }
 
   .project .title {

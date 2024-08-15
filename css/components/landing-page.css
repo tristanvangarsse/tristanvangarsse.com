@@ -60,7 +60,7 @@
 
   .landing-page {
     padding: 80px 30px 60px 30px;
-    font-size: var(--fs-300);
+    font-size: var(--fs-250);
   }
 
 /* The following css shouldn't be in this file
