@@ -68,7 +68,7 @@
 
   .slideshow-container img {
     border-radius: var(--border-rad-200);
-    height: 400px;
+    min-height: 200px;
     object-fit: cover;
   }
 
