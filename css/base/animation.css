@@ -1,4 +1,5 @@
 .fadeinmove-br { /* Fade in from Bottom Right */
+  opacity: 0;
   animation: fadeInMove-br 3s cubic-bezier(0,.7,0,1) 0.7s 1 normal forwards;
 }
 
@@ -15,6 +16,7 @@
 
 
 .fadeinmove-bc { /* Fade in from Bottom Center */
+  opacity: 0;
   animation: fadeInMove-bc 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
 }
 
@@ -31,6 +33,7 @@
 
 
 .fadein { /* Fade in */
+  opacity: 0;
   animation: fadeIn 2s ease 1s 1 normal forwards;
 }
 

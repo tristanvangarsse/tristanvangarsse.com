@@ -43,8 +43,7 @@
 
 .project .title,
 .project .subtitle,
-.project .paragraph,
-.project img {
+.project .paragraph {
   padding: 10px 0;
 }
 
@@ -79,6 +78,10 @@
 
 .project .outline {
   outline: 4px solid #ecc4a1;
+}
+
+.project .small {
+  margin: 4vw calc(15vw - 100px);
 }
 
 
