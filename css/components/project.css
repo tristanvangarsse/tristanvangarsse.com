@@ -71,7 +71,8 @@
   line-height: 2.5rem;
 }
 
-.project .image {
+.project .image,
+.project .video {
   margin: 4vw 0;
   border-radius: var(--border-rad-200);
 }
@@ -98,7 +99,8 @@
     top: 2rem;
   }
 
-  .project .image {
+  .project .image,
+  .project .video {
     padding: 0;
     margin: 40px 0;
   }

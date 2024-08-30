@@ -5,11 +5,8 @@
   font-weight: var(--fw-regular);
 }
 
-
-/* The following css shouldn't be in this file
-*/
-
-.centered {
+/*       unused slideshow
+.centered {            what is this??
   text-align: center;
 }
 
@@ -34,6 +31,15 @@
 
 .slide.show {
   opacity: 1;
+}
+*/
+
+.landing-page-video {
+  max-width: var(--max-width-300);
+  width: 95vw;
+  height: auto;
+  margin: 0 50px;
+  border-radius: var(--border-rad-300);
 }
 
 .temporary-message {
@@ -62,14 +68,21 @@
     font-size: var(--fs-250);
   }
 
-/* The following css shouldn't be in this file
-*/
+  /*       unused slideshow
 
   .slideshow-container img {
     border-radius: var(--border-rad-200);
     min-height: 200px;
     object-fit: cover;
   }
+  */
+
+  .landing-page-video {
+    border-radius: var(--border-rad-200);
+    min-height: 200px;
+    object-fit: cover;
+  }
+
 
   .temporary-message {
     margin: 50px 0 100px 0;
