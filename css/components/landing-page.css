@@ -79,7 +79,7 @@
 
   .landing-page-video {
     border-radius: var(--border-rad-200);
-    min-height: 200px;
+    width: 80vw;
     object-fit: cover;
   }
 
