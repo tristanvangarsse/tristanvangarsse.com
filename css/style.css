@@ -15,6 +15,7 @@
 @import 'components/case-studies.css';
 @import 'components/project.css';
 @import 'components/contact-page.css';
+@import 'components/collapsible.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
