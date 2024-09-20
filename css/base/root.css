@@ -5,7 +5,7 @@
   --clr-mono-300: hsl(0, 0%, 30%);
   --clr-mono-460: hsl(0, 0%, 46%);
   --clr-mono-500: hsl(0, 0%, 50%);
-  --clr-mono-900: hsl(0, 0%, 90%); /* unused */
+  --clr-mono-900: hsl(0, 0%, 90%);
   --clr-mono-950: hsl(0, 0%, 95%);
 
   --clr-transparent: hsla(0, 0, 0, 0);
@@ -15,14 +15,14 @@
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
 
-  --fw-thin: 100; /* currently unused */
+  --fw-thin: 100;
   --fw-light: 320;
   --fw-regular: 360;
   --fw-medium: 500;
-  --fw-bold: 700; /* currently unused */
+  --fw-bold: 700;
 
-  --fs-50: 0.6rem; /* currently unused */
-  --fs-100: 0.8rem; /* currently unused */
+  --fs-50: 0.6rem;
+  --fs-100: 0.8rem;
   --fs-150: 0.9rem;
   --fs-200: 1rem;
   --fs-220: 1.2rem;
@@ -36,7 +36,7 @@
   --max-width-200: 1200px;
   --max-width-300: 1400px;
 
-  --border-rad-100: 10px; /* currently unused */
-  --border-rad-200: 20px; /* currently unused */
+  --border-rad-100: 10px;
+  --border-rad-200: 20px;
   --border-rad-300: 30px;
 }
