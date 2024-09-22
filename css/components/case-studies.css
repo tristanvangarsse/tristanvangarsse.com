@@ -15,8 +15,8 @@
 .case-studies .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12% 7vw;
-  margin: 100px 100px 300px 100px;
+  gap: 6vw 7vw;
+  margin: 100px 100px 200px 100px;
 }
 
 .case-studies .container > div {
@@ -60,8 +60,8 @@
 
   .case-studies .container {
     grid-template-columns: repeat(1, 1fr);
-    gap: 3% 0;
-    margin: 100px 40px 200px 40px;
+    gap: 7vw 0;
+    margin: 70px 40px 100px 40px;
   }
 
   .case-studies .title {
