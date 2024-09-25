@@ -76,3 +76,12 @@ button:hover {
 button:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 640px) {
+
+  html, body {
+    font-size: 28px;
+  }
+
+
+}
