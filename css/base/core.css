@@ -13,3 +13,7 @@ main {
   color: var(--clr-white);
   background-color: var(--clr-mono-300);
 }
+
+.journal {
+  display: none;
+}
