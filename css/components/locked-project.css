@@ -1,7 +1,7 @@
 .locked-project {
   max-width: var(--max-width-200);
   width: calc(100px + 20%);
-  padding: calc(450px - 15%) 0 160px 0;
+  padding: calc(400px - 15%) 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -48,7 +48,7 @@
 
   .locked-project {
     width: 60%;
-    padding: 30vh 0 160px 0;
+    padding: 30vh 0 0 0;
   }
 
   .locked-project .image {
