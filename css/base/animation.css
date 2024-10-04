@@ -1,4 +1,5 @@
-.fadeinmove-br { /* Fade in from Bottom Right */
+/* ----------------  Fade in from Bottom Right */
+.fadeinmove-br {
   opacity: 0;
   animation: fadeInMove-br 3s cubic-bezier(0,.7,0,1) 0.7s 1 normal forwards;
 }
@@ -14,8 +15,8 @@
   }
 }
 
-
-.fadeinmove-bc { /* Fade in from Bottom Center */
+/* ----------------  Fade in from Bottom Center */
+.fadeinmove-bc {
   opacity: 0;
   animation: fadeInMove-bc 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
 }
@@ -31,8 +32,8 @@
   }
 }
 
-
-.fadein { /* Fade in */
+/* ----------------  Fade in */
+.fadein {
   opacity: 0;
   animation: fadeIn 2s ease 1s 1 normal forwards;
 }
@@ -46,23 +47,34 @@
   } 
 }
 
+/* ----------------  Scale in */
 .scale-hover,
 .scale-hover .partner,
-.scale-hover .description { /* Scale in */
+.scale-hover .description,
+.scale-hover .lock {
   transition: 0.7s cubic-bezier(0,0,0,1);
 }
 
 .scale-hover:hover {
   scale: 0.95;
-
 }
 
-.scale-hover:hover .partner,
+.scale-hover:hover .partner {
+  scale: 1.15;
+  transform: translate(15px,10px);
+}
+
 .scale-hover:hover .description {
   scale: 1.15;
-  transform: translate(30px,10px);
+  transform: translate(40px,10px);
 }
 
+.scale-hover:hover .lock {
+  scale: 1.15;
+  transform: translate(-10px,10px);
+}
+
+/* Not necessary apparently
 @keyframes scaleOnHover {
   0% {
     transform: scale(1);
@@ -71,10 +83,9 @@
     transform: scale(1.2);
   } 
 }
+*/
 
-
-/* --- close button in project view --- */
-
+/* ----------------  Close button in project view */
 .rotate-hover {
   transition: 0.7s cubic-bezier(0,0,0,1);  
 }
@@ -83,8 +94,7 @@
   transform: rotate(90deg);
 }
 
-/* --- left and right arrows in project view --- */
-
+/* ----------------  Left and right arrows in project view */
 .budge-left-hover,
 .budge-right-hover {
   transition: 0.7s cubic-bezier(0,0,0,1);  
@@ -98,9 +108,7 @@
   transform: translateX(10px);
 }
 
-
-/* --- back to top arrow in project view --- */
-
+/* ----------------  Back to top arrow in project view */
 .portal-effect > img { /* Fade in */
     animation: portalUp 3s cubic-bezier(.73,.15,.25,.82) 0s infinite normal forwards;
 }

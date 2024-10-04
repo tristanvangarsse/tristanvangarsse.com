@@ -1,0 +1,64 @@
+.locked-project {
+  max-width: var(--max-width-200);
+  width: calc(100px + 20%);
+  padding: calc(450px - 15%) 0 160px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.locked-project .image {
+  margin: 4vw 0 0.5vw 0;
+  border-radius: var(--border-rad-200); 
+}
+
+.locked-project .partner {
+  margin: 5% 0 2% 0;
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.locked-project .description {
+  color: var(--clr-mono-300);
+  font-size: var(--fs-100);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.locked-project input {
+  display: block;
+  margin: 50px auto 0 auto;
+  background: none;
+  width: 200px;
+  height: 50px;
+  font-size: var(--fs-250);
+  color: #000000;
+  text-align: center;
+  border-radius: var(--border-rad-300);
+  border: solid 2px var(--clr-accent-500);
+}
+
+.locked-project input:focus {
+  border: solid 2px var(--clr-accent);
+  outline: none !important;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+  .locked-project {
+    width: 60%;
+    padding: 30vh 0 160px 0;
+  }
+
+  .locked-project .image {
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+
+  .locked-project .partner {
+    font-size: var(--fs-220);
+    font-weight: var(--fw-medium);
+  }
+
+}
