@@ -10,6 +10,7 @@
   width: 84vw;
   height: auto;
   border-radius: var(--border-rad-300);
+  background: var(--clr-mono-200);
 }
 
 .landing-page b {
