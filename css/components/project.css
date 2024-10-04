@@ -99,6 +99,14 @@
     top: 2rem;
   }
 
+  .project-arrowleftbtn {
+    left: 1vw;
+  }
+  
+  .project-arrowrightbtn {
+    right: 1vw;
+  }
+
   .project .image,
   .project .video {
     padding: 0;
