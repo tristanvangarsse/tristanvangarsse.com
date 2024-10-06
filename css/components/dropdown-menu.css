@@ -1,13 +1,17 @@
 
 #dropdown-nav { display: none }
 
+/* ------------- TEMPORARY DISABLED JOURNAL
+*/
+.journal { display:none; }
+
 @media only screen and (max-width: 600px) {
   #dropdown-nav {
     display: flex;
     position: fixed;
     overflow: hidden;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--clr-black);
     width: 100%;
@@ -23,12 +27,8 @@
   }
 
   #dropdown-nav *:nth-child(2) {
-    margin-top: 10vh; /* couldn't give parents padding for some reason. */
+    margin: 20vh 0 7vh 0; /* couldn't give parents padding for some reason. */
     }
-    
-  #dropdown-nav *:nth-child(4) {
-    margin-bottom: 40vh;/* couldn't give parents padding for some reason. */
-  }
 
   #dropdown-nav .mobile-menu-closebtn {
     position: absolute;
