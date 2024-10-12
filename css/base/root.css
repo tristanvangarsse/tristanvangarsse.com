@@ -14,6 +14,8 @@
 
   --clr-transparent: hsla(0, 0, 0, 0);
 
+  --clr-placeholder: var(--clr-mono-900);
+
   --ff-primary: "Inter", sans-serif;
 
   --ff-body: var(--ff-primary);

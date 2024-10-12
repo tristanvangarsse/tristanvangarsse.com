@@ -28,7 +28,7 @@
   border-radius: var(--border-rad-200);
   position: relative;
   object-fit: cover;
-  background: var(--clr-mono-200);
+  background: var(--clr-placeholder);
 }
 
 .case-studies a img,

@@ -75,6 +75,7 @@
 .project .video {
   margin: 4vw 0;
   border-radius: var(--border-rad-200);
+  background: var(--clr-placeholder);
 }
 
 .project .outline {
