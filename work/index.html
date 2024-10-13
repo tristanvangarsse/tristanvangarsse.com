@@ -65,7 +65,7 @@
       <div class="title fadein" id="selected_cases">selected case studies</div>
       <div class="container">
         <div class="fadein scale-hover">
-          <a draggable="false" href="../kuleuven/"><img draggable="false" src="../images/Work/tristanvangarsse-work-kuleuven_1.jpg" alt=""></a>
+          <a draggable="false" href="../kuleuven/"><img class="lazyload" draggable="false" src="../images/Work/kuleuven_1_small.jpg" data-src="../images/Work/kuleuven_1.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">KU Leuven</div>
             <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
@@ -73,7 +73,7 @@
           <div class="description">UX / UI design</div>
         </div>
         <div class="fadein scale-hover">
-          <a draggable="false" href="../data-stories/"><img draggable="false" src="../images/Work/tristanvangarsse-work-datastories_1.jpg" alt=""></a>
+          <a draggable="false" href="../data-stories/"><img class="lazyload" draggable="false" src="../images/Work/datastories_1_small.jpg" data-src="../images/Work/datastories_1.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">Data stories</div>
             <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
@@ -81,7 +81,7 @@
           <div class="description">Data visualization</div>
         </div>
         <div class="fadein locked scale-hover">
-          <a draggable="false" href="../out-of-sight/"><img draggable="false" src="../images/Work/tristanvangarsse-work-outofsight_1.jpg" alt=""></a>
+          <a draggable="false" href="../out-of-sight/"><img class="lazyload" draggable="false" src="../images/Work/outofsight_1_small.jpg" data-src="../images/Work/outofsight_1.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">Out of Sight</div>
             <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
@@ -89,7 +89,7 @@
           <div class="description">Product design</div>
         </div>
         <div class="fadein locked scale-hover">
-          <a draggable="false" href="../revealing-the-library/"><img draggable="false" src="../images/Work/tristanvangarsse-work-revealingthelibrary_1.jpg" alt=""></a>
+          <a draggable="false" href="../revealing-the-library/"><img class="lazyload" draggable="false" src="../images/Work/revealingthelibrary_1.jpg" data-src="../images/Work/revealingthelibrary_1_small.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">Revealing the Library</div>
             <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
@@ -133,6 +133,15 @@
   <script src="../scripts/nav-menu.js"></script> <!-- hamburger menu -->
   <script src="../scripts/smooth-scroll-anchor.js"></script> <!-- scrolls smoothly to anchor -->
   <script src="../scripts/scroll-anchor-visibility.js"></script> <!-- hides back to top arrow -->
+  <script>lazyload();</script> <!-- lazy load media -->
+  <script>
+      let images = document.querySelectorAll(".lazyload");
+      new LazyLoad(images, {
+          root: null,
+          rootMargin: "100px",
+          threshold: 0
+      });
+  </script>
 
 </body>
 </html>

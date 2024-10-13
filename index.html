@@ -147,5 +147,14 @@
   <script src="scripts/parent-image-scaler.js"></script> <!-- manages scaling parent in fading slideshow on homepage -->
   <script src="scripts/scroll-anchor-visibility.js"></script> <!-- hides back to top arrow -->
   <script src="scripts/collapsible.js"></script> <!-- collapsible list of qualifications -->
+  <script>lazyload();</script> <!-- lazy load media -->
+  <script>
+      let images = document.querySelectorAll(".lazyload");
+      new LazyLoad(images, {
+          root: null,
+          rootMargin: "1000px",
+          threshold: 0
+      });
+  </script>
 </body>
 </html>
