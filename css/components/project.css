@@ -32,6 +32,7 @@
 
 .project-arrowupbtn {
   position: fixed;
+  z-index: 10;
   width: 45px;
   bottom: 10%;
   right: 11vw;
