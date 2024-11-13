@@ -16,7 +16,6 @@
   font-size: var(--fs-400);
   text-transform: uppercase;
   text-align: center;
-  color: var(--clr-accent-dark);
 }
 
 .locked-project .description {
