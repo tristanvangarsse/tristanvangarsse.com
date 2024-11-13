@@ -1,7 +1,3 @@
-body {
-  display: flex;
-}
-
 body > * {
-  width: 49vw;
+  width: 100vw;
 }
