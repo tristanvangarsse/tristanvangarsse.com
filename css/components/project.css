@@ -43,33 +43,43 @@
 }
 
 .project .title,
+.project .year,
 .project .subtitle,
 .project .paragraph {
-  padding: 10px 0;
-}
-
-.project .subtitle,
-.project .paragraph {
-  margin: 2vw 0;
+  padding: 0 10px;
 }
 
 .project .title {
-  margin: 7vw 0 2vw;
+  margin: 7vw 0 0.6vw 0;
   text-transform: uppercase;
   text-align: center;
   font-size: var(--fs-500);
+  color: var(--clr-accent-dark);
 }
 
-.project .subtitle {
+.project .year {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .2rem;
   font-size: var(--fs-150);
+  color: var(--clr-mono-500);
+}
+
+.project .subtitle {
+  margin: 4vw 0 1vw 0;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .2rem;
+  font-size: var(--fs-150);
+  color: var(--clr-accent-dark);
 }
 
 .project .paragraph {
+  margin: 1.8vw 0;
   font-size: var(--fs-220);
-  line-height: 2.5rem;
+  font-weight: var(--fw-regular);
+  line-height: 2.3rem;
+  /*color: var(--clr-mono-200);*/
 }
 
 .project .image,

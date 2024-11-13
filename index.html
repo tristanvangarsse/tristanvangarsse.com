@@ -73,6 +73,28 @@
 
     <div class="spacer-200"></div>
 
+    <div class="landing-page-title fadein">selected case studies</div>
+    <div class="case-studies">
+      <div class="container">
+        <div class="fadein scale-hover">
+          <a draggable="false" href="./kuleuven/"><img class="lazyload" draggable="false" src="./images/Work/kuleuven_1_small.jpg" data-src="./images/Work/kuleuven_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">KU Leuven</div>
+            <img draggable="false" class="lock" src="./images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">UX / UI design</div>
+        </div>
+        <div class="fadein scale-hover">
+          <a draggable="false" href="./data-stories/"><img class="lazyload" draggable="false" src="./images/Work/datastories_1_small.jpg" data-src="./images/Work/datastories_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Data stories</div>
+            <img draggable="false" class="lock" src="./images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">Data visualization</div>
+        </div>
+      </div>
+    </div>
+
     <div class="landing-page-title fadein">capabilities & skillset</div>
 
     <div class="spacer-100"></div>
@@ -146,6 +168,14 @@
   <script src="scripts/parent-image-scaler.js"></script> <!-- manages scaling parent in fading slideshow on homepage -->
   <script src="scripts/scroll-anchor-visibility.js"></script> <!-- hides back to top arrow -->
   <script src="scripts/collapsible.js"></script> <!-- collapsible list of qualifications -->
+  <script>
+    let images = document.querySelectorAll(".lazyload");
+    new LazyLoad(images, {
+        root: null,
+        rootMargin: "100px",
+        threshold: 0
+    });
+  </script>
 
 </body>
 </html>

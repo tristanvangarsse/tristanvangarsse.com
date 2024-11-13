@@ -9,8 +9,9 @@
   --clr-mono-900: hsl(0, 0%, 90%);
   --clr-mono-950: hsl(0, 0%, 95%);
 
-  --clr-accent-500: hsl(348, 100%, 80%);
-  --clr-accent: hsl(348, 100%, 60%);
+  --clr-accent: hsl(345, 80%, 60%);
+  --clr-accent-dark: hsl(345, 80%, 50%);
+  --clr-accent-light: hsl(345, 80%, 70%);
 
   --clr-transparent: hsla(0, 0, 0, 0);
 
