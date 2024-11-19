@@ -15,7 +15,7 @@
   }
 }
 
-/* ----------------  Fade in from Bottom Center */
+/* ----------------  Fade in from Bottom Center #1 */
 .fadeinmove-bc {
   opacity: 0;
   animation: fadeInMove-bc 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
@@ -29,6 +29,40 @@
   100% {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+
+/* ----------------  Fade in from Bottom Center #2 - Homepage video */
+.fadeinmove-bc-2 {
+  opacity: 0;
+  animation: fadeInMove-bc-2 1.5s cubic-bezier(0,1,1,1) 1.5s 1 normal forwards;
+}
+
+@keyframes fadeInMove-bc-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------  Fade in from Bottom Center #3 - Animate when in view */
+.fadeinmove-bc-3 {
+  opacity: 0; /* Fade in */
+  animation: fadeInMove-bc-3 0.5s cubic-bezier(0,0,0,1) 0.7s normal forwards; /* Trigger the animation */
+}
+
+@keyframes fadeInMove-bc-3 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -73,17 +107,6 @@
   scale: 1.15;
   transform: translate(-10px,10px);
 }
-
-/* Not necessary apparently
-@keyframes scaleOnHover {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  } 
-}
-*/
 
 /* ----------------  Close button in project view */
 .rotate-hover {

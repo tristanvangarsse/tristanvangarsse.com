@@ -30,7 +30,7 @@
 
 <body onload="init()" id="anchor">
 
-  <div class="page-loader"></div>
+  <!-- <div class="page-loader"></div> -->
 
   <div id="dropdown-nav">
     <a draggable="false" href="javascript:void(0)" class="mobile-menu-closebtn" onclick="closeNav()">&times;</a>
@@ -66,16 +66,16 @@
       <b>An experienced design researcher with motion and front-end development skills.</b>
     </div>
 
-    <video class="landing-page-video" autoplay="" loop="" muted="" playsinline="">
+    <video class="landing-page-video fadeinmove-bc-2" autoplay="" loop="" muted="" playsinline="">
       <source src="videos/Work/datastories_video_1.mp4" type="video/mp4">
     </video>
 
     <div class="spacer-200"></div>
 
-    <div class="landing-page-title fadein">selected case studies</div>
+    <div class="landing-page-title trigger-when-in-view">selected case studies</div>
     <div class="case-studies">
       <div class="container">
-        <div class="fadein scale-hover">
+        <div class="scale-hover trigger-when-in-view">
           <a draggable="false" href="./kuleuven/"><img class="lazyload" draggable="false" src="./images/Work/kuleuven_1_small.jpg" data-src="./images/Work/kuleuven_1.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">KU Leuven</div>
@@ -83,7 +83,7 @@
           </div>
           <div class="description">UX / UI design</div>
         </div>
-        <div class="fadein scale-hover">
+        <div class="scale-hover trigger-when-in-view">
           <a draggable="false" href="./data-stories/"><img class="lazyload" draggable="false" src="./images/Work/datastories_1_small.jpg" data-src="./images/Work/datastories_1.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">Data stories</div>
@@ -94,11 +94,11 @@
       </div>
     </div>
 
-    <div class="landing-page-title fadein">capabilities & skillset</div>
+    <div class="landing-page-title trigger-when-in-view">capabilities & skillset</div>
 
     <div class="spacer-100"></div>
 
-    <div class="collapsible">
+    <div class="collapsible trigger-when-in-view">
       <button type="button">Design Strategy</button>
       <div class="content">
         <div>
@@ -110,7 +110,7 @@
       </div>
     </div>
 
-    <div class="collapsible">
+    <div class="collapsible trigger-when-in-view">
       <button type="button">Product Design</button>
       <div class="content">
         <div>
@@ -122,7 +122,7 @@
       </div>
     </div>
 
-    <div class="collapsible">
+    <div class="collapsible trigger-when-in-view">
       <button type="button">Design Development</button>
       <div class="content">
         <div>
@@ -134,7 +134,7 @@
       </div>
     </div>
 
-    <div class="collapsible">
+    <div class="collapsible trigger-when-in-view">
       <button type="button">Preferred Toolset</button>
       <div class="content">
         <div>
@@ -168,6 +168,7 @@
   <script src="scripts/parent-image-scaler.js"></script> <!-- manages scaling parent in fading slideshow on homepage -->
   <script src="scripts/scroll-anchor-visibility.js"></script> <!-- hides back to top arrow -->
   <script src="scripts/collapsible.js"></script> <!-- collapsible list of qualifications -->
+  <script src="scripts/animate-when-in-view.js"></script> <!-- Animate when in view -->
   <script>
     let images = document.querySelectorAll(".lazyload");
     new LazyLoad(images, {
