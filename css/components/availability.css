@@ -25,6 +25,7 @@
   font-weight: 300;
   color: var(--clr-mono-300);
   letter-spacing: 0.2px;
+  user-select: none;
 }
 
 @media only screen and (max-width: 600px) {
