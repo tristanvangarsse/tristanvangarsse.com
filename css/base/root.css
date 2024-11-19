@@ -13,6 +13,9 @@
   --clr-accent-dark: hsl(345, 80%, 50%);
   --clr-accent-light: hsl(345, 80%, 70%);
 
+  --clr-green: hsl(112, 88%, 47%);
+  --clr-red: hsl(0, 83%, 55%);
+
   --clr-transparent: hsla(0, 0, 0, 0);
 
   --clr-placeholder: var(--clr-mono-900);

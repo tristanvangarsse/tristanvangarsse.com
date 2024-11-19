@@ -33,7 +33,14 @@
 
 <body onload="init()" id="anchor">
 
-  <!-- <div class="page-loader"></div> -->
+  <div class="page-loader"></div>
+
+  <div class="fadein-2">
+    <div id="availability">
+      <div id="status-color"></div>
+      <p id="status-text"></p>
+    </div>
+  </div>
 
   <div id="dropdown-nav">
     <a draggable="false" href="javascript:void(0)" class="mobile-menu-closebtn" onclick="closeNav()">&times;</a>
@@ -172,6 +179,7 @@
   <script src="scripts/scroll-anchor-visibility.js"></script> <!-- hides back to top arrow -->
   <script src="scripts/collapsible.js"></script> <!-- collapsible list of qualifications -->
   <script src="scripts/animate-when-in-view.js"></script> <!-- Animate when in view -->
+  <script src="scripts/time-availability-checker.js"></script> <!-- Checks time availability -->
   <script>
     let images = document.querySelectorAll(".lazyload");
     new LazyLoad(images, {

@@ -17,6 +17,7 @@
 @import 'components/locked-project.css';
 @import 'components/contact-page.css';
 @import 'components/collapsible.css';
+@import 'components/availability.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
