@@ -1,10 +1,10 @@
-/* ----------------  Fade in from Bottom Right */
-.fadeinmove-br {
+/* ----------------  Fade in from Bottom Right #1 */
+.fadein-br-1 {
   opacity: 0;
-  animation: fadeInMove-br 3s cubic-bezier(0,.7,0,1) 0.7s 1 normal forwards;
+  animation: fadein-br-1 3s cubic-bezier(0,.7,0,1) 0.7s 1 normal forwards;
 }
 
-@keyframes fadeInMove-br {
+@keyframes fadein-br-1 {
   0% {
     opacity: 0;
     transform: translate(50px, 40px) scale(1);
@@ -16,29 +16,29 @@
 }
 
 /* ----------------  Fade in from Bottom Center #1 */
-.fadeinmove-bc {
+.fadein-bc-1 {
   opacity: 0;
-  animation: fadeInMove-bc 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
+  animation: fadein-bc-1 1s cubic-bezier(0,.8,1,1) 0.5s 1 normal forwards;
 }
 
-@keyframes fadeInMove-bc {
+@keyframes fadein-bc-1 {
   0% {
     opacity: 0;
-    transform: translate(0px, 40px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translateY(0);
   }
 }
 
-/* ----------------  Fade in from Bottom Center #2 - Homepage video */
-.fadeinmove-bc-2 {
+/* ----------------  Fade in from Bottom Center #2 */
+.fadein-bc-2 {
   opacity: 0;
-  animation: fadeInMove-bc-2 1.5s cubic-bezier(0,1,1,1) 1.5s 1 normal forwards;
+  animation: fadein-bc-2 1.5s cubic-bezier(0,1,1,1) 1.5s 1 normal forwards;
 }
 
-@keyframes fadeInMove-bc-2 {
+@keyframes fadein-bc-2 {
   0% {
     opacity: 0;
     transform: translateY(150px);
@@ -49,13 +49,14 @@
   }
 }
 
-/* ----------------  Fade in from Bottom Center #3 - Animate when in view */
-.fadeinmove-bc-3 {
+
+/* ----------------  Fade in from Bottom Center #3 - On trigger */
+.fadein-bc-3 {
   opacity: 0; /* Fade in */
-  animation: fadeInMove-bc-3 0.5s cubic-bezier(0,0,0,1) 0.7s normal forwards; /* Trigger the animation */
+  animation: fadein-bc-3 0.5s cubic-bezier(0,0,0,1) 0.5s normal forwards; /* Trigger the animation */
 }
 
-@keyframes fadeInMove-bc-3 {
+@keyframes fadein-bc-3 {
   from {
     opacity: 0;
     transform: translateY(100px);
@@ -66,13 +67,30 @@
   }
 }
 
-/* ----------------  Fade in */
-.fadein {
+/* ----------------  Fade in from Bottom Center #4 */
+.fadein-bc-4 {
   opacity: 0;
-  animation: fadeIn 1s ease 0.1s 1 normal forwards;
+  animation: fadein-bc-4 1.5s cubic-bezier(0,.8,1,1) 1s 1 normal forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadein-bc-4 {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------  Fade in #1 */
+.fadein-1 {
+  opacity: 0;
+  animation: fadein-1 1s ease 0.1s 1 normal forwards;
+}
+
+@keyframes fadein-1 {
   0% {
     opacity: 0;
   }
@@ -81,62 +99,62 @@
   } 
 }
 
-/* ----------------  Scale in */
-.scale-hover,
-.scale-hover .partner,
-.scale-hover .description,
-.scale-hover .lock {
+/* ----------------  Scale in on Hover #1 */
+.scale-hover-1,
+.scale-hover-1 .partner,
+.scale-hover-1 .description,
+.scale-hover-1 .lock {
   transition: 0.7s cubic-bezier(0,0,0,1);
 }
 
-.scale-hover:hover {
+.scale-hover-1:hover {
   scale: 0.95;
 }
 
-.scale-hover:hover .partner {
+.scale-hover-1:hover .partner {
   scale: 1.15;
   transform: translate(15px,10px);
 }
 
-.scale-hover:hover .description {
+.scale-hover-1:hover .description {
   scale: 1.15;
   transform: translate(40px,10px);
 }
 
-.scale-hover:hover .lock {
+.scale-hover-1:hover .lock {
   scale: 1.15;
   transform: translate(-10px,10px);
 }
 
 /* ----------------  Close button in project view */
-.rotate-hover {
+.rotate-hover-1 {
   transition: 0.7s cubic-bezier(0,0,0,1);  
 }
 
-.rotate-hover:hover {
+.rotate-hover-1:hover {
   transform: rotate(90deg);
 }
 
 /* ----------------  Left and right arrows in project view */
-.budge-left-hover,
-.budge-right-hover {
+.budge-left-hover-1,
+.budge-right-hover-1 {
   transition: 0.7s cubic-bezier(0,0,0,1);  
 }
 
-.budge-left-hover:hover {
+.budge-left-hover-1:hover {
   transform: translateX(-10px);
 }
 
-.budge-right-hover:hover {
+.budge-right-hover-1:hover {
   transform: translateX(10px);
 }
 
 /* ----------------  Back to top arrow in project view */
-.portal-effect > img { /* Fade in */
-    animation: portalUp 3s cubic-bezier(.73,.15,.25,.82) 0s infinite normal forwards;
+.portal-move-1 > img {
+    animation: portal-move-1 3s cubic-bezier(.73,.15,.25,.82) 0s infinite normal forwards;
 }
   
-  @keyframes portalUp {
+  @keyframes portal-move-1 {
     0% {
       transform: translate(0px,0px) scale(1);
     }

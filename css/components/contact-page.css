@@ -1,9 +1,18 @@
+.contact-info {
+  margin-top: -30px;
+}
+
 .contact-icons {
-  margin: 60px 0 0 0;
   display: flex;
   gap: 10px;
 }
 
 .contact-icons img {
   width: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-info {
+    margin-top: 50px;
+  }
 }
