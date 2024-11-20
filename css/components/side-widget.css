@@ -47,14 +47,14 @@
 
 /* On hover, scale the child */
 .side-widget:hover .av-contact:nth-child(3) {
-  transition: 0.7s opacity 0.2s;
+  transition: 0.7s opacity 0.1s;
   opacity: 1;
   pointer-events: all;
 }
 
 /* On hover, scale the child */
 .side-widget:hover .av-contact:nth-child(4) {
-  transition: 0.7s opacity 0.4s;
+  transition: 0.7s opacity 0.2s;
   opacity: 1;
   pointer-events: all;
 }
@@ -71,11 +71,11 @@
   border-radius: 20px;
 }
 
-.av-checker #status-text,
-.av-contact #status-text {
-  font-weight: 400;
+.av-checker p,
+.av-contact p {
+  font-weight: var(--fw-regular);
   color: var(--clr-black);
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   user-select: none;
 }
 
