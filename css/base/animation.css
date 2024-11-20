@@ -13,7 +13,7 @@
   } 
 }
 
-/* ----------------  Fade in #2 - Side Widget */
+/* ----------------  Fade in #2 - Side Widget Slow*/
 .fadein-2 {
   opacity: 0;
   animation: fadein-2 1s ease 2s 1 normal forwards;
@@ -28,7 +28,7 @@
   } 
 }
 
-/* ----------------  Fade in #3 */
+/* ----------------  Fade in #3 - Side Widget Fast*/
 .fadein-3 {
   opacity: 0;
   animation: fadein-3 1s ease 0.5s 1 normal forwards;
