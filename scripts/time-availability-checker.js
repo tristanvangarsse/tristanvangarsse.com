@@ -1,6 +1,6 @@
 // Define availability times (in 24-hour format) for Brussels
 const availability = {
-  start: 8, // Available from 9:00
+  start: 16, // Available from 9:00
   end: 20,  // Available until 18:00
 };
 

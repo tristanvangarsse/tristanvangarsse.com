@@ -6,7 +6,11 @@
   --clr-mono-300: hsl(0, 0%, 30%);
   --clr-mono-460: hsl(0, 0%, 46%);
   --clr-mono-500: hsl(0, 0%, 50%);
+  --clr-mono-600: hsl(0, 0%, 60%);
+  --clr-mono-700: hsl(0, 0%, 70%);
+  --clr-mono-800: hsl(0, 0%, 80%);
   --clr-mono-900: hsl(0, 0%, 90%);
+  --clr-mono-920: hsl(0, 0%, 92%);
   --clr-mono-950: hsl(0, 0%, 95%);
 
   --clr-accent: hsl(345, 80%, 60%);
@@ -40,6 +44,7 @@
   --fs-300: 1.8rem;
   --fs-400: 2.3rem;
   --fs-500: 3rem;
+  --fs-600: 5rem;
 
   --max-width-50: 900px;
   --max-width-100: 1000px;

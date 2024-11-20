@@ -13,7 +13,7 @@
   } 
 }
 
-/* ----------------  Fade in #2 */
+/* ----------------  Fade in #2 - Side Widget */
 .fadein-2 {
   opacity: 0;
   animation: fadein-2 1s ease 2s 1 normal forwards;
@@ -35,6 +35,21 @@
 }
 
 @keyframes fadein-3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+
+/* ----------------  Fade in #2 */
+.fadein-4 {
+  opacity: 0;
+  animation: fadein-4 1s ease 2.5s 1 normal forwards;
+}
+
+@keyframes fadein-4 {
   0% {
     opacity: 0;
   }
@@ -98,7 +113,7 @@
 /* ----------------  Fade in from Bottom Center #3 - On trigger */
 .fadein-bc-3 {
   opacity: 0; /* Fade in */
-  animation: fadein-bc-3 0.5s cubic-bezier(0,0,0,1) 0.5s normal forwards; /* Trigger the animation */
+  animation: fadein-bc-3 0.5s cubic-bezier(0,0,0,1) 0.2s normal forwards; /* Trigger the animation */
 }
 
 @keyframes fadein-bc-3 {

@@ -33,17 +33,21 @@
 
 <body onload="init()" id="anchor">
 
-  <div class="fadein-3">
+  <div class="side-widget fadein-3">
     <div id="availability">
-      <div id="status-color"></div>
-      <p id="status-text"></p>
+      <div class="av-checker">
+        <div id="status-color"></div>
+        <p id="status-text"></p>
+      </div>
+      <div class="av-contact">
+        <p>0483 14 68 18</p>
+      </div>
     </div>
   </div>
 
   <div id="dropdown-nav">
     <a draggable="false" href="javascript:void(0)" class="mobile-menu-closebtn" onclick="closeNav()">&times;</a>
     <a draggable="false" class="mobile-menu" id="" href="../work/">Work</a>
-    <a draggable="false" class="mobile-menu journal" id="" href="../page-404/">Journal</a>
     <a draggable="false" class="mobile-menu" id="" href="../contact/">Contact</a>
   </div>
 
@@ -51,13 +55,7 @@
     <a draggable="false" draggable="false" href="../"><img draggable="false" class="wordmark" src="../images/SVG/wordmark-neutral-100.svg" alt=""></a>
     <nav>
       <a draggable="false" draggable="false" id="" href="../work/">Work</a>
-      <a draggable="false" id="" class="journal" href="../page-404/">Journal</a>
       <a draggable="false" id="" href="../contact/">Contact</a>
-      <select id="language" onchange="changeLanguage()">
-        <option value="en">EN</option>
-        <option value="nl">NL</option>
-        <option value="fr">FR</option>
-      </select>
       <img draggable="false" class="burger-menu" src="../images/SVG/icon-hamburger-neutral-100.svg" onclick="openNav()" alt="">
     </nav>
   </header>
@@ -82,20 +80,20 @@
           <div class="description">UX / UI design</div>
         </div>
         <div class="fadein-1 scale-hover-1">
-          <a draggable="false" href="../data-stories/"><img class="lazyload" draggable="false" src="../images/Work/datastories_1_small.jpg" data-src="../images/Work/datastories_1.jpg" alt=""></a>
-          <div class="partner-lock">
-            <div class="partner">Data stories</div>
-            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
-          </div>
-          <div class="description">Data visualization</div>
-        </div>
-        <div class="fadein-1 scale-hover-1">
           <a draggable="false" href="../verbeek-interieur/"><img class="lazyload" draggable="false" src="../images/Work/verbeek_1_small.jpg" data-src="../images/Work/verbeek_1.jpg" alt=""></a>
           <div class="partner-lock">
             <div class="partner">Verbeek Interieur</div>
             <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
           </div>
           <div class="description">Branding / Logo</div>
+        </div>
+        <div class="fadein-1 scale-hover-1">
+          <a draggable="false" href="../data-stories/"><img class="lazyload" draggable="false" src="../images/Work/datastories_1_small.jpg" data-src="../images/Work/datastories_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Data stories</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">Data visualization</div>
         </div>
         <div class="fadein-1 locked scale-hover-1">
           <a draggable="false" href="../lush-lab/"><img class="lazyload" draggable="false" src="../images/Work/lush-lab_1_small.jpg" data-src="../images/Work/lush-lab_1.jpg" alt=""></a>

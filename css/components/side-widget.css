@@ -1,0 +1,60 @@
+.side-widget #availability {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.side-widget > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  padding: 9px 15px;
+  border-radius: 100px;
+  background: var(--clr-mono-920);
+}
+
+#availability #status-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+}
+
+.av-checker #status-text,
+.av-contact #status-text {
+  font-weight: 400;
+  color: var(--clr-black);
+  letter-spacing: 0.2px;
+  user-select: none;
+}
+
+.available #status-color {background-color: var(--clr-green);}
+.unavailable #status-color {background-color: var(--clr-red);}
+
+.unavailable .av-contact p {color: var(--clr-mono-700);}
+.unavailable .av-contact {display: none;}
+
+.av-contact p::selection {
+  color: var(--clr-black);
+  background-color: var(--clr-mono-800);
+}
+
+@media only screen and (max-width: 1300px) {
+
+  .side-widget #availability {
+    flex-direction: row;
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .side-widget {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

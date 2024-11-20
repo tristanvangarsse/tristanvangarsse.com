@@ -1,10 +1,6 @@
 
 #dropdown-nav { display: none }
 
-/* ------------- TEMPORARY DISABLED JOURNAL
-*/
-.journal { display:none; }
-
 @media only screen and (max-width: 600px) {
   #dropdown-nav {
     display: flex;
@@ -43,7 +39,7 @@
   }
 
   .mobile-menu-closebtn {
-    font-size: var(--fs-500);
+    font-size: var(--fs-600);
     font-weight: var(--fw-thin);
   }
 }
