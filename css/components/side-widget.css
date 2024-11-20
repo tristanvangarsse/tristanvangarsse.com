@@ -1,5 +1,6 @@
-.side-widget .available {
+.side-widget {
   cursor: pointer;
+  overflow: hidden;
 }
 
 .side-widget #availability {
@@ -31,9 +32,6 @@
 
 .side-widget .av-contact {
   padding: 5px 15px;
-}
-
-.side-widget .av-contact {
   cursor: text;
   pointer-events: none;
   opacity: 0; /* Initial state */
@@ -42,14 +40,21 @@
 
 /* On hover, scale the child */
 .side-widget:hover .av-contact:nth-child(2) {
-  transition: 0.5s opacity 0s;
+  transition: 0.7s opacity 0s;
   opacity: 1;
   pointer-events: all;
 }
 
 /* On hover, scale the child */
 .side-widget:hover .av-contact:nth-child(3) {
-  transition: 0.5s opacity 0.2s;
+  transition: 0.7s opacity 0.2s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* On hover, scale the child */
+.side-widget:hover .av-contact:nth-child(4) {
+  transition: 0.7s opacity 0.4s;
   opacity: 1;
   pointer-events: all;
 }
@@ -59,8 +64,6 @@
   opacity: 0;
   pointer-events: none;
 }
-
-
 
 #availability #status-color {
   width: 8px;
@@ -78,9 +81,6 @@
 
 .available #status-color {background-color: var(--clr-green);}
 .unavailable #status-color {background-color: var(--clr-red);}
-
-.unavailable .av-contact p {color: var(--clr-mono-700);}
-.unavailable .av-contact {display: none;}
 
 .av-contact p::selection {
   color: var(--clr-black);
@@ -100,7 +100,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 
   .side-widget {
     visibility: hidden;
