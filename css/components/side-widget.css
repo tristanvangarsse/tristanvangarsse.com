@@ -84,6 +84,9 @@
   font-weight: var(--fw-regular);
   color: var(--clr-black);
   letter-spacing: 0.1px;
+}
+
+.av-checker p {
   user-select: none;
 }
 
