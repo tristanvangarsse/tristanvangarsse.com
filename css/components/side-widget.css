@@ -43,7 +43,7 @@
   cursor: text;
   pointer-events: none;
   opacity: 0; /* Initial state */
-  transition: 0.5s opacity 3s;
+  transition: 0.5s opacity 4s;
 }
 
 /* On hover, scale the child */
