@@ -6,8 +6,8 @@
 }
 
 .landing-page-video {
-  max-width: var(--max-width-200);
-  width: 84vw;
+  max-width: var(--max-width-100);
+  width: 80vw;
   height: auto;
   border-radius: var(--border-rad-300);
   background: var(--clr-placeholder);
