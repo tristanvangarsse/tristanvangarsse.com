@@ -1,7 +1,7 @@
 // Define availability times (in 24-hour format) for Brussels
 const availability = {
-  start: 8, // Available from 9:00
-  end: 19,  // Available until 18:00
+  start: 0, // Available from 9:00
+  end: 24,  // Available until 18:00
 };
 
 function updateStatus() {

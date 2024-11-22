@@ -1,3 +1,11 @@
+
+/* DISABLED: week schedule */
+.side-widget .av-contact:nth-child(2) {
+  display: none;
+}
+/*------------------------*/
+
+
 .side-widget {
   cursor: pointer;
   overflow: hidden;
