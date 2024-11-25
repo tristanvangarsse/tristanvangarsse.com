@@ -110,7 +110,7 @@
 }
 
 
-/* ----------------  Fade in from Bottom Center #3 - On trigger */
+/* ----------------  Fade in from Bottom Center #3 */
 .fadein-bc-3 {
   opacity: 0; /* Fade in */
   animation: fadein-bc-3 0.5s cubic-bezier(0,0,0,1) 0.2s normal forwards; /* Trigger the animation */
@@ -143,6 +143,58 @@
     transform: translateY(0);
   }
 }
+
+/* ----------------  Fade in from Trigger #1 */
+.fadein-tr-1 {
+  opacity: 0; /* Fade in */
+  animation: fadein-tr-1 0.5s cubic-bezier(0,0,0,1) 0.2s normal forwards; /* Trigger the animation */
+}
+
+@keyframes fadein-tr-1 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------  Fade in from Trigger #2 - for Work page LEFT*/
+.fadein-tr-2 {
+  opacity: 0; /* Fade in */
+  animation: fadein-tr-2 0.5s cubic-bezier(0,0,0,1) 0.3s normal forwards; /* Trigger the animation */
+}
+
+@keyframes fadein-tr-2 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------  Fade in from Trigger #3 for Work page RIGHT*/
+.fadein-tr-3 {
+  opacity: 0; /* Fade in */
+  animation: fadein-tr-3 0.5s cubic-bezier(0,0,0,1) 0.5s normal forwards; /* Trigger the animation */
+}
+
+@keyframes fadein-tr-3 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* ----------------  Scale in on Hover #1 */
 .scale-hover-1,
