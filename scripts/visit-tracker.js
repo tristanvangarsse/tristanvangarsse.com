@@ -1,11 +1,13 @@
-// Send a request to the backend to record a visit
-fetch("https://tvg46934977.ct.ws/track-visit.php", {
-    method: "POST"
-})
-  .then(response => response.json())
-  .then(data => {
-    console.log("Visit count:", data.count);
-  })
-  .catch(err => {
-    console.error("Error tracking visit:", err);
-  });
+var _paq = window._paq = window._paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(["disableCampaignParameters"]);
+_paq.push(["disableCookies"]);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="https://tristanvangarsse.matomo.cloud/";
+  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  _paq.push(['setSiteId', '1']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.async=true; g.src='https://cdn.matomo.cloud/tristanvangarsse.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+})();
