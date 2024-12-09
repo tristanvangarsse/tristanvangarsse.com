@@ -27,7 +27,7 @@
   font-size: var(--fs-300);
 }
 
-.news a {
+.button-link {
   width: fit-content;
   display: flex;
   margin: 20px 0 0 0;
@@ -36,11 +36,11 @@
   border: 2px solid black;
 }
 
-.news a div { /* link text */
+.button-link div { /* link text */
   font-size: var(--fs-100);
 }
 
-.news a img { /* pointing arrow */
+.button-link img { /* pointing arrow */
   margin-left: 10px;
   width: 10px;
 }
@@ -61,7 +61,7 @@
     margin: 20px 0 10px 0;
   }
 
-  .news .container a {
+  .button-link {
     margin: 40px 0 0 0;
   }
 }
