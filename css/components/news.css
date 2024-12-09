@@ -20,6 +20,7 @@
 }
 
 .news .container .title {
+  color: var(--clr-accent-dark);
   font-size: var(--fs-400);
 }
 
@@ -59,9 +60,14 @@
 
   .news .container .title {
     margin: 20px 0 10px 0;
+    font-size: var(--fs-250);
+  }
+
+  .news .container .description {
+    font-size: var(--fs-250);
   }
 
   .button-link {
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
   }
 }
