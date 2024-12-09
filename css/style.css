@@ -18,6 +18,7 @@
 @import 'components/contact-page.css';
 @import 'components/collapsible.css';
 @import 'components/side-widget.css';
+@import 'components/news.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
@@ -27,9 +28,9 @@
 /*================== RED OUTLINE ====================*/
 
 
-/* @media only screen and (min-width: 100px) and (max-width: 2000px) {
+  /*
   * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
-} */
+  */
 
 
 
