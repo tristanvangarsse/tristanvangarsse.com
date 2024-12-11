@@ -35,7 +35,7 @@
 
   .landing-page-video {
     border-radius: var(--border-rad-200);
-    width: 80vw;
+    width: 85vw;
     object-fit: cover;
   }
 
