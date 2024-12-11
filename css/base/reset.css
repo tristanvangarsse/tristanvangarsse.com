@@ -44,6 +44,11 @@ picture,
 svg {
   max-width: 100%;
   display: block;
+}
+
+img :not(.burger-menu),
+picture,
+svg {
   pointer-events: none;
 }
 

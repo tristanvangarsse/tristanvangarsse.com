@@ -1,9 +1,11 @@
-function openNav() {
-  document.getElementById("dropdown-nav").style.height = "100%";
-  document.body.style.overflow = 'hidden';
-}
+document.querySelector('.burger-menu').addEventListener('click', () => {
+  const dropdownNav = document.getElementById('dropdown-nav');
+  dropdownNav.style.height = '100%';
+  document.body.classList.add('no-scroll'); // Add class for overflow control
+});
 
-function closeNav() {
-  document.getElementById("dropdown-nav").style.height = "0";
-  document.body.style.overflow = '';
-}
+document.querySelector('.mobile-menu-closebtn').addEventListener('click', () => {
+  const dropdownNav = document.getElementById('dropdown-nav');
+  dropdownNav.style.height = '0';
+  document.body.classList.remove('no-scroll');
+});
