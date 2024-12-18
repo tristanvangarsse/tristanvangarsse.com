@@ -12,6 +12,7 @@
   --clr-mono-900: hsl(0, 0%, 90%);
   --clr-mono-920: hsl(0, 0%, 92%);
   --clr-mono-950: hsl(0, 0%, 95%);
+  --clr-mono-970: hsl(0, 0%, 97%);
 
   --clr-accent: hsl(345, 80%, 60%);
   --clr-accent-dark: hsl(345, 80%, 50%);
@@ -32,6 +33,7 @@
   --fw-thin: 100;
   --fw-light: 320;
   --fw-regular: 360;
+  --fw-semi-regular: 450;
   --fw-medium: 500;
   --fw-bold: 700;
 

@@ -1,11 +1,32 @@
-document.querySelector('.burger-menu').addEventListener('click', () => {
-  const dropdownNav = document.getElementById('dropdown-nav');
-  dropdownNav.style.height = '100%';
-  document.body.classList.add('no-scroll'); // Add class for overflow control
-});
+const menuTrigger = document.getElementById('menu-trigger');
+const bottomOpenAnim = document.getElementById('bread-bottom-open');
+const bottomCloseAnim = document.getElementById('bread-bottom-close');
+const topOpenAnim = document.getElementById('bread-top-open');
+const topCloseAnim = document.getElementById('bread-top-close');
 
-document.querySelector('.mobile-menu-closebtn').addEventListener('click', () => {
-  const dropdownNav = document.getElementById('dropdown-nav');
-  dropdownNav.style.height = '0';
-  document.body.classList.remove('no-scroll');
+// Select the div to animate
+const animatedDropdown = document.getElementById('header');
+const noScrollBody = document.getElementById('body-anchor');
+
+let isMenuOpen = false;
+
+menuTrigger.addEventListener('click', () => {
+  if (isMenuOpen) {
+    // Play "close" animations
+    bottomCloseAnim.beginElement();
+    topCloseAnim.beginElement();
+
+    // Remove 'open' class
+    animatedDropdown.classList.remove('open');
+
+  } else {
+    // Play "open" animations
+    bottomOpenAnim.beginElement();
+    topOpenAnim.beginElement();
+
+    // Add 'open' class
+    animatedDropdown.classList.add('open');
+
+  }
+  isMenuOpen = !isMenuOpen;
 });
