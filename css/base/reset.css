@@ -89,4 +89,5 @@ button {
   text-decoration: none;
   border: none;
   background: none;
+  color: inherit;
 }
