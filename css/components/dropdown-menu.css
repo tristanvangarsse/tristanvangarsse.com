@@ -1,7 +1,7 @@
 .header .dropdown {
   --top-distance: 70px;
   position: fixed;
-  z-index: 11;
+  z-index: 80;
   left: 0;
   top: var(--top-distance);
   width: 100%;
