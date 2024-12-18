@@ -18,6 +18,7 @@ menuTrigger.addEventListener('click', () => {
 
     // Remove 'open' class
     animatedDropdown.classList.remove('open');
+    noScrollBody.classList.remove('no-scroll');
 
   } else {
     // Play "open" animations
@@ -26,6 +27,7 @@ menuTrigger.addEventListener('click', () => {
 
     // Add 'open' class
     animatedDropdown.classList.add('open');
+    noScrollBody.classList.add('no-scroll');    
 
   }
   isMenuOpen = !isMenuOpen;

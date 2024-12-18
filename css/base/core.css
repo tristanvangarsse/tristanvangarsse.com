@@ -2,6 +2,10 @@ html {
   font-size: 19px; /* dictates rem size */
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
