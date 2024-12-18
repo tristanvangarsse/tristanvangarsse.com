@@ -6,29 +6,42 @@ const topCloseAnim = document.getElementById('bread-top-close');
 
 // Select the div to animate
 const animatedDropdown = document.getElementById('header');
-const noScrollBody = document.getElementById('body-anchor');
+const noScroll = document.getElementById('body-anchor'); // Should be the body or html element
 
 let isMenuOpen = false;
 
+// Function to disable scroll
+function disableScroll() {
+  document.body.style.overflow = 'hidden'; // Prevent scrollbars
+  document.body.style.position = 'fixed'; // Lock position
+  document.body.style.width = '100%'; // Prevent layout shifts
+}
+
+// Function to enable scroll
+function enableScroll() {
+  document.body.style.overflow = ''; // Reset styles
+  document.body.style.position = '';
+  document.body.style.width = '';
+}
+
+// Toggle the menu and scroll lock
 menuTrigger.addEventListener('click', () => {
   if (isMenuOpen) {
     // Play "close" animations
     bottomCloseAnim.beginElement();
     topCloseAnim.beginElement();
 
-    // Remove 'open' class
+    // Remove 'open' and reset scroll
     animatedDropdown.classList.remove('open');
-    noScrollBody.classList.remove('no-scroll');
-
+    enableScroll();
   } else {
     // Play "open" animations
     bottomOpenAnim.beginElement();
     topOpenAnim.beginElement();
 
-    // Add 'open' class
+    // Add 'open' and disable scroll
     animatedDropdown.classList.add('open');
-    noScrollBody.classList.add('no-scroll');    
-
+    disableScroll();
   }
-  isMenuOpen = !isMenuOpen;
+  isMenuOpen = !isMenuOpen; // Toggle the state
 });

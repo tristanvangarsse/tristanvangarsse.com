@@ -24,6 +24,7 @@ ol[role='list'] {
 
 html,
 body {
+  overflow: auto;
   min-height: 100%;
 }
 

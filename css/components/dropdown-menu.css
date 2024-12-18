@@ -1,62 +1,70 @@
-.header .dropdown {
-  --top-distance: 70px;
-  position: fixed;
-  z-index: 90;
-  left: 0;
-  top: var(--top-distance);
-  width: 100%;
-  height: 0;
-  transition: height 0.5s ease;
-  /*background-color: var(--clr-white);*/
-  background-color: blue;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+@media only screen and (max-width: 600px) {
 
-.header.open .dropdown  {
-  height: calc(100% - var(--top-distance));
-}
+  .no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
 
-.mobile-menu {
-  margin-left: 40px;
-  color: var(--clr-black);
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  .header .dropdown {
+    --top-distance: 70px;
+    position: fixed;
+    z-index: 90;
+    left: 0;
+    top: var(--top-distance);
+    width: 100%;
+    height: 0;
+    transition: height 0.5s ease;
+    background-color: var(--clr-white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 
-a.mobile-menu {
-  font-size: var(--fs-300);
-  font-weight: var(--fw-semi-regular);
-}
+  .header.open .dropdown  {
+    height: calc(100% - var(--top-distance));
+  }
 
-p.mobile-menu {
-  font-size: var(--fs-150);
-  font-weight: var(--fw-regular);
-}
+  .mobile-menu {
+    margin-left: 40px;
+    color: var(--clr-black);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 
-/* Apply staggered delay using nth-child */
-.mobile-menu:nth-child(1) {
-  margin-top: 40px;
-  transition-delay: 0.1s;
-}
+  a.mobile-menu {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-semi-regular);
+  }
 
-.mobile-menu:nth-child(2) {
-  transition-delay: 0.2s;
-}
+  p.mobile-menu {
+    font-size: var(--fs-150);
+    font-weight: var(--fw-regular);
+  }
 
-.mobile-menu:nth-child(3) {
-  margin-top: 100px;
-  transition-delay: 0.3s;
-}
+  /* Apply staggered delay using nth-child */
+  .mobile-menu:nth-child(1) {
+    margin-top: 40px;
+    transition-delay: 0.1s;
+  }
 
-.mobile-menu:nth-child(4) {
-  transition-delay: 0.4s;
-}
+  .mobile-menu:nth-child(2) {
+    transition-delay: 0.2s;
+  }
 
-.header.open .mobile-menu {
-  opacity: 1;
-  transform: translateY(0);
+  .mobile-menu:nth-child(3) {
+    margin-top: 100px;
+    transition-delay: 0.3s;
+  }
+
+  .mobile-menu:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .header.open .mobile-menu {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
