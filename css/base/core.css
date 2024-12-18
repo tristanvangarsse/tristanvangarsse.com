@@ -2,8 +2,9 @@ html {
   font-size: 19px; /* dictates rem size */
 }
 
-body.no-scroll {
+.no-scroll {
   overflow: hidden;
+  height: 100%;
 }
 
 main {

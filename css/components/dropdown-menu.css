@@ -1,12 +1,14 @@
 .header .dropdown {
+  --top-distance: 70px;
   position: fixed;
   z-index: 11;
   left: 0;
-  top: 70px;
+  top: var(--top-distance);
   width: 100%;
   height: 0;
   transition: height 0.5s ease;
-  background-color: var(--clr-white);
+  /*background-color: var(--clr-white);*/
+  background-color: blue;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
 }
 
 .header.open .dropdown  {
-  height: 100%;
+  height: calc(100% - var(--top-distance));
 }
 
 .mobile-menu {
