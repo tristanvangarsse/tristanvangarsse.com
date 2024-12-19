@@ -24,6 +24,7 @@ ol[role='list'] {
 
 html,
 body {
+  overflow: auto;
   min-height: 100%;
 }
 
@@ -83,4 +84,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: inherit;
 }

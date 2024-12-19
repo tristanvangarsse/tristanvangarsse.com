@@ -2,14 +2,23 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 90px 50px 0 50px; /* margin doesn't work because width: 100%*/
+  padding: 90px 50px 0 50px;
   width: 100%;
   max-width: var(--max-width-100);
 }
 
+.wordmark-link {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.header.open .wordmark-link {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .wordmark {
   width: 182px;
-  padding-bottom:2px;
 }
 
 nav {
@@ -20,16 +29,21 @@ nav {
   font-size: var(--fs-200);
 }
 
-nav > * {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
 nav > *:not(:first-child):not(:last-child) {   
   margin: 0 0 0 45px;
 }
 
+nav > a {
+  transition: color 0.1s ease;
+}
+
+nav > a:hover,
+nav > a.current-page {
+  color: var(--clr-accent-dark);
+}
+
+
+/* --------------------------------- old navigation menu animation with underline
 nav > a:not(.focus-nav):after {
   display:block;
   content: '';
@@ -49,26 +63,32 @@ nav > a:not(.focus-nav):after {
 .focus-nav {
   border-bottom: 1px solid var(--clr-black)
 }
+*/
 
-.burger-menu {
+
+.hamburger-menu {
   display: none
 }
 
 @media only screen and (max-width: 600px) {
 
   header {
-    padding: 30px 30px 0 30px;
+    padding: 10px 10px 0 10px;
   }
 
-  nav > *:not(:nth-last-child(-n+1)) {
+  .wordmark-link {
+    padding: 20px;
+  }
+
+  header > nav > a {
     display: none
   }
 
-  .burger-menu {
+  .hamburger-menu {
     display: block;
-    cursor: pointer;
-    height: 14px;
     margin: 7px 0 0 0;
+    padding: 20px;
+    cursor: pointer;
   }
 
   nav { padding-bottom: 2px } /* to align with wordmark */

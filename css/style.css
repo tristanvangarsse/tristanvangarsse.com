@@ -17,8 +17,9 @@
 @import 'components/locked-project.css';
 @import 'components/contact-page.css';
 @import 'components/collapsible.css';
-@import 'components/side-widget.css';
-@import 'components/news.css';
+@import 'components/availability-widget.css';
+@import 'components/news-and-updates.css';
+@import 'components/back-to-top.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
@@ -27,12 +28,8 @@
 
 /*================== RED OUTLINE ====================*/
 
-
-  /*
-  * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
-  */
-
-
-
+/*
+* { outline: 1px dotted rgba(255,0,0,0.4) !important; }
+*/
 
 /*====================================================*/

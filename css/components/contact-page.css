@@ -2,13 +2,18 @@
   margin-top: -30px;
 }
 
+.contact-info .highlight {
+  color: var(--clr-accent-dark);
+}
+
 .contact-icons {
+  margin-top: 10px;
   display: flex;
   gap: 10px;
 }
 
 .contact-icons img {
-  width: 40px;
+  width: 30px;
 }
 
 @media only screen and (max-width: 600px) {
