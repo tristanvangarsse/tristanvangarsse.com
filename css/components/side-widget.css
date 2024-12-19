@@ -19,6 +19,7 @@
   align-items: flex-end;
   flex-direction: column;
   gap: 6px;
+  pointer-events: none;
 }
 
 .side-widget .av-checker,
@@ -36,6 +37,7 @@
 .side-widget .av-checker {
   padding: 9px 15px;
   margin-bottom: 4px;
+  pointer-events: all;
 }
 
 .side-widget .av-contact {
@@ -44,6 +46,10 @@
   pointer-events: none;
   opacity: 0; /* Initial state */
   transition: 0.5s opacity 4s; /* When hover is removed, for 4 seconds it stays on */
+}
+
+.side-widget:hover #availability {
+  pointer-events: all; /* Makes sure everything is clickable and affected when hovered, when av-checker is hovered */
 }
 
 /* On hover, show the child */
