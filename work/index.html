@@ -33,7 +33,8 @@
 
 <body id="body-anchor">
 
-  <div class="side-widget fadein-3">
+  <!-- side widget -->
+  <div class="availability-widget fadein-3">
     <div id="availability">
       <div class="av-checker">
         <div id="status-color"></div>
@@ -56,7 +57,7 @@
       <img draggable="false" class="wordmark" src="../images/SVG/wordmark-neutral-100.svg" alt="Tristan Van Garsse">
     </a>
     <nav>
-      <div class="dropdown" id="animated-dropdown">
+      <div class="dropdown-menu" id="animated-dropdown">
         <a draggable="false" class="mobile-menu" href="../work/">Work</a>
         <a draggable="false" class="mobile-menu" href="../contact/">Contact</a>
         <p class="mobile-menu">tristanvangarsse@proton.me</p>
@@ -124,7 +125,7 @@
   </header>
 
   <!-- back to top arrow -->
-  <a draggable="false" href="#body-anchor" class="project-arrowupbtn portal-move-1"><img src="../images/SVG/arrow-up-accent.svg" alt=""></a>
+  <a draggable="false" href="#body-anchor" class="back-to-top portal-move-1"><img src="../images/SVG/arrow-up-accent.svg" alt=""></a>
 
   <!-- main content -->
   <main>
@@ -230,12 +231,11 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
-  <script src="../scripts/nav-menu.js"></script> <!-- hamburger menu -->
-  <script src="../scripts/smooth-scroll-anchor.js"></script> <!-- scrolls smoothly to anchor -->
-  <script src="../scripts/scroll-anchor-visibility.js"></script> <!-- hides back to top arrow -->
+  <script src="../scripts/back-to-top-smooth-scroll.js"></script> <!-- scrolls smoothly to anchor -->
+  <script src="../scripts/back-to-top-visibility.js"></script> <!-- hides back to top arrow -->
   <script src="../scripts/animate-when-in-view.js"></script> <!-- Animate when in view -->
-  <script src="../scripts/time-availability-checker.js"></script> <!-- Checks time availability -->
-  <script src="../scripts/nav-menu.js"></script> <!-- Dropdown menu -->
+  <script src="../scripts/availability-checker.js"></script> <!-- Checks availability -->
+  <script src="../scripts/dropdown-menu.js"></script> <!-- Dropdown menu -->
   <script>
       let images = document.querySelectorAll(".lazyload");
       new LazyLoad(images, {

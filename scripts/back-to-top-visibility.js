@@ -1,6 +1,6 @@
 // script.js
 window.addEventListener('scroll', function() {
-  const targetDivs = document.querySelectorAll('.project-arrowupbtn');
+  const targetDivs = document.querySelectorAll('.back-to-top');
   const scrollDistance = window.scrollY; // The distance the page has scrolled vertically
 
   targetDivs.forEach(function(targetDiv) {
