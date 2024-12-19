@@ -30,18 +30,6 @@
   right: 11vw;
 }
 
-.project-arrowupbtn {
-  position: fixed;
-  z-index: 10;
-  width: 50px;
-  bottom: 10%;
-  right: 11vw;
-  padding: 0 10px;
-  clip-path: inset(100%, 100%, 100%, 100%);
-  overflow: hidden;
-  display: none;
-}
-
 .project .title,
 .project .year,
 .project .subtitle,
@@ -134,5 +122,5 @@
     font-size: var(--fs-100);
     line-height: 1.5rem;
   }
-
+  
 }

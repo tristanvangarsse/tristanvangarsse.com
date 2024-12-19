@@ -1,0 +1,20 @@
+.project-arrowupbtn {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  bottom: 10%;
+  right: 11vw;
+  padding: 0 10px;
+  clip-path: inset(100%, 100%, 100%, 100%);
+  overflow: hidden;
+  display: none;
+}
+
+@media (pointer: coarse) { /* checks for touchscreen devices */
+
+    .project-arrowupbtn {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+}
