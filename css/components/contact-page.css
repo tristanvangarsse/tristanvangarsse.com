@@ -2,6 +2,10 @@
   margin-top: -30px;
 }
 
+.contact-info .highlight {
+  color: var(--clr-accent-dark);
+}
+
 .contact-icons {
   display: flex;
   gap: 10px;
