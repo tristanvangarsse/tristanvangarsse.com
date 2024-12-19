@@ -102,26 +102,29 @@
   }
 
   .project-closebtn {
+    position: absolute;
     top: 2rem;
   }
 
-  .project-arrowleftbtn {
-    left: 1vw;
-  }
-  
-  .project-arrowrightbtn {
-    right: 1vw;
+  .project-arrowleftbtn,
+  .project-arrowrightbtn
+   {
+    display: none;
   }
 
   .project .image,
   .project .video {
     padding: 0;
-    margin: 40px 0;
+    margin: 40px 0 20px 0;
   }
 
   .project .title {
     font-size: var(--fs-220);
     font-weight: var(--fw-medium);
+  }
+
+  .project .subtitle {
+    margin: 40px 0 30px 0;
   }
 
   .project .paragraph {
