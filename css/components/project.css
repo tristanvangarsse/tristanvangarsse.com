@@ -67,7 +67,6 @@
   font-size: var(--fs-220);
   font-weight: var(--fw-regular);
   line-height: 2.3rem;
-  /*color: var(--clr-mono-200);*/
 }
 
 .project .image,
@@ -75,6 +74,13 @@
   margin: 4vw 0;
   border-radius: var(--border-rad-200);
   background: var(--clr-placeholder);
+}
+
+.project .video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust to your video's aspect ratio */
+  object-fit: cover;   /* Ensures video content fits the element */
 }
 
 .project .outline {
@@ -122,5 +128,5 @@
     font-size: var(--fs-100);
     line-height: 1.5rem;
   }
-  
+
 }
