@@ -38,10 +38,7 @@
 }
 
 .project .title {
-  margin-top: clamp(0px, 7vw, 100px);
-  margin-right: 0;
-  margin-bottom: clamp(0px, 0.6vw, 10px);
-  margin-left: 0;
+  margin: clamp(0px, 7vw, 100px) 0 clamp(0px, 0.6vw, 10px) 0;
   text-transform: uppercase;
   text-align: center;
   font-size: var(--fs-500);
@@ -57,7 +54,7 @@
 }
 
 .project .subtitle {
-  margin: 4vw 0 1vw 0;
+  margin: clamp(0px, 4vw, 60px) 0 clamp(0px, 1vw, 10px) 0;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .2rem;
@@ -66,7 +63,7 @@
 }
 
 .project .paragraph {
-  margin: 1.8vw 0;
+  margin: clamp(0px, 1.8vw, 10px) 0;
   font-size: var(--fs-220);
   font-weight: var(--fw-regular);
   line-height: 2.3rem;
@@ -74,7 +71,7 @@
 
 .project .image,
 .project .video {
-  margin: 4vw 0;
+  margin: clamp(0px, 4vw, 60px) 0;
   border-radius: var(--border-rad-200);
   background: var(--clr-placeholder);
 }
