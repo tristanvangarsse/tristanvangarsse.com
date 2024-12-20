@@ -38,7 +38,10 @@
 }
 
 .project .title {
-  margin: 7vw 0 0.6vw 0;
+  margin-top: clamp(0px, 7vw, 100px);
+  margin-right: 0;
+  margin-bottom: clamp(0px, 0.6vw, 10px);
+  margin-left: 0;
   text-transform: uppercase;
   text-align: center;
   font-size: var(--fs-500);
