@@ -14,9 +14,10 @@
   --clr-mono-950: hsl(0, 0%, 95%);
   --clr-mono-970: hsl(0, 0%, 97%);
 
-  --clr-accent: hsl(345, 80%, 60%);
-  --clr-accent-dark: hsl(345, 80%, 50%);
-  --clr-accent-light: hsl(345, 80%, 70%);
+  --clr-accent: hsl(355, 68%, 60%);
+  /* HEX: #de545f */
+  --clr-accent-old: hsl(345, 80%, 60%);
+  --clr-accent-light: hsl(355, 80%, 80%);
 
   --clr-green: hsl(112, 88%, 47%);
   --clr-red: hsl(0, 83%, 55%);
@@ -56,4 +57,5 @@
   --border-rad-100: 10px;
   --border-rad-200: 20px;
   --border-rad-300: 30px;
+  --border-rad-1000: 100px;
 }

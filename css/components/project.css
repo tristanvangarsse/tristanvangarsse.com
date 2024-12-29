@@ -42,7 +42,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: var(--fs-500);
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
 }
 
 .project .year {
@@ -59,7 +59,7 @@
   text-align: center;
   letter-spacing: .2rem;
   font-size: var(--fs-150);
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
 }
 
 .project .paragraph {

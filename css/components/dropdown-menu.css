@@ -59,12 +59,16 @@
   }
 
   .mobile-menu:nth-child(3) {
-    margin-top: 100px;
     transition-delay: 0.3s;
   }
 
   .mobile-menu:nth-child(4) {
+    margin-top: 100px;
     transition-delay: 0.4s;
+  }
+
+  .mobile-menu:nth-child(5) {
+    transition-delay: 0.5s;
   }
 
   .header.open .mobile-menu {

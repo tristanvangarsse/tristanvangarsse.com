@@ -39,7 +39,7 @@ nav > a {
 
 nav > a:hover,
 nav > a.current-page {
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
 }
 
 

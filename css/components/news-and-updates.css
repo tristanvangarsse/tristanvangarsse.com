@@ -20,7 +20,7 @@
 }
 
 .news-and-updates .container .title {
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
   font-size: var(--fs-400);
 }
 
