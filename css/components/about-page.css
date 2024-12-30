@@ -98,7 +98,8 @@
   }
   
   .about-profile .profile-picture {
-    padding: 0 15vw;
+    padding: 0;
+    max-width: calc(100% - 40px);
   }
 
 

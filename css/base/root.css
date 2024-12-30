@@ -16,10 +16,10 @@
 
   --clr-accent: hsl(355, 68%, 60%);
   /* HEX: #de545f */
-  --clr-accent-old: hsl(345, 80%, 60%);
   --clr-accent-light: hsl(355, 80%, 80%);
+  --clr-accent-old: hsl(345, 80%, 60%);
 
-  --clr-green: hsl(112, 88%, 47%);
+  --clr-green: hsl(112, 100%, 41%);
   --clr-red: hsl(0, 83%, 55%);
 
   --clr-transparent: hsla(0, 0, 0, 0);
