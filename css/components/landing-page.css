@@ -14,8 +14,8 @@
   pointer-events: none;
 }
 
-.landing-page b {
-  color: var(--clr-mono-460);
+.landing-page em {
+  color: var(--clr-accent);
   font-weight: var(--fw-light);
 }
 
