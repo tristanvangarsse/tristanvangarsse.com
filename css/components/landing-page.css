@@ -10,7 +10,6 @@
   width: 80vw;
   height: auto;
   border-radius: var(--border-rad-300);
-  background: var(--clr-placeholder);
   pointer-events: none;
 }
 
