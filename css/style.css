@@ -21,6 +21,7 @@
 @import 'components/news-and-updates.css';
 @import 'components/back-to-top.css';
 @import 'components/about-page.css';
+@import 'components/artifacts.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
@@ -29,8 +30,8 @@
 
 /*================== RED OUTLINE ====================*/
 
-/* 
-* { outline: 1px dotted rgba(255,0,0,0.4) !important; } */
+
+/* * { outline: 1px dotted rgba(255,0,0,0.4) !important; } */
 
 
 /*====================================================*/

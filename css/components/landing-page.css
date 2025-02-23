@@ -22,6 +22,7 @@
   font-weight: var(--fw-medium);
   text-transform: uppercase;
   letter-spacing: .2rem;
+  text-align: center;
   opacity: 0;
 }
 
