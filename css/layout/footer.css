@@ -41,6 +41,23 @@ footer .subtitle {
 }
 
 
+/*   DARK MODE FOOTER
+*/
+
+footer.dark {
+  background-color: var(--clr-mono-80);
+}
+
+footer.dark > * {
+  color: var(--clr-mono-900);
+  font-weight: var(--fw-light);  
+}
+
+footer.dark .button {
+  border: 2px solid var(--clr-mono-900);
+}
+
+
 
 @media only screen and (max-width: 600px) {
 
