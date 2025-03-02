@@ -15,6 +15,10 @@
   height: 100px;
 }
 
+.spacer-150 {
+  height: 100px;
+}
+
 .spacer-200 {
   height: 200px;
 }
@@ -24,6 +28,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+  .spacer-150 {
+    height: 75px;
+  }
 
   .spacer-200 {
     height: 100px;
