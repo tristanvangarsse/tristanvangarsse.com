@@ -6,11 +6,15 @@
 }
 
 .landing-page-video {
-  max-width: var(--max-width-100);
-  width: 80vw;
+ /*max-width: var(--max-width-100);*/
+  width: 65vw;
   height: auto;
   border-radius: var(--border-rad-300);
   pointer-events: none;
+}
+
+#power-saver { /* had to take this ID because video can only have one ID */
+  transition: width 0.2s ease-out; /* animate size */
 }
 
 .landing-page em {
