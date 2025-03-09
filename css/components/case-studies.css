@@ -79,7 +79,7 @@
   .case-studies .container {
     grid-template-columns: repeat(1, 1fr);
     gap: 7vw 0;
-    margin: 70px 40px 100px 40px;
+    margin: 70px 40px 20px 40px;
   }
 
   .case-studies .title {

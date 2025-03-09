@@ -1,8 +1,8 @@
 window.addEventListener("scroll", function () {
-  if (window.innerWidth > 1000) { // Only run if screen width is greater than 1000px
+  if (window.innerWidth > 1500) { // Only run if screen width is greater than 1400px
     let scrollY = window.scrollY;
-    let minWidth = 65;
-    let maxWidth = 80;
+    let minWidth = 50;
+    let maxWidth = 65;
     let growthRate = 0.03;
 
     let newWidth = Math.min(minWidth + scrollY * growthRate, maxWidth);
