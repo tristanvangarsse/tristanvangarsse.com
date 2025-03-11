@@ -26,16 +26,32 @@
     transform: translateY(50%);
 }
 
-.artifacts > div > img {
+.artifacts > div > img,
+.artifacts > div > video {
   border-radius: 15px;
   margin: 0 0 20px 0;
 }
+
+.artifacts > div > video {
+  width: 500px;
+  height: auto;
+  pointer-events: none;
+}
+
 
 .artifacts > div > .description {
   font-size: var(--fs-200);
   font-weight: var(--fw-light);
   line-height: 1.5em;
   color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 1500px) {
+
+  .artifacts > div > video {
+    width: calc(43vw - 30px);
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,8 +70,13 @@
       transform: translateY(0%);
   }
 
-  .artifacts > div > img {
+  .artifacts > div > img,
+  .artifacts > div > video {
     margin: 0 0 15px 0;
+  }
+
+  .artifacts > div > video {
+    width: 100%;
   }
 
   .artifacts > div > .description {
