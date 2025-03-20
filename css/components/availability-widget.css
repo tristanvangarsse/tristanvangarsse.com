@@ -14,7 +14,7 @@
 .availability-widget #availability {
   position: absolute;
   top: 30px;
-  right: 32px;
+  right: 112px;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -36,7 +36,7 @@
 
 .availability-widget .av-checker {
   padding: 9px 15px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   pointer-events: all;
 }
 
@@ -108,12 +108,12 @@
 
   .availability-widget #availability {
     flex-direction: row-reverse;
-    right: 40px;
+    right: 121px;
   }
 
   .availability-widget .av-contact {
     padding: 9px 15px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
 }
 
