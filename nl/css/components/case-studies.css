@@ -1,0 +1,103 @@
+.case-studies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-studies .title {
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .2rem;
+  opacity: 0;
+}
+
+.case-studies .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6vw 7vw;
+  gap: clamp(0px, 6vw, 60px) clamp(0px, 7vw, 70px);
+  margin: 100px 100px 50px 100px;
+}
+
+.case-studies .container > div {
+  max-width: 600px;
+  opacity: 0;
+}
+
+.case-studies a img {
+  border-radius: var(--border-rad-200);
+  position: relative;
+  object-fit: cover;
+  background: var(--clr-placeholder);
+}
+
+.case-studies a img,
+.case-studies a {
+  object-fit: fill;
+  width: 100%;
+}
+
+.case-studies .partner-lock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.case-studies .partner {
+  margin: 5% 0 2% 0;
+  font-size: var(--fs-400);
+}
+
+.case-studies .lock {
+  width: 40px;
+  visibility: hidden;
+  padding: 24px 5px 0 0;
+}
+
+.case-studies .description {
+  color: var(--clr-mono-300);
+  font-size: var(--fs-100);
+  text-transform: uppercase;
+}
+
+/* Grayed out content -- not necessary
+.case-studies .locked * {
+  filter: opacity(0.6) contrast(0.9) grayscale(1);
+} */
+
+.case-studies .locked .lock {
+  visibility: visible;
+}
+
+.case-studies .locked *:hover {
+  scale: 1 !important;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+  .case-studies .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7vw 0;
+    margin: 70px 40px 20px 40px;
+  }
+
+  .case-studies .title {
+    font-size: var(--fs-150);
+  }
+
+  .case-studies .partner {
+    margin: 2% 0 1% 0;
+    font-size: var(--fs-250);
+  }
+
+  .case-studies .description {
+    font-size: var(--fs-50);
+  }
+
+  .case-studies .lock {
+    width: 30px;
+    padding: 8px 0 0 5px;
+  }
+
+}

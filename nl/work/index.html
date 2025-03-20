@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the creative work of a Brussels-based creative designer specializing in branding, visual identity, and digital design. Explore a portfolio that showcases innovative and impactful designs.">
+  <meta name="keywords" content="UI, UX, Motion graphics, Graphic design, Design, Brussels, Belgium">
+  <meta name="author" content="Tristan Van Garsse">
+  <title>Tristan Van Garsse | Creative Designer & Brand Strategist</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/Favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/Favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/Favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/Favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/Favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/Favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/Favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/Favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/Favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../images/Favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/Favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/Favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../images/Favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="body-anchor">
+
+  <!-- side widget -->
+  <div class="availability-widget fadein-3">
+    <div id="availability">
+      <div class="av-checker">
+        <div id="status-color"></div>
+        <p id="status-text"></p>
+      </div>
+      <div class="av-contact">
+        <p>Mon-Sat: 8 AM-7 PM</p>
+      </div>
+      <div class="av-contact">
+        <p>tristanvangarsse@proton.me</p>
+      </div>
+      <div class="av-contact">
+        <p>+32(0)4831 46818</p>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <a draggable="false" class="wordmark-link" href="../">
+      <img draggable="false" class="wordmark" src="../images/SVG/wordmark-neutral-100.svg" alt="Tristan Van Garsse">
+    </a>
+    <nav>
+      <div class="dropdown-menu" id="animated-dropdown">
+        <a draggable="false" class="mobile-menu" href="../work/">Work</a>
+        <a draggable="false" class="mobile-menu" href="../about/">About</a>
+        <a draggable="false" class="mobile-menu" href="../contact/">Contact</a>
+        <p class="mobile-menu">tristanvangarsse@proton.me</p>
+        <p class="mobile-menu">+32(0)4831 46818</p>
+      </div>
+      <a draggable="false" class="current-page" href="../work/">Work</a>
+      <a draggable="false" href="../about/">About</a>
+      <a draggable="false" href="../contact/">Contact</a>
+      <button id="menu-trigger" class="hamburger-menu">
+        <svg width="18" height="18" viewBox="0 0 18 18">
+          <polyline id="bread-bottom" 
+                    fill="none" 
+                    stroke="#000" 
+                    stroke-width="1.2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    points="2 12, 16 12">
+            <animate id="bread-bottom-open" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
+            <animate id="bread-bottom-close" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
+          </polyline>
+          <polyline id="bread-top" 
+                    fill="none" 
+                    stroke="#000" 
+                    stroke-width="1.2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    points="2 5, 16 5">
+            <animate id="bread-top-open" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
+            <animate id="bread-top-close" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
+          </polyline>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- back to top arrow -->
+  <a draggable="false" href="#body-anchor" class="back-to-top portal-move-1"><img src="../images/SVG/arrow-up-accent.svg" alt=""></a>
+
+  <!-- main content -->
+  <main>
+    <div class="landing-page centered fadein-bc-1">
+      I specialize in crafting impactful and intuitive <em>branding solutions</em>.
+    </div>
+    <div class="case-studies">
+      <div class="title fadein-1" id="selected_cases">selected case studies</div>
+      <div class="container">
+        <div class="locked scale-hover-1 trigger-2">
+          <a draggable="false" href="../mino/"><img class="lazyload" draggable="false" src="../images/Work/mino_1_small.jpg" data-src="../images/Work/mino_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Mino.</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">logo / identity</div>
+        </div>
+        <div class="locked scale-hover-1 trigger-2">
+          <a draggable="false" href="../van-dender/"><img class="lazyload" draggable="false" src="../images/Work/van-dender_1_small.jpg" data-src="../images/Work/van-dender_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Van Dender Chocolate</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding</div>
+        </div>
+        <div class="scale-hover-1 trigger-3">
+          <a draggable="false" href="../verbeek-interieur/"><img class="lazyload" draggable="false" src="../images/Work/verbeek_1_small.jpg" data-src="../images/Work/verbeek_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Verbeek Interieur</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding / logo</div>
+        </div>
+        <div class="scale-hover-1 trigger-2">
+          <a draggable="false" href="../kuleuven/"><img class="lazyload" draggable="false" src="../images/Work/kuleuven_1_small.jpg" data-src="../images/Work/kuleuven_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">KU Leuven</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">ux / ui design</div>
+        </div>
+        <div class="scale-hover-1 trigger-2">
+          <a draggable="false" href="../quatre-mains/"><img class="lazyload" draggable="false" src="../images/Work/quatre-mains_1_small.jpg" data-src="../images/Work/quatre-mains_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Quatre Mains Piano's</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding</div>
+        </div>
+        <div class="scale-hover-1 trigger-2">
+          <a draggable="false" href="../bruxelles-ma-belle/"><img class="lazyload" draggable="false" src="../images/Work/bruxelles-ma-belle_1_small.jpg" data-src="../images/Work/bruxelles-ma-belle_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Bruxelles ma belle</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding / logo</div>
+        </div>
+        <div class="locked scale-hover-1 trigger-2">
+          <a draggable="false" href="../hbd/"><img class="lazyload" draggable="false" src="../images/Work/hbd_1_small.jpg" data-src="../images/Work/hbd_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Here Be Dragons</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding / exhibition</div>
+        </div>
+        <div class="locked scale-hover-1 trigger-2">
+          <a draggable="false" href="../lush-lab/"><img class="lazyload" draggable="false" src="../images/Work/lush-lab_1_small.jpg" data-src="../images/Work/lush-lab_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Lush Lab</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding / logo</div>
+        </div>
+        <div class="locked scale-hover-1 trigger-3">
+          <a draggable="false" href="../instinct/"><img class="lazyload" draggable="false" src="../images/Work/instinct_1_small.jpg" data-src="../images/Work/instinct_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Instinct</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding / logo</div>
+        </div>
+        <div class="locked scale-hover-1 trigger-3">
+          <a draggable="false" href="../lumilens/"><img class="lazyload" draggable="false" src="../images/Work/lumilens_1_small.jpg" data-src="../images/Work/lumilens_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">LumiLens</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">branding / logo</div>
+        </div>
+      </div>
+    </div>
+    <div class="case-studies">
+      <div class="title fadein-1" id="selected_cases">selected research projects</div>
+      <div class="container">
+        <div class="scale-hover-1 trigger-2">
+          <a draggable="false" href="../data-stories/"><img class="lazyload" draggable="false" src="../images/Work/datastories_1_small.jpg" data-src="../images/Work/datastories_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Data stories</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">website design</div>
+        </div>
+        <div class="locked scale-hover-1 trigger-3">
+          <a draggable="false" href="../out-of-sight/"><img class="lazyload" draggable="false" src="../images/Work/outofsight_1_small.jpg" data-src="../images/Work/outofsight_1.jpg" alt=""></a>
+          <div class="partner-lock">
+            <div class="partner">Out of Sight</div>
+            <img draggable="false" class="lock" src="../images/SVG/lock.svg" alt="">
+          </div>
+          <div class="description">product design</div>
+        </div>
+      </div>
+    </div>
+    <div class="spacer-200"></div>
+
+<!--                                 NEWS & UPDATES
+      <div class="case-studies">
+      <div class="title fadein-1" id="selected_cases">latest news & updates</div>
+    </div>
+    <div class="spacer-200"></div>
+-->
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="title">Let's talk design and ideas—who knows where it might lead?</div>
+      <a draggable="false" href="mailto:tristanvangarsse@proton.me" class="button">Get in Touch</a>
+      <div class="information">
+        <div class="subtitle">© 2025. Made by me. <br> All rights reserved.</div>
+        <a draggable="false" href="mailto:tristanvangarsse@proton.me" class="subtitle underscored">tristanvangarsse@proton.me</a>
+        <div draggable="false" href="tel:+32483146818" class="subtitle underscored">+32(0)4831 46818</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script src="../scripts/back-to-top-smooth-scroll.js"></script> <!-- scrolls smoothly to anchor -->
+  <script src="../scripts/back-to-top-visibility.js"></script> <!-- hides back to top arrow -->
+  <script src="../scripts/animate-when-in-view.js"></script> <!-- Animate when in view -->
+  <script src="../scripts/availability-checker.js"></script> <!-- Checks availability -->
+  <script src="../scripts/dropdown-menu.js"></script> <!-- Dropdown menu -->
+  <script>
+      let images = document.querySelectorAll(".lazyload");
+      new LazyLoad(images, {
+          root: null,
+          rootMargin: "100px",
+          threshold: 0
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+/* DISABLED: week schedule */
+.availability-widget .av-contact:nth-child(2) {
+  display: none;
+}
+/*------------------------*/
+
+
+.availability-widget {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.availability-widget #availability {
+  position: absolute;
+  top: 30px;
+  right: 112px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.availability-widget .av-checker,
+.availability-widget .av-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:fit-content;
+  gap: 10px;
+  font-size: 12px;
+  border-radius: 100px;
+  background: var(--clr-mono-920);
+}
+
+.availability-widget .av-checker {
+  padding: 9px 15px;
+  margin-bottom: 10px;
+  pointer-events: all;
+}
+
+.availability-widget .av-contact {
+  padding: 5px 15px;
+  cursor: text;
+  pointer-events: none;
+  opacity: 0; /* Initial state */
+  transition: 0.5s opacity 4s; /* When hover is removed, for 4 seconds it stays on */
+}
+
+.availability-widget:hover #availability {
+  pointer-events: all; /* Makes sure everything is clickable and affected when hovered, when av-checker is hovered */
+}
+
+/* On hover, show the child */
+.availability-widget:hover .av-contact:nth-child(2) {
+  transition: 0.7s opacity 0s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* On hover, show the child */
+.availability-widget:hover .av-contact:nth-child(3) {
+  transition: 0.7s opacity 0.1s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* On hover, show the child */
+.availability-widget:hover .av-contact:nth-child(4) {
+  transition: 0.7s opacity 0.2s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* When hover stops, trigger the animation */
+.sidewidget:not(:hover) .av-contact {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#availability #status-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+}
+
+.av-checker p,
+.av-contact p {
+  font-weight: var(--fw-regular);
+  color: var(--clr-black);
+  letter-spacing: 0.1px;
+}
+
+.av-checker p {
+  user-select: none;
+}
+
+.available #status-color {background-color: var(--clr-green);}
+.unavailable #status-color {background-color: var(--clr-red);}
+
+.av-contact p::selection {
+  color: var(--clr-black);
+  background-color: var(--clr-mono-800);
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .availability-widget #availability {
+    flex-direction: row-reverse;
+    right: 121px;
+  }
+
+  .availability-widget .av-contact {
+    padding: 9px 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+
+  .availability-widget {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

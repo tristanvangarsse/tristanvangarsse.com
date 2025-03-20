@@ -1,0 +1,95 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 50px 0 50px;
+  width: 100%;
+  max-width: var(--max-width-100);
+}
+
+.wordmark-link {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.header.open .wordmark-link {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wordmark {
+  width: 182px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-200);
+}
+
+nav > *:not(:first-child):not(:last-child) {   
+  margin: 0 0 0 45px;
+}
+
+nav > a {
+  transition: color 0.1s ease;
+}
+
+nav > a:hover,
+nav > a.current-page {
+  color: var(--clr-accent);
+}
+
+
+/* --------------------------------- old navigation menu animation with underline
+nav > a:not(.focus-nav):after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px var(--clr-black);
+  transform: scaleX(0);
+  transition: transform 150ms ease-in-out;
+}
+nav > a:not(.focus-nav):hover:after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%; 
+}
+
+nav > a:not(.focus-nav):after {
+  border-bottom: 1px solid var(--clr-black)
+}
+
+.focus-nav {
+  border-bottom: 1px solid var(--clr-black)
+}
+*/
+
+
+.hamburger-menu {
+  display: none
+}
+
+@media only screen and (max-width: 600px) {
+
+  header {
+    padding: 10px 10px 0 10px;
+  }
+
+  .wordmark-link {
+    padding: 20px;
+  }
+
+  header > nav > a {
+    display: none
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin: 7px 0 0 0;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  nav { padding-bottom: 2px } /* to align with wordmark */
+}

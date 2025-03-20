@@ -1,0 +1,20 @@
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 100;
+  background-color: var(--clr-white);
+}
+
+.page-loader {
+  animation: page-loader 0.8s ease-in 0.5s 1 normal forwards
+}
+
+@keyframes page-loader {
+	0% { opacity: 1 }
+  100% { opacity: 0	}
+}
