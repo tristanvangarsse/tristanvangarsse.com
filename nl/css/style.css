@@ -1,38 +1,28 @@
 /* Import base styles */
-@import 'base/root.css';
-@import 'base/core.css';
-@import 'base/reset.css';
-@import 'base/animation.css';
+@import '../../css/base/root.css';
+@import '../../css/base/core.css';
+@import '../../css/base/reset.css';
+@import '../../css/base/animation.css';
 
 /* Import layout styles */
-@import 'layout/header.css';
-@import 'layout/footer.css';
+@import '../../css/layout/header.css';
+@import '../../css/layout/footer.css';
 
 /* Import component styles */
-@import 'components/dropdown-menu.css';
-@import 'components/landing-page.css';
-@import 'components/page-loader.css';
-@import 'components/case-studies.css';
-@import 'components/project.css';
-@import 'components/locked-project.css';
-@import 'components/contact-page.css';
-@import 'components/collapsible.css';
-@import 'components/availability-widget.css';
-@import 'components/language-widget.css';
-@import 'components/news-and-updates.css';
-@import 'components/back-to-top.css';
-@import 'components/about-page.css';
-@import 'components/artifacts.css';
+@import '../../css/components/dropdown-menu.css';
+@import '../../css/components/landing-page.css';
+@import '../../css/components/page-loader.css';
+@import '../../css/components/case-studies.css';
+@import '../../css/components/project.css';
+@import '../../css/components/locked-project.css';
+@import '../../css/components/contact-page.css';
+@import '../../css/components/collapsible.css';
+@import '../../css/components/availability-widget.css';
+@import '../../css/components/language-widget.css';
+@import '../../css/components/news-and-updates.css';
+@import '../../css/components/back-to-top.css';
+@import '../../css/components/about-page.css';
+@import '../../css/components/artifacts.css';
 
 /* Import utility styles */
-@import 'utilities/spacing.css';
-
-
-
-/*================== RED OUTLINE ====================*/
-
-
-/* * { outline: 1px dotted rgba(255,0,0,0.4) !important; } */
-
-
-/*====================================================*/
+@import '../../css/utilities/spacing.css';
