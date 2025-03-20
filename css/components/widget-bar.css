@@ -7,10 +7,9 @@
 
 
 .widget-bar {
-  cursor: pointer;
   overflow: hidden;
   position: absolute;
-  top: 0px;
+  top: 30px;
   right: 32px;
   display: flex;
   align-items: flex-start;
@@ -19,6 +18,7 @@
 }
 
 .widget-bar #availability {
+  cursor: pointer;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -67,28 +67,28 @@
 }
 
 /* On hover, show the child */
-.widget-bar:hover .av-contact:nth-child(2) {
+.widget-bar #availability:hover .av-contact:nth-child(2) {
   transition: 0.7s opacity 0s;
   opacity: 1;
   pointer-events: all;
 }
 
 /* On hover, show the child */
-.widget-bar:hover .av-contact:nth-child(3) {
+.widget-bar #availability:hover .av-contact:nth-child(3) {
   transition: 0.7s opacity 0.1s;
   opacity: 1;
   pointer-events: all;
 }
 
 /* On hover, show the child */
-.widget-bar:hover .av-contact:nth-child(4) {
+.widget-bar #availability:hover .av-contact:nth-child(4) {
   transition: 0.7s opacity 0.2s;
   opacity: 1;
   pointer-events: all;
 }
 
 /* When hover stops, trigger the animation */
-.sidewidget:not(:hover) .av-contact {
+.sidewidget #availability:not(:hover) .av-contact {
   opacity: 0;
   pointer-events: none;
 }
@@ -120,9 +120,12 @@
 
 @media only screen and (max-width: 1600px) {
 
+  .widget-bar {
+    right: 45px;
+  }
+
   .widget-bar #availability {
     flex-direction: row-reverse;
-    right: 40px;
   }
 
   .widget-bar .av-contact {
