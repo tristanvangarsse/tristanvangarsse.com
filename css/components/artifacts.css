@@ -43,7 +43,7 @@
   font-size: var(--fs-200);
   font-weight: var(--fw-light);
   line-height: 1.5em;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 @media only screen and (max-width: 1500px) {
