@@ -7,7 +7,7 @@
 
 .landing-page-video {
  /*max-width: var(--max-width-100);*/
-  width: 50vw;
+  width: 46vw;
   height: auto;
   border-radius: var(--border-rad-300);
   pointer-events: none;
@@ -47,7 +47,7 @@
 
   .landing-page-video {
     border-radius: var(--border-rad-200);
-    width: 85vw;
+    width: calc(100vw - 60px);
     object-fit: cover;
   }
 
