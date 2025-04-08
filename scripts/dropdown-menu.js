@@ -45,3 +45,32 @@ menuTrigger.addEventListener('click', () => {
   }
   isMenuOpen = !isMenuOpen; // Toggle the state
 });
+
+
+
+// Closes menu when link is clicked
+document.querySelectorAll('.mobile-menu[href^="#"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (isMenuOpen) {
+      bottomCloseAnim.beginElement();
+      topCloseAnim.beginElement();
+      animatedDropdown.classList.remove('open');
+      enableScroll();
+      isMenuOpen = false;
+    }
+  });
+});
+
+
+// debug
+document.querySelectorAll('.mobile-menu[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Then add the menu closing logic from solution 1
+  });
+});

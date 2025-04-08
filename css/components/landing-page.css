@@ -7,7 +7,7 @@
 
 .landing-page-video {
  /*max-width: var(--max-width-100);*/
-  width: 65vw;
+  width: 46vw;
   height: auto;
   border-radius: var(--border-rad-300);
   pointer-events: none;
@@ -31,6 +31,13 @@
 }
 
 
+@media only screen and (max-width: 1500px) {
+  .landing-page-video {
+    width: 85vw;
+  }
+
+}
+
 @media only screen and (max-width: 600px) {
 
   .landing-page {
@@ -40,7 +47,7 @@
 
   .landing-page-video {
     border-radius: var(--border-rad-200);
-    width: 85vw;
+    width: calc(100vw - 60px);
     object-fit: cover;
   }
 

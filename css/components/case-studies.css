@@ -79,11 +79,12 @@
   .case-studies .container {
     grid-template-columns: repeat(1, 1fr);
     gap: 7vw 0;
-    margin: 70px 40px 100px 40px;
+    margin: 20px 30px 20px 30px;
   }
 
   .case-studies .title {
     font-size: var(--fs-150);
+    margin-bottom: 20px;
   }
 
   .case-studies .partner {

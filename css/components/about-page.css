@@ -37,15 +37,15 @@
 }
 
 .about-experience .subtitle {
-  font-size: var(--fs-100);
+  font-size: var(--fs-200);
 }
 
 .about-experience .description {
-  max-width: 70ch;
+  max-width: 50ch;
   margin: 15px 0 0 0;
-  font-size: var(--fs-100);
+  font-size: var(--fs-200);
   color: var(--clr-mono-460);
-  line-height: 140%;
+  line-height: 150%;
 }
 
 .about-profile {

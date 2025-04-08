@@ -30,7 +30,8 @@
     height: calc(100% - var(--top-distance));
   }
 
-  .mobile-menu {
+  .mobile-menu,
+  .mobile-lang {
     margin-left: 40px;
     color: var(--clr-black);
     opacity: 0;
@@ -46,6 +47,15 @@
   p.mobile-menu {
     font-size: var(--fs-150);
     font-weight: var(--fw-regular);
+  }
+
+  a.mobile-lang {
+    font-size: var(--fs-150);
+    font-weight: var(--fw-regular);
+    padding: 8px 11px;
+    width:min-content;
+    background-color: var(--clr-mono-900);
+    border-radius: 10px;
   }
 
   /* Apply staggered delay using nth-child */
@@ -71,7 +81,13 @@
     transition-delay: 0.5s;
   }
 
-  .header.open .mobile-menu {
+  .mobile-lang {
+    margin-top: 20px;
+    transition-delay: 0.6s;
+  }
+
+  .header.open .mobile-menu,
+  .header.open .mobile-lang {
     opacity: 1;
     transform: translateY(0);
   }
