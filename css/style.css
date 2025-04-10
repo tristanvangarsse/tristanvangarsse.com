@@ -13,15 +13,16 @@
 @import 'components/landing-page.css';
 @import 'components/page-loader.css';
 @import 'components/case-studies.css';
-@import 'components/project.css';
-@import 'components/locked-project.css';
+@import 'components/breakdown.css';
+@import 'components/locked-breakdown.css';
 @import 'components/contact-page.css';
 @import 'components/collapsible.css';
 @import 'components/widget-bar.css';
-@import 'components/news-and-updates.css';
+@import 'components/articles.css';
 @import 'components/back-to-top.css';
 @import 'components/about-page.css';
 @import 'components/artifacts.css';
+@import 'components/showcase.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';
@@ -31,7 +32,23 @@
 /*================== RED OUTLINE ====================*/
 
 
-/* * { outline: 1px dotted rgba(255,0,0,0.4) !important; }*/
+@media only screen and (min-width: 500px) and (max-width: 550px) {
+ * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 850px) {
+ * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1450px) {
+ * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
+}
+
+@media only screen and (min-width: 1850px) and (max-width: 1900px) {
+ * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
+}
+
+@media only screen and (min-width: 1px) {.debug-mode {display: block;}}
 
 
 /*====================================================*/

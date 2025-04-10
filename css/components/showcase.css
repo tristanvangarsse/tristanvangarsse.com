@@ -1,0 +1,309 @@
+.showcase {
+  width: 100%;
+}
+
+.showcase .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+.showcase .project {
+  --fw-title: 320;
+  --fw-name: 700;
+  --fw-tags: 320;
+  --fw-description: 320;
+  --fw-link: 320;
+
+  --clr-name: var(--clr-main);
+  --clr-title: var(--clr-main);
+  --clr-tags: var(--clr-main);
+  --clr-description: var(--clr-main);
+  --clr-link: var(--clr-main);
+  --clr-supporting: var(--clr-main);
+
+  --clr-dim: hsla(var(--clr-h),var(--clr-s),var(--clr-l),0.4);
+  --clr-selection: hsla(calc(var(--clr-h) - 10), 80%, 50%,0.3);
+}
+
+.showcase .project *::selection {
+  color: white;
+  background: var(--clr-selection);
+}
+
+.showcase .project.dark-blue,
+.showcase .project.black {
+  --fw-title: 220;
+  --fw-name: 600;
+  --fw-tags: 220;
+  --fw-description: 250;
+  --fw-link: 220;
+  --fw-supporting: 220;
+}
+
+.showcase .project.green {
+  --clr-h: 125;
+  --clr-s: 69%;
+  --clr-l: 19%;
+  --clr-main: hsl(
+    var(--clr-h),
+    var(--clr-s),
+    var(--clr-l)
+  );
+  background: linear-gradient(0deg, hsl(var(--clr-h), 30%, 58%) 0%, hsl(var(--clr-h), 20%, 87%) 80%, hsl(var(--clr-h), 20%, 100%) 100%);
+}
+
+.showcase .project.dark-blue {
+  --clr-h: 205;
+  --clr-s: 0%;
+  --clr-l: 90%;
+  --clr-main: hsl(
+    var(--clr-h),
+    var(--clr-s),
+    var(--clr-l)
+  );
+
+  background: linear-gradient(0deg, hsl(var(--clr-h), 50%, 18%) 0%, hsl(var(--clr-h), 40%, 5%) 100%);
+}
+
+.showcase .project.salmon {
+  --clr-h: 27;
+  --clr-s: 54%;
+  --clr-l: 30%;
+  --clr-main: hsl(
+    var(--clr-h),
+    var(--clr-s),
+    var(--clr-l)
+  );
+
+  background: linear-gradient(0deg, hsl(var(--clr-h), 50%, 95%) 0%, hsl(var(--clr-h), 40%, 80%) 100%);
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+.showcase .container {
+  max-width: 1200px;
+  padding: 100px 30px 0px 30px;
+  margin-right: 10vw;
+}
+
+.showcase .slideshow {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s linear;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.indicators {
+  padding-left: 2px; /* optical adjustment radius slideshow */
+  line-height: 0%;
+}
+
+.indicator-container {
+  display: inline-block;
+  padding: 3px 0; /* larger clickable area */
+  cursor: pointer;  
+}
+
+.indicator {
+  display: inline-block;
+  width: 50px;
+  height: 4px;
+  border-radius: 100px;
+  margin: 20px 1px 0 0;
+  background-color: var(--clr-dim);
+  transition: background-color 0.5s ease;
+}
+
+.indicator-container.active .indicator {
+  background-color: var(--clr-main);
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+.showcase .text-content {
+  margin: 20px 0 0 0;
+  display: flex;
+}
+
+.showcase .text-content > div:nth-child(1) {
+  flex-basis: 40%;
+  padding-left: 2px; /* optical adjustment radius slideshow */
+  padding-right: 100px;
+}
+.showcase .text-content div:nth-child(2) {
+  flex-basis: 60%;
+}
+
+.showcase .title {
+  font-weight: var(--fw-title);
+  font-size: var(--fs-300);
+  color: var(--clr-title);
+}
+
+.showcase .title span {
+  font-weight: var(--fw-name);
+  color: var(--clr-name);
+}
+
+.showcase .tags {
+  margin-top: 10px;
+  font-size: var(--fs-150);
+  font-weight: var(--fw-tags);
+  color: var(--clr-dim);
+}
+
+.showcase .description {
+  font-weight: var(--fw-description);
+  color: var(--clr-description);
+  line-height: 170%;
+  margin: 8px 0 16px 0;
+}
+
+.showcase .link {
+  font-weight: var(--fw-link);
+  margin-top: 20px;
+  color: var(--clr-link);
+}
+
+
+/* ------- */
+
+.showcase .supporting-visuals {
+  display: flex;
+  padding: 110px 30px 180px 30px;
+  margin-left: 15vw;
+  width: 70vw;
+}
+
+.showcase .supporting-visuals div:nth-child(1) {
+  flex-basis: 65%;
+}
+.showcase .supporting-visuals div:nth-child(2) {
+  flex-basis: 35%;
+}
+
+.showcase .supporting-visuals div:nth-child(1) .supporting-image {
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.showcase .supporting-visuals div:nth-child(2) .supporting-image {
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.showcase .supporting-image {
+  min-width: 0;
+  min-height: 600px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.showcase .supporting-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container while maintaining aspect ratio */
+  object-position: center; /* centers the crop */
+  min-width: 100%; /* ensures full width coverage */
+  min-height: 100%; /* ensures full height coverage */
+}
+
+.showcase .supporting-text {
+  margin-top: 10px;
+  margin-right: 30px; /* buffer so text doesn't touch*/
+  font-size: var(--fs-150);
+  font-weight: var(--fw-supporting);
+  color: var(--clr-dim);
+}
+
+
+
+
+@media only screen and (max-width: 1100px) {
+
+  .showcase .supporting-visuals {
+    padding: 110px 30px 180px 30px;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .showcase .container {
+    margin-right: 0;
+  }
+
+  .showcase .text-content {
+    flex-direction: column;
+  }
+
+  .showcase .tags {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .indicator-container {
+    padding: 5px 0; /* larger clickable area */  
+  }
+  
+  .indicator {
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    border-radius: 100px;
+    margin: 20px 1px 0 0;
+    background-color: var(--clr-dim);
+    transition: background-color 0.5s ease;
+  }
+
+
+  .showcase .supporting-visuals {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  .showcase .supporting-image {
+    border-radius: 15px;
+  }
+
+  .showcase .supporting-text {
+    font-size: var(--fs-200);  
+    margin: 15px 0 60px 0;
+  }
+}
+
+

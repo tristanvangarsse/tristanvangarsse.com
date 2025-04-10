@@ -1,4 +1,4 @@
-.project {
+.breakdown {
   max-width: var(--max-width-200);
   width: 60%;
   padding: 70px 0 160px 0;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.project-closebtn {
+.breakdown-closebtn {
   position: fixed;
   top: 3rem;
   right: 11vw;
@@ -14,30 +14,30 @@
   padding: 10px;
 }
 
-.project-arrowleftbtn,
-.project-arrowrightbtn {
+.breakdown-arrowleftbtn,
+.breakdown-arrowrightbtn {
   position: fixed;
   top: 50%;
   width: 47px;
   padding: 0 10px;
 }
 
-.project-arrowleftbtn {
+.breakdown-arrowleftbtn {
   left: 11vw;
 }
 
-.project-arrowrightbtn {
+.breakdown-arrowrightbtn {
   right: 11vw;
 }
 
-.project .title,
-.project .year,
-.project .subtitle,
-.project .paragraph {
+.breakdown .title,
+.breakdown .year,
+.breakdown .subtitle,
+.breakdown .paragraph {
   padding: 0 10px;
 }
 
-.project .title {
+.breakdown .title {
   margin: clamp(0px, 7vw, 100px) 0 clamp(0px, 0.6vw, 10px) 0;
   text-transform: uppercase;
   text-align: center;
@@ -45,7 +45,7 @@
   color: var(--clr-accent);
 }
 
-.project .year {
+.breakdown .year {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .2rem;
@@ -53,7 +53,7 @@
   color: var(--clr-mono-500);
 }
 
-.project .subtitle {
+.breakdown .subtitle {
   margin: clamp(0px, 4vw, 60px) 0 clamp(0px, 1vw, 10px) 0;
   text-transform: uppercase;
   text-align: center;
@@ -62,32 +62,32 @@
   color: var(--clr-accent);
 }
 
-.project .paragraph {
+.breakdown .paragraph {
   margin: clamp(0px, 1.8vw, 10px) 0;
   font-size: var(--fs-220);
   font-weight: var(--fw-regular);
   line-height: 2.3rem;
 }
 
-.project .image,
-.project .video {
+.breakdown .image,
+.breakdown .video {
   margin: clamp(0px, 4vw, 60px) 0;
   border-radius: var(--border-rad-200);
   background: var(--clr-placeholder);
 }
 
-.project .video {
+.breakdown .video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9; /* Adjust to your video's aspect ratio */
   object-fit: cover;   /* Ensures video content fits the element */
 }
 
-.project .outline {
+.breakdown .outline {
   outline: 4px solid #ecc4a1;
 }
 
-.project .small {
+.breakdown .small {
   margin: 4vw calc(15vw - 100px);
 }
 
@@ -96,38 +96,38 @@
 
 @media only screen and (max-width: 900px) {
 
-  .project {
+  .breakdown {
     width: 85%;
     padding-top: 90px;
   }
 
-  .project-closebtn {
+  .breakdown-closebtn {
     position: absolute;
     top: 2rem;
   }
 
-  .project-arrowleftbtn,
-  .project-arrowrightbtn
+  .breakdown-arrowleftbtn,
+  .breakdown-arrowrightbtn
    {
     display: none;
   }
 
-  .project .image,
-  .project .video {
+  .breakdown .image,
+  .breakdown .video {
     padding: 0;
     margin: 40px 0 20px 0;
   }
 
-  .project .title {
+  .breakdown .title {
     font-size: var(--fs-220);
     font-weight: var(--fw-medium);
   }
 
-  .project .subtitle {
+  .breakdown .subtitle {
     margin: 40px 0 30px 0;
   }
 
-  .project .paragraph {
+  .breakdown .paragraph {
     font-size: var(--fs-100);
     line-height: 1.5rem;
   }

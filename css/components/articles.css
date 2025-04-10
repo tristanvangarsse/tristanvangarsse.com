@@ -1,0 +1,128 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all .container horizontally */
+  gap: 90px; /* Space between cards */
+  margin: 0 100px;
+}
+
+.articles .container {
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5vw;
+  max-width: 800px;
+  width: 100%;
+}
+
+.articles .container .image-content {
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 50%;
+  min-width: 0;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-rad-200);
+  background: var(--clr-placeholder);
+  width: 100%;
+  position: relative;
+}
+
+.articles .container .image-content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container while maintaining aspect ratio */
+  object-position: center; /* centers the crop */
+  min-width: 100%; /* ensures full width coverage */
+  min-height: 100%; /* ensures full height coverage */
+}
+
+.articles .container .text-content {
+  flex: 1 0 50%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.articles .container .title {
+  color: var(--clr-accent);
+  font-size: var(--fs-400);
+}
+
+.articles .container .description {
+  font-size: var(--fs-300);
+}
+
+.button-link {
+  width: fit-content;
+  display: flex;
+  margin: 20px 0 0 0;
+  padding: 10px 15px;
+  border-radius: var(--border-rad-200);
+  border: 2px solid black;
+}
+
+.button-link div { /* link text */
+  font-size: var(--fs-100);
+}
+
+.button-link img { /* pointing arrow */
+  margin-left: 10px;
+  width: 10px;
+}
+
+.button-link-arrow {
+  margin: 4px 0 0 10px;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/arrow-up-right-neutral-100.svg");
+}
+
+.disabled .button-link-arrow {
+  background-image: url("https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/arrow-up-right-neutral-600.svg");
+}
+
+.button-link.disabled {
+  --clr-disabled-button: var(--clr-mono-600);
+  color: var(--clr-disabled-button);
+  border-color: var(--clr-disabled-button);
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .articles {
+    gap: 70px;
+    margin: 0 30px;
+  }
+
+  .articles .container {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .articles .container .image-content {
+    flex-basis: auto;
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+
+  .articles .container .title {
+    margin: 0 0 10px 0;
+    font-size: var(--fs-250);
+  }
+
+  .articles .container .description {
+    font-size: var(--fs-250);
+  }
+
+  .button-link {
+    margin: 20px 0 0 0;
+  }
+
+
+}
