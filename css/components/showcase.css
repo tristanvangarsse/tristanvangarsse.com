@@ -1,3 +1,8 @@
+/* .showcase * {
+  overflow: hidden;
+} */
+
+
 .showcase {
   width: 100%;
 }
@@ -288,6 +293,11 @@
     margin: 20px 1px 0 0;
     background-color: var(--clr-dim);
     transition: background-color 0.5s ease;
+  }
+
+  .showcase .text-content > div:nth-child(1) {
+    padding-left: 0px; /* optical adjustment removed radius slideshow */
+    padding-right: 20px;
   }
 
 
