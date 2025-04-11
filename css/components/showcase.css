@@ -31,7 +31,7 @@
   --clr-link: var(--clr-main);
   --clr-supporting: var(--clr-main);
 
-  --clr-dim: hsla(var(--clr-h),var(--clr-s),var(--clr-l),0.4);
+  --clr-dim: hsla(var(--clr-h),var(--clr-s),var(--clr-l),0.6);
   --clr-selection: hsla(calc(var(--clr-h) - 10), 80%, 50%,0.3);
 }
 
