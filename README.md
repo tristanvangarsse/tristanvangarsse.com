@@ -1,4 +1,4 @@
-![Preview](readme_preview/portfolio-preview.png)
+![Preview](https://file.garden/Z8RSCvtUnnZ9Xeo8/image/github/portfolio-preview.png)
 
 ## Overview
 
