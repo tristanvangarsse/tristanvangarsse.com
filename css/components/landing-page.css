@@ -1,6 +1,6 @@
 .landing-page {
   max-width: var(--max-width-100);
-  padding: 210px 50px 160px 50px;
+  padding: 210px 50px 0 50px;
   font-size: var(--fs-400);
   font-weight: var(--fw-regular);
 }
@@ -9,6 +9,7 @@
  /*max-width: var(--max-width-100);*/
   width: 46vw;
   height: auto;
+  margin: 160px 0 0 0;
   border-radius: var(--border-rad-300);
   pointer-events: none;
 }
@@ -41,11 +42,12 @@
 @media only screen and (max-width: 600px) {
 
   .landing-page {
-    padding: 80px 30px 60px 30px;
+    padding: 80px 30px 0 30px;
     font-size: var(--fs-250);
   }
 
   .landing-page-video {
+    margin: 60px 0 0 0;
     border-radius: var(--border-rad-200);
     width: calc(100vw - 60px);
     object-fit: cover;
