@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brusselse designer & brand strategist die krachtige identiteiten en betekenisvolle verhalen creëert. Versterk je merk met strategische creativiteit.">
+  <meta name="keywords" content="UI, UX, Motion graphics, Graphic design, Design, Brussels, Belgium">
+  <meta name="author" content="Tristan Van Garsse">
+  <title>Tristan Van Garsse | Creative Designer & Brand Strategist</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="body-anchor">
+
+    <!-- debug mode -->
+    <div class="debug-mode">debug mode</div>
+
+    <!-- page loader -->
+  <div class="page-loader"></div>
+
+    <!-- side widget -->
+  <div class="widget-bar fadein-2">
+    <div class="availability-widget">
+      <div class="av-checker">
+        <div id="status-color"></div>
+        <p id="status-text">beschikbaar</p>
+      </div>
+      <div class="av-contact">
+        <p>ma-za: 8u. - 19u.</p>
+      </div>
+      <div class="av-contact">
+        <p>tristan@vangarsse.com</p>
+      </div>
+      <div class="av-contact">
+        <p>0483 14 68 18</p>
+      </div>
+    </div>
+    <a class="language-widget fadein-2" href="../en/" hreflang="en">
+      English →
+    </a>
+  </div>
+  
+  <header class="header" id="header">
+    <a draggable="false" class="wordmark-link">
+      <img draggable="false" class="wordmark" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/wordmark-neutral-100.svg" alt="Tristan Van Garsse">
+    </a>
+    <nav>
+      <div class="dropdown-menu" id="animated-dropdown">
+        <a draggable="false" class="mobile-menu" href="#work-section">Werk</a>
+        <a draggable="false" class="mobile-menu" href="#about-section">Over</a>
+        <a draggable="false" class="mobile-menu" href="#contact-section">Contact</a>
+        <p class="mobile-menu">tristan@vangarsse.com</p>
+        <p class="mobile-menu">0483 14 68 18</p>
+        <a draggable="false" class="mobile-lang" href="../en/" hreflang="en">English →</a>
+      </div>
+      <a draggable="false" href="#work-section">Werk</a>
+      <a draggable="false" href="#about-section">Over</a>
+      <a draggable="false" href="#contact-section">Contact</a>
+      <button id="menu-trigger" class="hamburger-menu">
+        <svg width="18" height="18" viewBox="0 0 18 18">
+          <polyline id="bread-bottom" 
+                    fill="none" 
+                    stroke="#000" 
+                    stroke-width="1.2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    points="2 12, 16 12">
+            <animate id="bread-bottom-open" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
+            <animate id="bread-bottom-close" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
+          </polyline>
+          <polyline id="bread-top" 
+                    fill="none" 
+                    stroke="#000" 
+                    stroke-width="1.2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    points="2 5, 16 5">
+            <animate id="bread-top-open" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
+            <animate id="bread-top-close" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
+          </polyline>
+        </svg>
+      </button>
+    </nav>
+  </header>  
+
+  <!-- back to top arrow -->
+  <a draggable="false" href="#body-anchor" class="back-to-top portal-move-1"><img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/arrow-up-accent.svg" alt=""></a>
+
+  <!-- main content -->
+  <main>
+    <div class="landing-page fadein-br-1">
+      404
+    </div>
+
+    <video id="power-saver" class="scroll-resize landing-page-video fadein-bc-2" autoplay="" loop="" muted="" playsinline="">
+      <source src="https://file.garden/Z8RSCvtUnnZ9Xeo8/video/4t6v18u7dr.mp4" type="video/mp4">
+    </video>
+
+    <div class="showcase">
+      <div class="project green">
+        <div class="spacer-200"></div>
+        <div class="spacer-50"></div>
+        <div class="container" id="work-section">
+          <div class="slideshow trigger-1">
+            <!-- Slides -->
+            <div class="slide active">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_2_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_2.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_3_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_3.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_6_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_6.jpg" alt="">
+            </div>
+          </div>
+          <div class="indicators">
+            <div class="indicator-container active" onclick="goToSlide(this, 0)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 1)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 2)">
+              <span class="indicator"></span>
+            </div>
+          </div>
+          <div class="text-content">
+            <div>
+              <h1 class="title">
+              <span>MINO.</span> — Een culinaire tijdscapsule waar Armeens en Frans erfgoed samenkomen
+              </h1>
+              <div class="tags">
+                Merkidentiteit, Productontwerp
+              </div>
+            </div>
+            <div>
+              <div class="description">
+                Mino is een culinaire brug tussen de rokerige haarden van Armenië en de verfijnde tafels van Frankrijk—een high-end dinerervaring waar met de hand gehakte lamstartaar samenkomt met lavash-as krokant, en Wagyu geglaceerd in granaatappelmelasse knispert boven open vuur.
+              </div>
+              <div class="description">
+                De merkidentiteit weerspiegelt deze dualiteit: een huwelijk van ruige texturen en verfijnde kunstzinnigheid, met typografie die lijkt uitgehouwen als Armeense steenscripts en beelden die gloeien als sintels onder gietijzer. Hier is elk gerecht een reliek, elke hap een fluistering uit het verleden.
+              </div>
+              <div class="link"></div>
+            </div>
+          </div>
+        </div>
+        <div class="supporting-visuals trigger-1">
+          <div>
+            <div class="supporting-image">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_4_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_4.jpg" alt="">
+            </div>
+            <div class="supporting-text">
+              De Armeense waakhond ontmoet zijn gelijke: de Franse keuken.
+            </div>           
+          </div>
+          <div>
+            <div class="supporting-image">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_5_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/mino_5.jpg" alt="">
+            </div>
+            <div class="supporting-text">
+              Het op maat gemaakte woordmerk.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project dark-blue">
+        <div class="container">
+          <div class="slideshow trigger-1">
+            <!-- Slides -->
+            <div class="slide active">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_6_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_6.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_2_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_2.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_3_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_3.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_7_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_7.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_8_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_8.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_9_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_9.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_5_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_5.jpg" alt="">
+            </div>
+          </div>
+          <div class="indicators">
+            <div class="indicator-container active" onclick="goToSlide(this, 0)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 1)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 2)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 3)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 4)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 5)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 6)">
+              <span class="indicator"></span>
+            </div>
+          </div>
+          <div class="text-content">
+            <div>
+              <h1 class="title">
+              <span>VERBEEK</span> — Een visuele identiteit voor modern vakmanschap
+              </h1>
+              <div class="tags">
+                Merkidentiteit, Logo-ontwerp
+              </div>
+            </div>
+            <div>
+              <div class="description">
+                Voor Verbeek Interieur, een schrijnwerker nabij Leuven, ontwikkelde ik een visuele identiteit die hun toewijding aan vakmanschap, precisie en moderne esthetiek weerspiegelt. Het resultaat is een tijdloos ontwerp dat kracht en elegantie in balans brengt. De visuele identiteit werd uitgebreid met een volledige set logovariaties, een kleurenpalet geworteld in wit en diepblauw, en een gedetailleerde merkhandleiding om consistentie te waarborgen in drukwerk en digitale media.
+              </div>
+              <a class="link" href="./verbeek-interieur/">Bekijk de casestudy</a>
+            </div>
+          </div>
+        </div>
+        <div class="supporting-visuals trigger-1">
+          <div>
+            <div class="supporting-image">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_4_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_4.jpg" alt="">
+            </div>
+            <div class="supporting-text">
+              Verkennende schetsen voor Verbeeks merkidentiteit.
+            </div>           
+          </div>
+          <div>
+            <div class="supporting-image">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_10_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/verbeek_10.jpg" alt="">
+            </div>
+            <div class="supporting-text">
+              Het op maat gemaakte woordmerk.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project salmon">
+        <div class="container">
+          <div class="slideshow trigger-1">
+            <!-- Slides -->
+            <div class="slide active">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_1_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_1.jpg" alt="">
+            </div>
+            <div class="slide active">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_2_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_2.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_3_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_3.jpg" alt="">
+            </div>
+          </div>
+          <div class="indicators">
+            <div class="indicator-container active" onclick="goToSlide(this, 0)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 1)">
+              <span class="indicator"></span>
+            </div>
+            <div class="indicator-container" onclick="goToSlide(this, 2)">
+              <span class="indicator"></span>
+            </div>
+          </div>
+          <div class="text-content">
+            <div>
+              <h1 class="title">
+              <span>KU LEUVEN</span> — Interactieve tools ontwerpen om het cultureel-erfgoedlandschap van Vlaanderen in kaart te brengen
+              </h1>
+              <div class="tags">
+                UX/UI-ontwerp, Datavisualisatie
+              </div>
+            </div>
+            <div>
+              <div class="description">
+                De Onderzoeksgroep Cultuurwetenschappen van KU Leuven stelde mij aan als Lead UX/UI Designer ter ondersteuning van een grootschalig onderzoeksproject naar de staat van het cultureel erfgoed in Vlaanderen. Ik ontwierp twee interactieve datavisualisaties: één die organisaties groepeert op basis van discipline, en een andere die hun onderlinge relaties toont via netwerken van knooppunten.
+              </div>
+              <div class="description">
+                Het project omvatte ook een gedrukt onderzoeksdossier met heldere typografie, een verfijnd kleurenpalet en op maat gemaakte grafieken om complexe bevindingen op een toegankelijke manier te presenteren. Deze tools helpen de Vlaamse overheid nu bij het nemen van doordachte beslissingen rond financiering, beleid en behoudsstrategieën.
+              </div>
+              <a class="link" href="./kuleuven/">Bekijk het project</a>
+            </div>
+          </div>
+        </div>
+        <div class="supporting-visuals trigger-1">
+          <div>
+            <div class="supporting-image">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_4_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_4.jpg" alt="">
+            </div>
+            <div class="supporting-text">
+            Grafieken opgenomen in het gedrukte onderzoeksdossier.
+            </div>           
+          </div>
+          <div>
+            <div class="supporting-image">
+              <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_5_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/kuleuven_5.jpg" alt="">
+            </div>
+            <div class="supporting-text">
+            Het op maat gemaakte woordmerk.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-200" id="about-section"></div>
+
+    <h1 class="landing-page-title trigger-1">over mij</h1>
+
+    <div class="about-profile centered trigger-3">
+      <img class="profile-picture" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/profile/profile-picture.jpg">
+    </div>
+    <div class="about-text centered trigger-1">
+      Ik ben een <em>creative designer</em> met zeven jaar ervaring in branding, UX en grafisch ontwerp.
+    </div>
+    <div class="about-text centered trigger-2">
+      Met een MFA in <em>Media and Information Design</em> beschik ik over actuele kennis van moderne industriestandaarden en state&#x2011;of&#x2011;the&#x2011;art communicatievormen.
+    </div>
+    <div class="about-text centered trigger-3">
+      Door mijn obsessie met <em>vakmanschap</em> en <em>out-of-the-box denken</em> zie ik kansen waar anderen problemen zien.
+    </div>
+    <div class="about-experience centered trigger-3">
+      <img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-tristanvangarsse.svg" class="logo">
+      <div class="employer">Freelance</div>
+      <div class="title">Creative Designer</div>
+      <div class="subtitle">2018 - 2025&nbsp;&nbsp;Brussel</div>
+      <div class="description">Ik creëerde visuele content voor meer dan 20 klanten, met logo's, brochures en websites die de merkherkenning en -betrokkenheid verbeterden. Ik leverde strategisch merkadvies en digitale oplossingen en zorgde voor 25% meer klantenbetrokkenheid voor één klant door geoptimaliseerde digitale marketing.</div>
+    </div>
+    <div class="about-experience centered trigger-3">
+      <img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-kuleuven.svg" class="logo">
+      <div class="employer">KU Leuven</div>
+      <div class="title">Graphic Designer</div>
+      <div class="subtitle">2023&nbsp;&nbsp;Leuven</div>
+      <div class="description">Ik werkte samen met het departement Cultuurwetenschappen om een uitgebreid onderzoeksdossier van 150 pagina's over artistiek erfgoed te ontwerpen. Ik ontwikkelde drie bijkomende webgebaseerde datavisualisaties, gebruikmakend van front-end talen om een duidelijke en boeiende UI/UX te leveren. In opdracht van de Vlaamse overheid heb ik bijgedragen aan het vormgeven van belangrijke beleidsbeslissingen.</div>
+    </div>
+    <div class="spacer-100"></div>
+    <div class="about-text centered trigger-3">
+      Gevestigd in <em>❦ Brussel</em> heb ik aan uiteenlopende ontwerpprojecten gewerkt, zowel als freelancer als in samenwerking met multidisciplinaire opdrachtgevers.
+    </div>
+    <div class="about-text centered trigger-3">
+      Mijn ervaring omvat impactvolle visuele en digitale content, strategisch brandadvies, en gebruiksvriendelijke ontwerpoplossingen.
+    </div>
+    <div class="about-text centered trigger-3">
+      Buiten mijn werk duik ik graag in het stadsleven of verdiep ik me in creatieve projecten.
+    </div>
+
+    <div class="spacer-150"></div>
+
+    <h1 class="landing-page-title trigger-1">vaardigheden & expertise</h1>
+
+    <div class="spacer-100"></div>
+
+    <div class="collapsible trigger-1">
+      <button type="button">Design strategie</button>
+      <div class="content">
+        <div>
+          Brand Development, Creative Direction, Ideation Workshops.
+        </div>
+        <div class="obscured">
+          Ik werk samen met opdrachtgevers om een heldere visie voor hun merk en projecten te ontwikkelen. Door doelen vroegtijdig af te stemmen, leg ik de basis voor krachtige, strategisch onderbouwde ontwerpen die aanspreken bij het publiek.
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible trigger-1">
+      <button type="button">Productdesign</button>
+      <div class="content">
+        <div>
+          Onderzoek (op maat), Branding, Informatiearchitectuur, Prototyping, Design Systems, UI & UX Design, Motion Graphics.
+        </div>
+        <div class="obscured">
+          Ik creëer impactvolle en betekenisvolle ervaringen door gebruikers- en bedrijfsbehoeften centraal te stellen. Het ontwerp weerspiegelt altijd de essentie en doelstellingen van het product.
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible trigger-1">
+      <button type="button">Design & Ontwikkeling</button>
+      <div class="content">
+        <div>
+          Front-end Development, HTML/CSS/JS, Python.
+        </div>
+        <div class="obscured">
+          Met technische kennis van front-end ontwikkeling zorg ik voor soepele samenwerking met developers en realiseer ik ontwerpen die praktisch uitvoerbaar zijn.
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible trigger-1">
+      <button type="button">Mijn Toolkit</button>
+      <div class="content">
+        <div>
+          Figma, Cinema4D, Adobe Creative Suite (Illustrator, InDesign).
+        </div>
+        <div class="obscured">
+          Mijn favoriete tools waarmee ik hoogwaardige resultaten behaal voor branding, digitaal design en motion graphics. 
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-150"></div>
+
+    <h1 class="landing-page-title trigger-1">artikels & essays</h1>
+
+    <div class="spacer-100"></div>
+
+
+    <div class="articles" id="article-section">
+
+      <div class="container">
+        <div class="image-content">
+          <img draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/external/google-deepmind-bonsai-extended.jpg" alt="">
+        </div>
+        <div class="text-content">
+          <div class="title">Think different:</div>
+          <div class="description">Design als systemen in plaats van outputs</div>
+          <a class="button-link" draggable="false" href="https://medium.com/@tristanvangarsse/design-as-systems-rather-than-outputs-4ad5e680a010" target="_blank">
+            <div>Read Article</div>
+            <div class="button-link-arrow"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-content">
+          <img draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/datastories_1.jpg" alt="">
+        </div>
+        <div class="text-content">
+          <div class="title">Datastories:</div>
+          <div class="description">Gesprekken en data gebruiken om opvattingen over verkeersveiligheid te herzien.</div>
+          <a class="button-link" draggable="false" href="https://medium.com/@tristanvangarsse/datastories-098938b86ff1" target="_blank">
+            <div>Read Article</div>
+            <div class="button-link-arrow"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-content">
+          <img draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/flagsoftomorrow_1.jpg" alt="">
+        </div>
+        <div class="text-content">
+          <div class="title">Flags of tomorrow:</div>
+          <div class="description">Terugblikken op mijn masterthesis over vlaggen als visuele verhalen.</div>
+          <a class="button-link" draggable="false" href="https://medium.com/@tristanvangarsse/flags-of-tomorrow-ac3687f9be5b" target="_blank">
+            <div>Read Article</div>
+            <div class="button-link-arrow"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="image-content">
+          <img draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/work/outofsight_1.jpg" alt="">
+        </div>
+        <div class="text-content">
+          <div class="title">Out of sight:</div>
+          <div class="description">Winkelen makkelijker maken voor mensen met een visuele beperking.</div>
+          <a class="button-link disabled" draggable="false" target="_blank">
+            <div>Read Article</div>
+            <div class="button-link-arrow"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="spacer-200"></div>
+
+  <div class="alt-section">
+    <h1 class="landing-page-title trigger-1">artefacten uit het archief</h1>
+
+    <div class="artifacts trigger-1">
+      <div>
+        <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/global-ocean-temperature-anomalies-poster_1_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/global-ocean-temperature-anomalies-poster_1.jpg" alt="">
+        <div class="description">
+          Een datavisualisatie die ik heb gemaakt om Zwitserse ontwerpprincipes en rasterstructuren te onderzoeken.
+        </div>
+      </div>
+      <div>
+        <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/futurismo-concept-poster_1_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/futurismo-concept-poster_1.jpg" alt="">
+        <div class="description">
+          Een posterontwerp voor een fictieve galerietentoonstelling, geïnspireerd op Ukiyo-e houtsneden.
+        </div>
+      </div>
+      <div>
+        <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/black-holes_1_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/black-holes_1.jpg" alt="">
+        <div class="description">
+          Een aangepaste boekomslag die ik heb ontworpen voor Black Holes van Brian Cox en Jeff Forshaw.
+        </div>
+      </div>
+      <div>
+        <video id="power-saver" class="lazyload" autoplay="" loop="" muted="" playsinline="">
+          <source src="https://file.garden/Z8RSCvtUnnZ9Xeo8/video/d3g5n4f3j4">
+        </video>
+        <div class="description">
+          Een mailer bedoeld om de aandacht te trekken van een veeleisend publiek. Ontworpen met gevoel voor verfijning.
+        </div>
+      </div>
+      <div>
+        <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/sanguine-field-drawing_1_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/sanguine-field-drawing_1.jpg" alt="">
+        <div class="description">
+          Een van mijn favoriete tekeningen, geïnspireerd door een scène uit een buitenlandse film.
+        </div>
+      </div>
+      <div>
+        <img class="lazyload" draggable="false" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/realm-of-dreams_1_small.jpg" data-src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/artifacts/realm-of-dreams_1.jpg" alt="">
+        <div class="description">
+          Een albumhoes die ik samenstelde in een poging om de sfeer van de muziek te evenaren met wat creatieve flair.
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="spacer-100"></div>
+
+  </div>
+
+  <footer class="dark" id="contact-section">
+    <div class="container">
+      <div class="title">Zin om te sparren over design?</div>
+      <a draggable="false" href="mailto:tristan@vangarsse.com" class="button">Neem contact op</a>
+      <div class="information">
+        <div class="subtitle">© 2025. Door mij gemaakt. <br> Alle rechten voorbehouden.</div>
+        <a draggable="false" href="mailto:tristan@vangarsse.com" class="subtitle underscored">tristan@vangarsse.com</a>
+        <div draggable="false" href="tel:+32483146818" class="subtitle underscored">0483 14 68 18</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script src="../scripts/back-to-top-smooth-scroll.js"></script> <!-- scrolls smoothly to anchor -->
+  <script src="../scripts/back-to-top-visibility.js"></script> <!-- hides back to top arrow -->
+  <script src="../scripts/collapsible.js"></script> <!-- collapsible list of qualifications -->
+  <script src="../scripts/animate-when-in-view.js"></script> <!-- Animate when in view -->
+  <script src="../scripts/availability-checker-nl.js"></script> <!-- Checks availability -->
+  <script src="../scripts/dropdown-menu.js"></script> <!-- Dropdown menu -->
+  <script src="../scripts/detect-low-power-mode.js"></script> <!-- Detect Low Power mode -->
+  <script src="../scripts/scroll-resize.js"></script> <!-- Resizes div based on scroll -->
+  <script src="../scripts/slideshow.js"></script> <!-- Shows slideshow of images -->
+  <script>
+    let images = document.querySelectorAll(".lazyload");
+    new LazyLoad(images, {
+        root: null,
+        rootMargin: "100px",
+        threshold: 0
+    });
+  </script>
+</body>
+</html>
