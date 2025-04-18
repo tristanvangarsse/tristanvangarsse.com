@@ -44,6 +44,7 @@
   max-width: 50ch;
   margin: 15px 0 0 0;
   font-size: var(--fs-200);
+  font-weight: var(--fw-light);
   color: var(--clr-mono-460);
   line-height: 150%;
 }
