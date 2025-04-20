@@ -1,4 +1,4 @@
-const textElement = document.getElementById("animated-text");
+const textElement = document.getElementById("move-in-letters");
 const rawText = textElement.textContent;
 textElement.textContent = "";
 
