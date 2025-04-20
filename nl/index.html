@@ -141,10 +141,13 @@
 
   <!-- main content -->
   <main>
-    <div class="landing-page fadein-br-1">
+    <div class="landing-page desktop" id="animated-text">
+      Hey,&nbsp;ik&nbsp;ben&nbsp;Tristan.|Een&nbsp;ervaren&nbsp;designer|en&nbsp;gepassioneerde&nbsp;|brand&nbsp;strategist.
+    </div>
+    <div class="landing-page mobile">
       Hey, ik ben Tristan.
       <br>
-      Een ervaren <em>creative designer</em> and gepassioneerde <em>brand strategist</em>.</em>
+      Een ervaren <em>creative designer</em> and gepassioneerde <em>brand strategist</em>.
     </div>
 
     <video id="power-saver" class="scroll-resize landing-page-video fadein-bc-2" autoplay="" loop="" muted="" playsinline="">
@@ -618,6 +621,7 @@
   <script src="/scripts/detect-low-power-mode.js"></script> <!-- Detect Low Power mode -->
   <script src="/scripts/scroll-resize.js"></script> <!-- Resizes div based on scroll -->
   <script src="/scripts/slideshow.js"></script> <!-- Shows slideshow of images -->
+  <script src="/scripts/letter-by-letter-animation.js"></script> <!-- Animates letters -->
   <script>
     let images = document.querySelectorAll(".lazyload");
     new LazyLoad(images, {

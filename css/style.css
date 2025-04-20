@@ -31,7 +31,7 @@
 /*================== RED OUTLINE ====================*/
 
 
-/* @media only screen and (min-width: 0px) and (max-width: 550px) {
+@media only screen and (min-width: 0px) and (max-width: 550px) {
  * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
 }
 
@@ -47,7 +47,7 @@
  * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
 }
 
-@media only screen and (min-width: 1px) {.debug-mode {display: block;}} */
+@media only screen and (min-width: 1px) {.debug-mode {display: block;}}
 
 
 /*====================================================*/
