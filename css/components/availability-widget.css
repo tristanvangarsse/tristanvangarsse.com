@@ -30,9 +30,9 @@
   cursor: pointer;
   overflow: hidden;
   width: fit-content;
-  font-size: 12px;
+  font-size: var(--fs-tiny);
   border-radius: 100px;
-  background-color: var(--clr-mono-920);
+  background-color: var(--clr-mono-92);
   padding: 9px 15px;
 }
 
@@ -43,9 +43,9 @@
   align-items: center;
   width:fit-content;
   gap: 10px;
-  font-size: 12px;
+  font-size: var(--fs-tiny);
   border-radius: 100px;
-  background: var(--clr-mono-920);
+  background: var(--clr-mono-92);
 }
 
 .widget-bar .av-checker {
@@ -115,7 +115,7 @@
 
 .av-contact p::selection {
   color: var(--clr-black);
-  background-color: var(--clr-mono-800);
+  background-color: var(--clr-mono-80);
 }
 
 @media only screen and (max-width: 1600px) {

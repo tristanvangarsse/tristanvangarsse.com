@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   padding: 90px 50px 0 50px;
   width: 100%;
-  max-width: var(--max-width-100);
+  max-width: 1000px;
 }
 
 .wordmark-link {
@@ -26,7 +26,7 @@ nav {
   align-items: center;
   font-family: var(--ff-heading);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-200);
+  font-size: var(--fs-base);
 }
 
 nav > *:not(:first-child):not(:last-child) {   

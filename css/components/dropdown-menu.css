@@ -40,21 +40,21 @@
   }
 
   a.mobile-menu {
-    font-size: var(--fs-300);
-    font-weight: var(--fw-semi-regular);
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-medium);
   }
 
   p.mobile-menu {
-    font-size: var(--fs-150);
+    font-size: var(--fs-base);
     font-weight: var(--fw-regular);
   }
 
   a.mobile-lang {
-    font-size: var(--fs-150);
+    font-size: var(--fs-base);
     font-weight: var(--fw-regular);
     padding: 8px 11px;
     width:min-content;
-    background-color: var(--clr-mono-900);
+    background-color: var(--clr-mono-90);
     border-radius: 10px;
   }
 

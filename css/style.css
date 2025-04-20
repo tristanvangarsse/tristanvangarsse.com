@@ -14,13 +14,12 @@
 @import 'components/page-loader.css';
 @import 'components/case-studies.css';
 @import 'components/breakdown.css';
-@import 'components/locked-breakdown.css';
 @import 'components/contact-page.css';
 @import 'components/collapsible.css';
 @import 'components/widget-bar.css';
 @import 'components/articles.css';
 @import 'components/back-to-top.css';
-@import 'components/about-page.css';
+@import 'components/about.css';
 @import 'components/artifacts.css';
 @import 'components/showcase.css';
 
@@ -30,9 +29,9 @@
 
 
 /*================== RED OUTLINE ====================*/
-/* 
 
-@media only screen and (min-width: 0px) and (max-width: 550px) {
+
+/* @media only screen and (min-width: 0px) and (max-width: 550px) {
  * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
 }
 
@@ -48,7 +47,7 @@
  * { outline: 1px dotted rgba(255,0,0,0.4) !important; }
 }
 
-@media only screen and (min-width: 1px) {.debug-mode {display: block;}}
- */
+@media only screen and (min-width: 1px) {.debug-mode {display: block;}} */
+
 
 /*====================================================*/

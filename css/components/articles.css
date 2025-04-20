@@ -21,7 +21,7 @@
   min-width: 0;
   min-height: 100%;
   overflow: hidden;
-  border-radius: var(--border-rad-200);
+  border-radius: 20px;
   background: var(--clr-placeholder);
   width: 100%;
   position: relative;
@@ -45,11 +45,13 @@
 
 .articles .container .title {
   color: var(--clr-accent);
-  font-size: var(--fs-400);
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-regular);
 }
 
 .articles .container .description {
-  font-size: var(--fs-300);
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-regular);
 }
 
 .button-link {
@@ -57,12 +59,10 @@
   display: flex;
   margin: 20px 0 0 0;
   padding: 10px 15px;
-  border-radius: var(--border-rad-200);
+  border-radius: 100px;
   border: 2px solid black;
-}
-
-.button-link div { /* link text */
-  font-size: var(--fs-100);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
 }
 
 .button-link img { /* pointing arrow */
@@ -85,7 +85,7 @@
 }
 
 .button-link.disabled {
-  --clr-disabled-button: var(--clr-mono-600);
+  --clr-disabled-button: var(--clr-mono-60);
   color: var(--clr-disabled-button);
   border-color: var(--clr-disabled-button);
 }
@@ -113,11 +113,11 @@
 
   .articles .container .title {
     margin: 0 0 10px 0;
-    font-size: var(--fs-250);
+    font-size: var(--fs-h5);
   }
 
   .articles .container .description {
-    font-size: var(--fs-250);
+    font-size: var(--fs-h5);
   }
 
   .button-link {

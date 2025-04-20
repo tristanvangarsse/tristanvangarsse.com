@@ -3,17 +3,17 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--clr-mono-950);
+  background-color: var(--clr-mono-95);
 }
 
 footer .container {
-  max-width: var(--max-width-50);
+  max-width: 900px;
   min-width: 30px;
   margin: 180px 10vw;
 }
 
 footer .title {
-  font-size: var(--fs-400);
+  font-size: var(--fs-h5);
 }
 
 footer .button {
@@ -32,7 +32,7 @@ footer .information {
 }
 
 footer .subtitle {
-  font-size: var(--fs-200);
+  font-size: var(--fs-base);
 }
 
 .underscored {
@@ -45,16 +45,16 @@ footer .subtitle {
 */
 
 footer.dark {
-  background-color: var(--clr-mono-80);
+  background-color: var(--clr-mono-8);
 }
 
 footer.dark > * {
-  color: var(--clr-mono-900);
-  font-weight: var(--fw-light);  
+  color: var(--clr-mono-90);
+  font-weight: var(--fw-regular-optical-white-on-black);  
 }
 
 footer.dark .button {
-  border: 2px solid var(--clr-mono-900);
+  border: 2px solid var(--clr-mono-90);
 }
 
 
@@ -62,7 +62,7 @@ footer.dark .button {
 @media only screen and (max-width: 600px) {
 
   footer .title {
-    font-size: var(--fs-300);
+    font-size: var(--fs-h5);
   }
 
   footer .container {

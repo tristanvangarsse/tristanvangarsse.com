@@ -7,11 +7,11 @@
   padding: 120px 0 450px 0;
   width: 100%;
   background: rgb(24,24,24);
-  background: linear-gradient(0deg, var(--clr-mono-80) 0%, var(--clr-mono-80) 10%, rgba(12,20,43,1) 59%, rgba(0,0,0,1) 96%, rgba(0,0,0,1) 100%); 
+  background: linear-gradient(0deg, var(--clr-mono-8) 0%, var(--clr-mono-8) 10%, rgba(12,20,43,1) 59%, rgba(0,0,0,1) 96%, rgba(0,0,0,1) 100%); 
 }
 
 .alt-section > .landing-page-title {
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular-optical-white-on-black);
 }
 
 .artifacts {
@@ -19,7 +19,7 @@
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   gap: 200px 10vw;
   padding: 200px 20px 0 20px;
-  max-width: var(--max-width-200);
+  max-width: 1200px;
 }
 
 .artifacts > div:nth-child(even) {
@@ -40,8 +40,8 @@
 
 
 .artifacts > div > .description {
-  font-size: var(--fs-200);
-  font-weight: var(--fw-light);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular-optical-white-on-black);
   line-height: 1.5em;
   color: rgba(255, 255, 255, 0.35);
 }
@@ -80,7 +80,7 @@
   }
 
   .artifacts > div > .description {
-    font-size: var(--fs-100);
+    font-size: var(--fs-base);
   }
 
 }

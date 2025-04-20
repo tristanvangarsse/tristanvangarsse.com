@@ -1,11 +1,11 @@
 
 .collapsible {
-  max-width: var(--max-width-50);
+  max-width: 900px;
   margin: 0 60px;
 }
 
 .collapsible * {
-  font-size: var(--fs-400);
+  font-size: var(--fs-h5);
   font-weight: var(--fw-regular);
 }
 
@@ -16,13 +16,13 @@
   padding: 0 0 40px 0;
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--clr-mono-900);
+  border-bottom: 1px solid var(--clr-mono-90);
   text-align: left;
   outline: none;
 }
 
 .active, .collapsible button:hover {
-  color: var(--clr-mono-300);
+  color: var(--clr-mono-30);
 }
 
 .collapsible button:after {
@@ -48,8 +48,8 @@
 }
 
 .collapsible .obscured {
-  color: var(--clr-mono-460);
-  font-weight: var(--fw-light);
+  color: var(--clr-mono-46);
+  font-weight: var(--fw-regular-optical-gray-on-white);
 }
 
 .collapsible .content>*:last-child {
@@ -63,7 +63,7 @@
   }
 
   .collapsible * {
-    font-size: var(--fs-250);
+    font-size: var(--fs-h5);
   }
 
 }

@@ -13,11 +13,11 @@
 /* ------------------------------- */
 
 .showcase .project {
-  --fw-title: 320;
-  --fw-name: 700;
-  --fw-tags: 320;
-  --fw-description: 320;
-  --fw-link: 320;
+  --fw-title: var(--fw-regular);
+  --fw-name: var(--fw-bold);
+  --fw-tags: var(--fw-regular);
+  --fw-description: var(--fw-regular);
+  --fw-link: var(--fw-regular);
 
   --clr-name: var(--clr-main);
   --clr-title: var(--clr-main);
@@ -37,12 +37,12 @@
 
 .showcase .project.dark-blue,
 .showcase .project.black {
-  --fw-title: 220;
-  --fw-name: 600;
-  --fw-tags: 220;
-  --fw-description: 250;
-  --fw-link: 220;
-  --fw-supporting: 220;
+  --fw-title: var(--fw-regular-optical-white-on-black);
+  --fw-name: var(--fw-bold-optical-white-on-black);
+  --fw-tags: var(--fw-regular-optical-white-on-black);
+  --fw-description: var(--fw-regular-optical-white-on-black);
+  --fw-link: var(--fw-regular-optical-white-on-black);
+  --fw-supporting: var(--fw-regular-optical-white-on-black);
 }
 
 .showcase .project.green {
@@ -164,7 +164,7 @@
 
 .showcase .title {
   font-weight: var(--fw-title);
-  font-size: var(--fs-300);
+  font-size: var(--fs-h5);
   color: var(--clr-title);
 }
 
@@ -175,7 +175,7 @@
 
 .showcase .tags {
   margin-top: 10px;
-  font-size: var(--fs-150);
+  font-size: var(--fs-base);
   font-weight: var(--fw-tags);
   color: var(--clr-dim);
 }
@@ -242,7 +242,7 @@
 .showcase .supporting-text {
   margin-top: 10px;
   margin-right: 30px; /* buffer so text doesn't touch*/
-  font-size: var(--fs-150);
+  font-size: var(--fs-base);
   font-weight: var(--fw-supporting);
   color: var(--clr-dim);
 }
@@ -307,7 +307,7 @@
   }
 
   .showcase .supporting-text {
-    font-size: var(--fs-200);  
+    font-size: var(--fs-base);  
     margin: 15px 0 60px 0;
   }
 }

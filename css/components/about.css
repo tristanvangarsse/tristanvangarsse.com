@@ -1,51 +1,61 @@
 .about-text {
-  max-width: var(--max-width-100);
-  padding: 20px 50px 60px 50px;
-  font-size: var(--fs-400);
+  max-width: 1000px;
+  padding: 20px 50px 30px 50px;
+  font-size: var(--fs-h5);
   font-weight: var(--fw-regular);
+  line-height: 140%;
 }
 
 .about-text em {
   color: var(--clr-accent);
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular-optical-accent-on-white);
   display: inline-block;
 }
 
 .about-experience {
-  max-width: var(--max-width-100);
+  max-width: 1000px;
   padding: 70px 50px 50px 50px;
   width: 100%;
 }
 
-.about-experience .logo {
-  width: 110px;
-  height: 110px;
-  background-color: rgba(0, 0, 0, 0.044);
-  border-radius: 300px;
-  padding: 10px;
-  margin: 0 0 40px 0;
+.about-experience .employer {
+  display: flex;
+  align-items: center;
 }
 
-.about-experience .employer {
-  font-size: var(--fs-300);
-  font-weight: var(--fw-semi-regular);
+.about-experience .employer img {
+  height: 41px;
+  width: auto;
+  filter: invert(45%) sepia(93%) saturate(1022%) hue-rotate(320deg) brightness(88%) contrast(97%); /* changes svg color */
+}
+
+.about-experience .employer .kul-adjustment {
+  height: 44px;
+}
+
+.about-experience .employer div {
+  margin-left: 20px;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  color: var(--clr-accent);
 }
 
 .about-experience .title {
-  font-size: var(--fs-600);
+  font-size: var(--fs-h2);
   margin: 10px 0 20px 0;
 }
 
 .about-experience .subtitle {
-  font-size: var(--fs-200);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-light);
 }
 
 .about-experience .description {
   max-width: 50ch;
   margin: 15px 0 0 0;
-  font-size: var(--fs-200);
+  font-size: var(--fs-base);
   font-weight: var(--fw-light);
-  color: var(--clr-mono-460);
+  color: var(--clr-mono-46);
   line-height: 150%;
 }
 
@@ -63,7 +73,7 @@
 @media only screen and (max-width: 600px) {
   .about-text {
     padding: 0px 30px 50px 30px;  
-    font-size: var(--fs-250);
+    font-size: var(--fs-h5);
   }
 
   .about-experience {
@@ -77,21 +87,21 @@
   }
   
   .about-experience .employer {
-    font-size: var(--fs-200);
+    font-size: var(--fs-base);
   }
   
   .about-experience .title {
-    font-size: var(--fs-300);
+    font-size: var(--fs-h5);
     margin: 10px 0 20px 0;
   }
   
   .about-experience .subtitle {
-    font-size: var(--fs-100);
+    font-size: var(--fs-base);
   }
   
   .about-experience .description {
     max-width: 70ch;
-    font-size: var(--fs-100);
+    font-size: var(--fs-base);
   }
 
   .about-profile {

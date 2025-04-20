@@ -143,10 +143,13 @@
 
   <!-- main content -->
   <main>
-    <div class="landing-page fadein-br-1">
+    <div class="landing-page desktop" id="animated-text">
+      Hi,&nbsp;I'm&nbsp;Tristan.|An&nbsp;experienced&nbsp;creative|designer&nbsp;and&nbsp;passionate&nbsp;|brand&nbsp;strategist.
+    </div>
+    <div class="landing-page mobile">
       Hi, I'm Tristan.
       <br>
-      An experienced <em>creative designer</em> and passionate <em>brand strategist.</em>
+      An experienced <em>creative designer</em> and passionate <em>brand strategist</em>.
     </div>
 
     <video id="power-saver" class="scroll-resize landing-page-video fadein-bc-2" autoplay="" loop="" muted="" playsinline="">
@@ -379,9 +382,9 @@
       </div>
     </div>
 
-    <div class="spacer-200" id="about-section"></div>
+    <div class="spacer-200"></div>
 
-    <h1 class="landing-page-title trigger-1">about me</h1>
+    <h1 class="landing-page-title trigger-1" id="about-section">about me</h1>
 
     <div class="about-profile centered trigger-3">
       <img class="profile-picture" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/profile/profile-picture.jpg">
@@ -396,15 +399,19 @@
       My passion for <em>impeccable design</em> and creative problem&#x2011;solving gives me a unique perspective on contemporary issues.
     </div>
     <div class="about-experience centered trigger-3">
-      <img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-tristanvangarsse.svg" class="logo">
-      <div class="employer">Freelance</div>
+      <div class="employer">
+        <img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-tristanvangarsse.svg">
+        <div>Freelance</div>
+      </div>
       <div class="title">Creative Designer</div>
       <div class="subtitle">2018 - 2025&nbsp;&nbsp;Brussels</div>
       <div class="description">I created visual content for over 20 clients, crafting logos, brochures, and websites that enhanced brand recognition and engagement. I delivered strategic brand advice and digital solutions, driving a 25% increase in customer engagement for one client through optimized digital marketing.</div>
     </div>
     <div class="about-experience centered trigger-3">
-      <img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-kuleuven.svg" class="logo">
-      <div class="employer">KU Leuven</div>
+      <div class="employer">
+        <img class="kul-adjustment" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-kuleuven.svg">
+        <div>KU Leuven</div>
+      </div>
       <div class="title">Graphic Designer</div>
       <div class="subtitle">2020 - 2025&nbsp;&nbsp;Leuven</div>
       <div class="description">I collaborated with the Department of Cultural Studies to design comprehensive research dossiers on artistic heritage. I developed additional web-based data visualizations, leveraging front-end languages to deliver a clear and engaging UI/UX. Commissioned by the Flemish government, I contributed to shaping major policy decisions.</div>
@@ -615,6 +622,7 @@
   <script src="/scripts/detect-low-power-mode.js"></script> <!-- Detect Low Power mode -->
   <script src="/scripts/scroll-resize.js"></script> <!-- Resizes div based on scroll -->
   <script src="/scripts/slideshow.js"></script> <!-- Shows slideshow of images -->
+  <script src="/scripts/letter-by-letter-animation.js"></script> <!-- Animates letters -->
   <script>
     let images = document.querySelectorAll(".lazyload");
     new LazyLoad(images, {

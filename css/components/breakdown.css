@@ -1,6 +1,6 @@
 .breakdown {
-  max-width: var(--max-width-200);
-  width: 60%;
+  max-width: 1200px;
+  max-width: 60ch;
   padding: 70px 0 160px 0;
   display: flex;
   flex-direction: column;
@@ -14,65 +14,50 @@
   padding: 10px;
 }
 
-.breakdown-arrowleftbtn,
-.breakdown-arrowrightbtn {
-  position: fixed;
-  top: 50%;
-  width: 47px;
-  padding: 0 10px;
-}
-
-.breakdown-arrowleftbtn {
-  left: 11vw;
-}
-
-.breakdown-arrowrightbtn {
-  right: 11vw;
-}
-
 .breakdown .title,
 .breakdown .year,
 .breakdown .subtitle,
 .breakdown .paragraph {
-  padding: 0 10px;
+  padding: 0 2px; /* optical adjustment towards images */
 }
 
 .breakdown .title {
-  margin: clamp(0px, 7vw, 100px) 0 clamp(0px, 0.6vw, 10px) 0;
+  margin: 5rem 0 1rem 0;
   text-transform: uppercase;
   text-align: center;
-  font-size: var(--fs-500);
+  font-size: var(--fs-h4);
   color: var(--clr-accent);
 }
 
 .breakdown .year {
+  margin: 0 0 3rem 0;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .2rem;
-  font-size: var(--fs-150);
-  color: var(--clr-mono-500);
+  font-size: var(--fs-base);
+  color: var(--clr-mono-50);
 }
 
 .breakdown .subtitle {
-  margin: clamp(0px, 4vw, 60px) 0 clamp(0px, 1vw, 10px) 0;
+  margin: 1rem 0 2rem 0;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .2rem;
-  font-size: var(--fs-150);
+  font-size: var(--fs-base);
   color: var(--clr-accent);
 }
 
 .breakdown .paragraph {
-  margin: clamp(0px, 1.8vw, 10px) 0;
-  font-size: var(--fs-220);
-  font-weight: var(--fw-regular);
-  line-height: 2.3rem;
+  margin: 1rem 0;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-light);
+  line-height: 1.6em;
 }
 
 .breakdown .image,
 .breakdown .video {
-  margin: clamp(0px, 4vw, 60px) 0;
-  border-radius: var(--border-rad-200);
+  margin: 3rem 0;
+  border-radius: 20px;
   background: var(--clr-placeholder);
 }
 
@@ -93,12 +78,11 @@
 
 
 
-
 @media only screen and (max-width: 900px) {
 
   .breakdown {
     width: 85%;
-    padding-top: 90px;
+    padding: 0 0 100px 0;
   }
 
   .breakdown-closebtn {
@@ -119,17 +103,16 @@
   }
 
   .breakdown .title {
-    font-size: var(--fs-220);
+    /* font-size: var(--fs-h5); */
     font-weight: var(--fw-medium);
   }
 
   .breakdown .subtitle {
-    margin: 40px 0 30px 0;
+    margin: 2rem 0 30px 0;
   }
 
   .breakdown .paragraph {
-    font-size: var(--fs-100);
-    line-height: 1.5rem;
+    line-height: 1.7em;
   }
 
 }
