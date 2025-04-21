@@ -3,7 +3,7 @@
   padding: 20vh 50px 0 50px;
   font-size: var(--fs-h3);
   font-weight: var(--fw-light);
-  background: linear-gradient(150deg, #1a1a1a, #787878);
+  background: linear-gradient(150deg, #000000, #bebebe);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -32,10 +32,6 @@
   margin: 160px 0 0 0;
   border-radius: 30px;
   pointer-events: none;
-}
-
-#power-saver { /* had to take this ID because video can only have one ID */
-  transition: width 0.2s ease-out; /* animate size */
 }
 
 .landing-page em {
