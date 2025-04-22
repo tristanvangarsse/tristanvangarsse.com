@@ -3,10 +3,10 @@
   padding: 20vh 50px 0 50px;
   font-size: var(--fs-h3);
   font-weight: var(--fw-light);
-  background: linear-gradient(150deg, #000000, #bebebe);
+  /* background: linear-gradient(150deg, #000000, #bebebe);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   display: inline-block;
   /* Force GPU acceleration */
   transform: translateZ(0);

@@ -20,7 +20,7 @@ lines.forEach((line) => {
     const progress = currentLetterIndex / totalLetters;
     const delay = Math.pow(progress, 2.5) * 2; // Quadratic easing over all letters
     
-    span.style.animation = `fadeIn 0.9s ease forwards ${delay}s`;
+    span.style.animation = `move-in-letters 0.9s ease forwards ${delay}s`;
     lineDiv.appendChild(span);
     currentLetterIndex++;
   });
