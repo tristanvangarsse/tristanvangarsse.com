@@ -50,8 +50,9 @@
 .breakdown .paragraph {
   margin: 1rem 0;
   font-size: var(--fs-base);
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
   line-height: 1.6em;
+  color: var(--clr-mono-8);
 }
 
 .breakdown .image,
