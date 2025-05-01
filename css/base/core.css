@@ -1,4 +1,6 @@
 html {
+  overflow-wrap: anywhere; /* prevents breaking div */
+  overflow-wrap: break-word; /* prevents breaking div */
   font-size: 18px; /* dictates rem size */
 }
 

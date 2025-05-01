@@ -83,7 +83,7 @@
 
   .breakdown {
     width: 85%;
-    padding: 0 0 100px 0;
+    padding: 30px 0 100px 0;
   }
 
   .breakdown-closebtn {
@@ -104,7 +104,7 @@
   }
 
   .breakdown .title {
-    /* font-size: var(--fs-h5); */
+    font-size: var(--fs-h5);
     font-weight: var(--fw-medium);
   }
 
