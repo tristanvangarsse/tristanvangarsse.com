@@ -1,9 +1,9 @@
 .back-to-top {
   position: fixed;
   z-index: 10;
-  width: 50px;
+  width: 60px;
   bottom: 10%;
-  right: 11vw;
+  right: 3vw;
   padding: 0 10px;
   clip-path: inset(100%, 100%, 100%, 100%);
   overflow: hidden;

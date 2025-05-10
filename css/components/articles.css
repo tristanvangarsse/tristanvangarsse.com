@@ -117,7 +117,7 @@
   }
 
   .articles .container .description {
-    font-size: var(--fs-h5);
+    font-size: var(--fs-large);
   }
 
   .button-link {
