@@ -1,11 +1,7 @@
 .landing-page {
   max-width: 1000px;
-  padding: calc(28vh - 150px) 0 0 0;
+  padding: clamp(90px, calc(26vh - 120px), 200px) 0 0 0;
   font-weight: var(--fw-light);
-  /* background: linear-gradient(150deg, #000000, #bebebe);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
   display: inline-block;
   /* Force GPU acceleration */
   transform: translateZ(0);
@@ -87,6 +83,32 @@
 
   .landing-page-title {
     font-size: var(--fs-base);
+  }
+
+}
+
+/* Targets laptop screens with a short height */
+@media only screen and (max-height: 700px) and (min-width: 1100px) {
+
+  .landing-page-video {
+    width: 150vh !important;
+  }
+
+  .landing-page.words-en {
+    font-size: 2.6rem !important;
+  }
+  
+  .landing-page.words-nl {
+    font-size: 2.6rem !important;
+  }
+
+}
+
+/* Targets touch-enabled devices with small screens */
+@media only screen and (max-width: 768px) and (pointer: coarse) {
+
+  .landing-page {
+    font-weight: var(--fw-regular);
   }
 
 }

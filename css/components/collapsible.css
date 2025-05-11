@@ -2,6 +2,7 @@
 .collapsible {
   max-width: 900px;
   margin: 0 60px;
+  width: 100%;
 }
 
 .collapsible * {
@@ -60,10 +61,28 @@
 
   .collapsible {
     margin: 0 40px;
+    width: 80%;
   }
 
-  .collapsible * {
+  .collapsible button {
+    padding: 0 0 30px 0;
+  }
+
+  .collapsible .content {
+    margin: 15px 0;
+  }
+
+  .collapsible .content div {
+    margin: 20px;
+  }
+
+
+  .collapsible button {
     font-size: var(--fs-h5);
+  }
+
+  .collapsible .content * {
+    font-size: var(--fs-large);
   }
 
 }

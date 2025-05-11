@@ -2,6 +2,8 @@ html {
   overflow-wrap: anywhere; /* prevents breaking div */
   overflow-wrap: break-word; /* prevents breaking div */
   font-size: 18px; /* dictates rem size */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -41,6 +43,7 @@ main {
 .debug-mode {
   display: none;
   position:fixed;
+  z-index: 100;
   left: 10px;
   top: 7px;
   color: red;
