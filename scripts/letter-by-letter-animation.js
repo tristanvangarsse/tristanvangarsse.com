@@ -43,3 +43,6 @@ lines.forEach((line) => {
 
   textElement.appendChild(lineDiv);
 });
+
+// Make the element visible after all animation is set up.
+textElement.style.visibility = 'visible';
