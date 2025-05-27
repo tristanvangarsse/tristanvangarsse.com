@@ -25,6 +25,7 @@
   background: var(--clr-placeholder);
   width: 100%;
   position: relative;
+  aspect-ratio: 16 / 9;
 }
 
 .articles .container .image-content img {
