@@ -42,14 +42,14 @@
   --fw-extra-bold: 720;
   --fw-black: 810;
 
-  --fs-tiny: 0.65rem; /* 13,5px */
-  --fs-small: 0.75rem; /* 13,5px */
-  --fs-base: 1rem;     /* 18px */
-  --fs-large: 1.4rem;     /* 18px */
+  --fs-tiny: 0.65rem;
+  --fs-small: 0.75rem;
+  --fs-base: 1rem;
+  --fs-large: 1.4rem;
 
-  --fs-h1: 6rem;       /* 108px */
-  --fs-h2: 5rem;       /* 90px */
-  --fs-h3: 4rem;       /* 72px */
-  --fs-h4: 3rem;       /* 54px */
-  --fs-h5: 2rem;       /* 36px */
+  --fs-h1: 6rem;
+  --fs-h2: 5rem;
+  --fs-h3: 4rem;
+  --fs-h4: 3rem;
+  --fs-h5: 2rem;
 }

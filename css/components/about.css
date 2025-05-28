@@ -26,7 +26,6 @@
 .about-experience .employer img {
   height: 41px;
   width: auto;
-  filter: invert(45%) sepia(93%) saturate(1022%) hue-rotate(320deg) brightness(88%) contrast(97%); /* changes svg color */
 }
 
 .about-experience .employer .kul-adjustment {
@@ -37,12 +36,36 @@
   margin-left: 20px;
   font-size: var(--fs-h4);
   font-weight: var(--fw-medium);
-  color: var(--clr-accent);
+}
+
+.about-experience .employer.pink img {
+  filter: invert(45%) sepia(93%) saturate(1022%) hue-rotate(320deg) brightness(88%) contrast(97%); /* changes svg color */
+}
+
+.about-experience .employer.blue img {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(1748%) hue-rotate(204deg) brightness(90%) contrast(91%);
+}
+
+.about-experience .employer.yellow img {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(7480%) hue-rotate(360deg) brightness(102%) contrast(104%);
+}
+
+.about-experience .employer.pink * {
+  color: #dd555e;
+}
+
+.about-experience .employer.blue * {
+  color: #123a75;
+}
+
+.about-experience .employer.yellow * {
+  color:#ffc500;
 }
 
 .about-experience .title {
   font-size: var(--fs-h2);
   margin: 10px 0 20px 0;
+  line-height: 1em;
 }
 
 .about-experience .subtitle {
@@ -73,7 +96,7 @@
 @media only screen and (max-width: 600px) {
   .about-text {
     padding: 0px 30px 50px 30px;  
-    font-size: var(--fs-h5);
+    font-size: var(--fs-large);
   }
 
   .about-experience {
@@ -112,7 +135,4 @@
     padding: 0;
     max-width: calc(100% - 70px);
   }
-
-
-
 }

@@ -8,7 +8,7 @@
   clip-path: inset(100%, 100%, 100%, 100%);
   overflow: hidden;
   display: none;
-  filter: drop-shadow(-2px 2px 2px hsla(356, 47%, 6%, 0.2));
+  /* filter: drop-shadow(-2px 2px 2px hsla(356, 47%, 6%, 0.2)); */
 }
 
 @media (pointer: coarse) { /* checks for touchscreen devices */

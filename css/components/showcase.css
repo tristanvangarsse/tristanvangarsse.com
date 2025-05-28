@@ -290,6 +290,10 @@
 
 @media only screen and (max-width: 600px) {
 
+  .project.green .spacer-50 {
+    display: none;
+  }
+
   .indicator-container {
     padding: 5px 0; /* larger clickable area */  
   }
@@ -309,15 +313,24 @@
     padding-right: 20px;
   }
 
+  .showcase .tags {
+    margin-bottom: 40px;
+  }
+
+  .showcase .description:nth-child(2) {
+    display: none;
+  }
+
 
   .showcase .supporting-visuals {
     flex-direction: column;
+    padding-top: 40px;
     padding-bottom: 50px;
   }
 
   .showcase .supporting-image {
     border-radius: 15px;
-    height: 70vh;
+    height: 60vh;
     min-height: auto;
   }
 
