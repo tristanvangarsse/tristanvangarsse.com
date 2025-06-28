@@ -45,6 +45,18 @@
   --fw-supporting: var(--fw-regular-optical-white-on-black);
 }
 
+.showcase .project.bordeaux {
+  --clr-h: 342;
+  --clr-s: 63%;
+  --clr-l: 41%;
+  --clr-main: hsl(
+    var(--clr-h),
+    var(--clr-s),
+    var(--clr-l)
+  );
+  background: linear-gradient(0deg, hsl(350, 50%, 78%) 0%, hsl(var(--clr-h), 20%, 87%) 80%, hsl(var(--clr-h), 20%, 100%) 100%);
+}
+
 .showcase .project.green {
   --clr-h: 125;
   --clr-s: 69%;
@@ -54,7 +66,8 @@
     var(--clr-s),
     var(--clr-l)
   );
-  background: linear-gradient(0deg, hsl(var(--clr-h), 30%, 58%) 0%, hsl(var(--clr-h), 20%, 87%) 80%, hsl(var(--clr-h), 20%, 100%) 100%);
+
+  background: linear-gradient(0deg, hsl(var(--clr-h), 30%, 50%) 0%, hsl(50, 85%, 93%) 100%);
 }
 
 .showcase .project.dark-blue {
