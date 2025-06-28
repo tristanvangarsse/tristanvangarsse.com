@@ -54,6 +54,7 @@
     var(--clr-s),
     var(--clr-l)
   );
+  
   background: linear-gradient(0deg, hsl(350, 50%, 78%) 0%, hsl(var(--clr-h), 20%, 87%) 80%, hsl(var(--clr-h), 20%, 100%) 100%);
 }
 
