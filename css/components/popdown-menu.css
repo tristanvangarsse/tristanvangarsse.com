@@ -64,10 +64,18 @@
 
 @media only screen and (max-width: 600px) {
 
+  .popdown-menu {
+    height: 50px;
+    background-color: rgba(43, 38, 39, 0.93);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.4));
+  }
+
   .popdown-menu .hamburger-menu {
     display: block;
-    margin: 7px 0 0 0;
-    padding: 20px;
+    margin: 3px 0 0 0;
+    padding: 15px;
     cursor: pointer;
   }
 
