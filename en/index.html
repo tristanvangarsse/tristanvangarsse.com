@@ -63,6 +63,85 @@
     <!-- page loader -->
   <div class="page-loader"></div>
 
+  <!-- pop-down menu bar after initial scroll -->
+  <div class="popdown-menu initial-scroll-visibility not-initialized popdown-move" id="popdown-menu">
+    <a draggable="false" class="wordmark-link" href="#body-anchor">
+      <img draggable="false" class="logomark" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/logo-tristanvangarsse-pink.svg" alt="Red logo">
+      <img draggable="false" class="wordmark" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/wordmark-neutral-900.svg" alt="Tristan Van Garsse">
+    </a>
+    <nav>
+      <a draggable="false" href="#work-section">Work</a>
+      <a draggable="false" href="#about-section">About</a>
+      <a draggable="false" href="#contact-section">Contact</a>
+      <button id="menu-trigger" class="hamburger-menu">
+        <svg width="18" height="18" viewBox="0 0 18 18">
+          <polyline id="bread-bottom" 
+                    fill="none" 
+                    stroke="#fff" 
+                    stroke-width="1.2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    points="2 12, 16 12">
+            <animate id="bread-bottom-open" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
+            <animate id="bread-bottom-close" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
+          </polyline>
+          <polyline id="bread-top" 
+                    fill="none" 
+                    stroke="#fff" 
+                    stroke-width="1.2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    points="2 5, 16 5">
+            <animate id="bread-top-open" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
+            <animate id="bread-top-close" 
+                      attributeName="points" 
+                      keyTimes="0;0.5;1" 
+                      dur="0.24s" 
+                      begin="indefinite" 
+                      fill="freeze" 
+                      calcMode="spline" 
+                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
+                      values="3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
+          </polyline>
+        </svg>
+      </button>
+    </nav> 
+  </div>
+  
+  <!-- drop-down menu -->
+  <div class="dropdown-menu" id="animated-dropdown">
+    <a draggable="false" class="mobile-menu" href="#work-section">Work</a>
+    <a draggable="false" class="mobile-menu" href="#about-section">About</a>
+    <a draggable="false" class="mobile-menu" href="#contact-section">Contact</a>
+    <p class="mobile-menu">vangarsse.tristan@gmail.com</p>
+    <p class="mobile-menu">+32(0)4831 46818</p>
+    <a draggable="false" class="mobile-lang" href="../nl/" hreflang="nl">Nederlands →</a>
+  </div>
+
     <!-- side widget -->
   <div class="widget-bar fadein-2">
     <div class="availability-widget">
@@ -90,78 +169,11 @@
       <img draggable="false" class="wordmark" src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/wordmark-neutral-100.svg" alt="Tristan Van Garsse">
     </a>
     <nav>
-      <div class="dropdown-menu" id="animated-dropdown">
-        <a draggable="false" class="mobile-menu" href="#work-section">Work</a>
-        <a draggable="false" class="mobile-menu" href="#about-section">About</a>
-        <a draggable="false" class="mobile-menu" href="#contact-section">Contact</a>
-        <p class="mobile-menu">vangarsse.tristan@gmail.com</p>
-        <p class="mobile-menu">+32(0)4831 46818</p>
-        <a draggable="false" class="mobile-lang" href="../nl/" hreflang="nl">Nederlands →</a>
-      </div>
       <a draggable="false" href="#work-section">Work</a>
       <a draggable="false" href="#about-section">About</a>
       <a draggable="false" href="#contact-section">Contact</a>
-      <button id="menu-trigger" class="hamburger-menu">
-        <svg width="18" height="18" viewBox="0 0 18 18">
-          <polyline id="bread-bottom" 
-                    fill="none" 
-                    stroke="#000" 
-                    stroke-width="1.2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
-                    points="2 12, 16 12">
-            <animate id="bread-bottom-open" 
-                      attributeName="points" 
-                      keyTimes="0;0.5;1" 
-                      dur="0.24s" 
-                      begin="indefinite" 
-                      fill="freeze" 
-                      calcMode="spline" 
-                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
-                      values="2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
-            <animate id="bread-bottom-close" 
-                      attributeName="points" 
-                      keyTimes="0;0.5;1" 
-                      dur="0.24s" 
-                      begin="indefinite" 
-                      fill="freeze" 
-                      calcMode="spline" 
-                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
-                      values="3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
-          </polyline>
-          <polyline id="bread-top" 
-                    fill="none" 
-                    stroke="#000" 
-                    stroke-width="1.2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
-                    points="2 5, 16 5">
-            <animate id="bread-top-open" 
-                      attributeName="points" 
-                      keyTimes="0;0.5;1" 
-                      dur="0.24s" 
-                      begin="indefinite" 
-                      fill="freeze" 
-                      calcMode="spline" 
-                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
-                      values="2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
-            <animate id="bread-top-close" 
-                      attributeName="points" 
-                      keyTimes="0;0.5;1" 
-                      dur="0.24s" 
-                      begin="indefinite" 
-                      fill="freeze" 
-                      calcMode="spline" 
-                      keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" 
-                      values="3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
-          </polyline>
-        </svg>
-      </button>
     </nav>
-  </header>  
-
-  <!-- back to top arrow -->
-  <a draggable="false" href="#body-anchor" class="back-to-top portal-move-1"><img src="https://file.garden/Z8RSCvtUnnZ9Xeo8/image/svg/arrow-up-accent.svg" alt=""></a>
+  </header>
 
   <!-- main content -->
   <main>
@@ -239,7 +251,7 @@
           <div class="text-content">
             <div>
               <h1 class="title">
-              <span>VAN DENDER</span> — Divine Tradition, Newly Tempting
+              <span>VAN DENDER</span> — Divine Tradition, Rebranded
               </h1>
               <div class="tags">
                 Rebranding, Brand Identity, Digital Strategy
@@ -247,12 +259,9 @@
             </div>
             <div>
               <div class="description">
-                With royal roots and global allure, Van Dender repositions itself as a Heritage Innovator: centuries-old craftsmanship translated into sensory luxury for a new generation. Here, chocolate is no longer just a treat, but a ritual. Elegantly packaged, digitally narrated, and made to be both shared and cherished.
+                Van Dender is a heritage chocolatier reimagined for a new generation. We replaced the outdated logo with a custom wordmark, refined the color palette to deep cocoa and muted burgundy, and redrew the coat of arms for digital and print. The identity blends tradition with modern clarity: minimal, elegant, and built for both shelf and screen.
               </div>
-              <div class="description">
-                The renewed identity blends timeless grandeur with contemporary refinement: deep cocoa brown is complemented by a warm, muted burgundy; the coat of arms is subtly redrawn for both screen and packaging. Van Dender remains true to its craft, but now also speaks the language of Instagram, sustainability, and culture-driven design.
-              </div>
-              <div class="link"></div>
+              <a class="link">Case study coming soon.</a>
             </div>
           </div>
         </div>
@@ -319,12 +328,9 @@
             </div>
             <div>
               <div class="description">
-                Mino is a culinary bridge between Armenia’s smoky hearths and French’ refined tables—a high-end dining experience where hand-chopped lamb tartare meets lavash ash brittle, and Wagyu glazed in pomegranate molasses crackles over open flame.
+                Mino is a culinary bridge between Armenia’s smoky hearths and French’ refined tables. They are a brand new high-end dining experience. As such, we designed their brand identity from scratch. The logo combines a script font with clean typography, reflecting the balance of rustic and refined. The visuals draw from Armenian stone carvings and warm, smoky green textures.
               </div>
-              <div class="description">
-                The brand identity mirrors this duality: a marriage of rugged textures and delicate artistry, with typography carved like Armenian stone scripts and visuals glowing like embers under cast-iron. Here, every dish is a relic, every bite a whispered history.
-              </div>
-              <div class="link"></div>
+              <a class="link">Case study coming soon.</a>
             </div>
           </div>
         </div>
@@ -470,10 +476,7 @@
             </div>
             <div>
               <div class="description">
-                KU Leuven’s Department of Cultural Studies commissioned me as Lead UX/UI Designer to support a major research project on the state of cultural heritage in Flanders. I designed interactive data visualizations: some showing clusters of organizations based on discipline, and others mapping their relationships through node-based networks.
-              </div>
-              <div class="description">
-                The project also included a printed research dossier with clear typography, a refined color palette, and custom graphs to present complex findings in an accessible way. These tools now help the Flemish government make informed decisions around funding, policy, and preservation strategies.
+                As Lead UX/UI Designer for KU Leuven, I created interactive data visualizations to analyze cultural heritage organizations, clustering them by discipline and mapping their connections. The project included a printed research dossier with custom typography and graphs, now used by the Flemish government to inform policy and funding decisions.
               </div>
               <a class="link" href="./kuleuven/">View project details</a>
             </div>
@@ -804,7 +807,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script src="/scripts/back-to-top-smooth-scroll.js"></script> <!-- scrolls smoothly to anchor -->
-  <script src="/scripts/back-to-top-visibility.js"></script> <!-- hides back to top arrow -->
+  <script src="/scripts/initial-scroll-visibility.js"></script> <!-- hides back to top arrow -->
   <script src="/scripts/collapsible.js"></script> <!-- collapsible list of qualifications -->
   <script src="/scripts/animate-when-in-view.js"></script> <!-- Animate when in view -->
   <script src="/scripts/dropdown-menu.js"></script> <!-- Dropdown menu -->

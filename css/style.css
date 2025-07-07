@@ -21,6 +21,7 @@
 @import 'components/about.css';
 @import 'components/artifacts.css';
 @import 'components/showcase.css';
+@import 'components/popdown-menu.css';
 
 /* Import utility styles */
 @import 'utilities/spacing.css';

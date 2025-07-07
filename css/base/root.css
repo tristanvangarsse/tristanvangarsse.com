@@ -31,6 +31,10 @@
   --fw-thin: 90;
   --fw-extra-light: 180;
   --fw-light: 270;
+  --fw-book-optical-gray-on-white: 270;
+  --fw-book-optical-accent-on-white: 270;
+  --fw-book-optical-white-on-black: 190;
+  --fw-book: 300;
   --fw-regular-optical-gray-on-white: 320;
   --fw-regular-optical-accent-on-white: 320;
   --fw-regular-optical-white-on-black: 240;
