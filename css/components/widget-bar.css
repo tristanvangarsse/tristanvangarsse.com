@@ -1,3 +1,9 @@
+/* DISABLED: widget */
+.widget-bar {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
 
 /* DISABLED: week schedule */
 .widget-bar .av-contact:nth-child(2) {

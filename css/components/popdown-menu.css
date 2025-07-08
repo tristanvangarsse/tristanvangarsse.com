@@ -1,6 +1,7 @@
 .popdown-menu {
+  --bg-color: var(--clr-bg-popdown-menu);
   position: fixed;
-  z-index: 100;
+  z-index: 99;
   left: 50%;
   transform: translate(-50%,-100px);
   top: 10px;
@@ -10,10 +11,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 25px 0 25px;
-  background-color: rgba(43, 38, 39, 0.85);
+  background-color: rgba(var(--bg-color),var(--bg-color),var(--bg-color), 0.8);
   border-radius: 18px;
   backdrop-filter: blur(10px);
-  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.4));
+  box-shadow: 0 -10px 60px rgba(0, 0, 0, 0.18);
 }
 
 .popdown-menu .wordmark-link {
@@ -40,13 +41,17 @@
   display: flex;
   align-items: center;
   font-family: var(--ff-heading);
-  font-weight: var(--fw-regular-optical-white-on-black);
+  font-weight: var(--fw-regular);
   font-size: var(--fs-base);
-  color: white;
+  color: black;
 }
 
 .popdown-menu nav > *:not(:first-child):not(:last-child) {   
-  margin: 0 0 0 45px;
+  margin: 0 0 0 clamp(20px, 2vw, 40px);
+}
+
+.popdown-menu nav > a:nth-last-child(2) {
+  color: var(--clr-accent);
 }
 
 .popdown-menu nav > a {
@@ -62,14 +67,12 @@
   display: none
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
   .popdown-menu {
     height: 50px;
-    background-color: rgba(43, 38, 39, 0.93);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.4));
+    background-color: rgba(var(--bg-color),var(--bg-color),var(--bg-color), 0.98);
+    border-radius: 8px;
   }
 
   .popdown-menu .hamburger-menu {

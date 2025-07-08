@@ -1,4 +1,5 @@
 .dropdown-menu {
+  --bg-color: var(--clr-bg-popdown-menu);
   display: none;
 }
 
@@ -19,26 +20,26 @@
     top: var(--top-distance);
     width: 90vw;
     height: 0;
-    transition: height 0.5s ease;
+    transition: height 0.3s ease;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 0 10px 0 25px;
-    background-color: rgba(43, 38, 39, 0.93);
-    border-radius: 18px;
+    background-color: rgba(var(--bg-color),var(--bg-color),var(--bg-color), 0.98);
+    border-radius: 11px;
     backdrop-filter: blur(10px);
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.4));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
   }
 
  .dropdown-menu.open  {
-  height: min-content;
+  height: calc(350px + 16vh);
   }
 
   .mobile-menu,
   .mobile-lang {
     margin-left: 20px;
-    color: var(--clr-white);
+    color: black;
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -60,36 +61,40 @@
     margin-bottom: 50px;
     width: min-content;
     padding: 7px 12px;
-    background-color: rgba(34, 34, 34, 0.8);
+    background-color: rgb(221, 221, 221);
     border-radius: 10px;
   }
 
   /* Apply staggered delay using nth-child */
   .mobile-menu:nth-child(1) {
-    margin-top: 40px;
+    margin-top: 30px;
     transition-delay: 0.1s;
   }
 
   .mobile-menu:nth-child(2) {
-    transition-delay: 0.2s;
+    transition-delay: 0.15s;
   }
 
   .mobile-menu:nth-child(3) {
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
   }
 
   .mobile-menu:nth-child(4) {
-    margin-top: 50px;
-    transition-delay: 0.4s;
+    transition-delay: 0.25s;
   }
 
   .mobile-menu:nth-child(5) {
-    transition-delay: 0.5s;
+    margin-top: 30px;
+    transition-delay: 0.3s;
+  }
+
+  .mobile-menu:nth-child(6) {
+    transition-delay: 0.35s;
   }
 
   .mobile-lang {
     margin-top: 20px;
-    transition-delay: 0.6s;
+    transition-delay: 0.4s;
   }
 
   .dropdown-menu.open .mobile-menu,

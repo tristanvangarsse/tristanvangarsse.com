@@ -49,3 +49,8 @@ main {
   color: red;
   font-size: var(--fs-base);
 }
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

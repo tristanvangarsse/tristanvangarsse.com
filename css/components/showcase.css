@@ -188,7 +188,8 @@
 .showcase .title span {
   font-weight: var(--fw-name);
   color: var(--clr-name);
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.12rem;
+
 }
 
 .showcase .tags {
@@ -308,17 +309,20 @@
 
 @media only screen and (max-width: 600px) {
 
+
+
+
   .showcase .project {
     --fw-title: var(--fw-regular);
-    --fw-description: var(--fw-regular);
-    --fw-link: var(--fw-regular);
+    --fw-description: var(--fw-medium);
+    --fw-link: var(--fw-medium);
   }
   
   .showcase .project.dark-blue,
   .showcase .project.black {
-    --fw-title: var(--fw-regular-optical-white-on-black);
-    --fw-description: var(--fw-regular-optical-white-on-black);
-    --fw-link: var(--fw-regular-optical-white-on-black);
+    --fw-title: var(--fw-medium-optical-white-on-black);
+    --fw-description: var(--fw-medium-optical-white-on-black);
+    --fw-link: var(--fw-medium-optical-white-on-black);
   }
 
   .project.green .spacer-50 {

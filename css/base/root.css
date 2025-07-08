@@ -23,6 +23,8 @@
 
   --clr-placeholder: var(--clr-mono-90);
 
+  --clr-bg-popdown-menu: 248;
+
   --ff-primary: "Inter", sans-serif;
 
   --ff-body: var(--ff-primary);
@@ -31,20 +33,27 @@
   --fw-thin: 90;
   --fw-extra-light: 180;
   --fw-light: 270;
-  --fw-book-optical-gray-on-white: 270;
-  --fw-book-optical-accent-on-white: 270;
-  --fw-book-optical-white-on-black: 190;
   --fw-book: 300;
-  --fw-regular-optical-gray-on-white: 320;
-  --fw-regular-optical-accent-on-white: 320;
-  --fw-regular-optical-white-on-black: 240;
   --fw-regular: 360;
   --fw-medium: 450;
   --fw-semi-bold: 540;
-  --fw-bold-optical-white-on-black: 500;
   --fw-bold: 630;
   --fw-extra-bold: 720;
   --fw-black: 810;
+
+  --fw-book-optical-gray-on-white: 270;
+  --fw-book-optical-accent-on-white: 270;
+  --fw-book-optical-white-on-black: 190;
+
+  --fw-regular-optical-gray-on-white: 320;
+  --fw-regular-optical-accent-on-white: 320;
+  --fw-regular-optical-white-on-black: 240;
+
+  --fw-medium-optical-gray-on-white: 410;
+  --fw-medium-optical-accent-on-white: 410;
+  --fw-medium-optical-white-on-black: 330;
+
+  --fw-bold-optical-white-on-black: 500;
 
   --fs-tiny: 0.65rem;
   --fs-small: 0.75rem;
