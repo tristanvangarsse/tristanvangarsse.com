@@ -30,21 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     });
 
+    // Add click event to current slide to go to next
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', () => {
+        if (i === currentSlide) {
+          clearInterval(interval);
+          let nextSlide = (currentSlide + 1) % slides.length;
+          showSlide(nextSlide);
+          startSlideshow();
+        }
+      });
+    });
+
     // Init
     showSlide(0);
     startSlideshow();
   });
 });
-
-// Helper for onclick from HTML (if still using inline)
-function goToSlide(element, n) {
-  const slideshow = element.closest('.container').querySelector('.slideshow');
-  const slides = slideshow.querySelectorAll('.slide');
-  const indicators = element.parentElement.querySelectorAll('.indicator-container');
-
-  slides.forEach(slide => slide.classList.remove('active'));
-  indicators.forEach(ind => ind.classList.remove('active'));
-
-  slides[n].classList.add('active');
-  indicators[n].classList.add('active');
-}
