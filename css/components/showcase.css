@@ -100,7 +100,7 @@
   --clr-description: hsla(var(--clr-h),var(--clr-s),var(--clr-l),0.6);
 }
 
-.showcase .project.azerty {
+.showcase .project.pink {
   --clr-h: 330;
   --clr-s: 79%;
   --clr-l: 50%;
