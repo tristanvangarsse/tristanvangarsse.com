@@ -110,7 +110,7 @@
     var(--clr-l)
   );
 
-  background: linear-gradient(0deg, hsl(var(--clr-h), 60%, 90%) 0%, hsl(330, 75%, 80%) 100%);
+  background: linear-gradient(0deg, hsl(var(--clr-h), 60%, 90%) 0%, hsl(37, 84%, 88%) 100%);
   /* background: linear-gradient(0deg, hsl(var(--clr-h), 50%, 95%) 0%, hsl(var(--clr-h), 40%, 80%) 100%); */
   --clr-description: hsla(var(--clr-h),var(--clr-s),var(--clr-l),0.8);
 }
