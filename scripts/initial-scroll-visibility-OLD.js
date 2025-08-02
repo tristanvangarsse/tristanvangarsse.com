@@ -8,6 +8,7 @@ function handleScroll() {
 
   targetDivs.forEach(function(targetDiv) {
     if (isMobile) {
+      // Always show immediately on mobile
       targetDiv.classList.remove('not-initialized', 'popdown-hide', 'popdown-show');
       targetDiv.style.transform = 'translate(-50%,0px)';
       targetDiv.style.opacity = '1';
@@ -16,10 +17,12 @@ function handleScroll() {
       return;
     }
 
-    // Always run visibility logic — even on first scroll
+    // Normal behavior for desktop
     if (!initialized) {
       targetDiv.classList.remove('not-initialized');
+      lastState = scrollDistance > 200 ? 'shown' : 'hidden';
       initialized = true;
+      return;
     }
 
     const shouldBeShown = scrollDistance > 200;
@@ -38,11 +41,6 @@ function handleScroll() {
   });
 }
 
-// Event listeners
 window.addEventListener('scroll', handleScroll);
-window.addEventListener('resize', handleScroll);
-window.addEventListener('load', () => {
-  handleScroll();
-  setTimeout(handleScroll, 100); // For anchor jumps
-});
-window.addEventListener('hashchange', handleScroll);
+window.addEventListener('resize', handleScroll); // trigger on resize as well
+window.addEventListener('load', handleScroll);   // run on initial load
