@@ -44,3 +44,6 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleScroll); // trigger on resize as well
 window.addEventListener('load', handleScroll);   // run on initial load
+
+
+//test
