@@ -1,6 +1,6 @@
 .landing-page {
   max-width: 1000px;
-  padding: clamp(90px, calc(26vh - 120px), 200px) 0 0 0;
+  padding: clamp(110px, calc(40vh - 200px), 250px) 0 0 0;
   font-weight: var(--fw-light);
   display: inline-block;
   /* Force GPU acceleration */
