@@ -106,7 +106,7 @@
 
   .group {
     gap: 30px;
-    animation: scrolling 50s linear infinite;
+    animation: scrolling 40s linear infinite;
   }
 
   .articles .container {
