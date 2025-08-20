@@ -1,45 +1,70 @@
 .articles {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers all .container horizontally */
-  gap: 90px; /* Space between cards */
-  margin: 0 100px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  width: 100%;
+  overflow: hidden;
+  --width: 400px;
+  > * {
+    flex: 0 0 100%;
+  }
+}
+
+.group {
+  display: flex;
+  gap: 50px;
+  padding-right: 50px;
+  will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+  animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .articles .container {
   display: flex;
-  justify-content: center;
-  column-gap: 2.5vw;
-  max-width: 800px;
-  /* width: 100%; */
+  flex-direction: column;
+  width: var(--width);
+  gap: 1vw;
+}
+
+.articles .container .image-container {
+  object-fit: contain;
+  border-radius: 20px;
+  overflow: hidden;
+  width: var(--width);
+  height: var(--width);
 }
 
 .articles .container .image-content {
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: min-content;
-  flex: 1 0 50%;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-top: 7px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .articles .container .title {
-  color: var(--clr-accent);
   font-size: var(--fs-h5);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-light);
+  line-height: 115%;
+  margin-bottom: 5px;
 }
 
 .articles .container .description {
-  font-size: var(--fs-h5);
-  font-weight: var(--fw-regular);
+  font-size: var(--fs-basis);
+  font-weight: var(--fw-book);
 }
 
 .button-link {
   width: fit-content;
   display: flex;
-  margin: 20px 0 0 0;
+  margin: 25px 0 0 0;
   padding: 10px 15px;
   border-radius: 100px;
   border: 2px solid black;
@@ -76,35 +101,27 @@
 @media only screen and (max-width: 600px) {
 
   .articles {
-    gap: 20px;
-    margin: 0 30px;
+    --width: 250px;
+  }
+
+  .group {
+    gap: 30px;
+    animation: scrolling 50s linear infinite;
   }
 
   .articles .container {
-    flex-direction: column;
-    column-gap: 0;
-    row-gap: 15px;
-  }
-
-  .articles .container .image-content {
-    flex-basis: auto;
-    width: 100%;
-    position: relative;
+    gap: 20px;
   }
 
   .articles .container .title {
-    margin: 0 0 5px 0;
-    font-size: var(--fs-basis);
-  }
-
-  .articles .container .description {
     font-size: var(--fs-large);
   }
 
+  .articles .container .description {
+    font-size: var(--fs-basis);
+  }
+
   .button-link {
-    border: none;
-    margin: 0 0 0 0;
-    padding: 15px 0;
   }
 
 
