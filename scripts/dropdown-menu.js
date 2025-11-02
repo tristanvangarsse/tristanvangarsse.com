@@ -16,21 +16,15 @@ menuTrigger.addEventListener('click', () => {
     // Play "close" animations
     bottomCloseAnim.beginElement();
     topCloseAnim.beginElement();
-
-    // Remove 'open' and reset scroll
     animatedDropdown.classList.remove('open');
   } else {
     // Play "open" animations
     bottomOpenAnim.beginElement();
     topOpenAnim.beginElement();
-
-    // Add 'open' and disable scroll
     animatedDropdown.classList.add('open');
   }
-  isMenuOpen = !isMenuOpen; // Toggle the state
+  isMenuOpen = !isMenuOpen;
 });
-
-
 
 // Closes menu when link is clicked
 document.querySelectorAll('.mobile-menu[href^="#"]').forEach(link => {
@@ -44,8 +38,7 @@ document.querySelectorAll('.mobile-menu[href^="#"]').forEach(link => {
   });
 });
 
-
-// debug
+// Smooth scroll for anchor links
 document.querySelectorAll('.mobile-menu[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -54,6 +47,17 @@ document.querySelectorAll('.mobile-menu[href^="#"]').forEach(link => {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
-    // Then add the menu closing logic from solution 1
   });
+});
+
+
+// 🟩 NEW: Show popdown menu when scrolling down
+const popdownMenu = document.querySelector('.popdown-menu');
+let hasShown = false;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50 && !hasShown) {
+    popdownMenu.classList.add('show'); // triggers CSS transition
+    hasShown = true;
+  }
 });
