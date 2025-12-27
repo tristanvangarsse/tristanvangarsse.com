@@ -276,5 +276,5 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 
   applyWeights();
-  setInterval(applyWeights, 50);
+  setInterval(applyWeights, 40);
 });
