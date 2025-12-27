@@ -11,11 +11,16 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE/Edge */
   visibility: hidden;
-  margin-bottom: -270px;
+  margin-bottom: -240px;
+}
+
+.landing-page.words-en,
+.landing-page.words-nl {
   font-size: 3rem;
   color: var(--clr-accent);
   text-align: center;
   letter-spacing: -1.5px;
+  line-height: 1em;
 }
 
 .highlight {
@@ -54,8 +59,12 @@
 
 }
 
-@media only screen and (max-width: 1000px) {
-  
+@media only screen and (max-width: 800px) {
+
+  .landing-page {
+  margin-bottom: 0;
+  }
+
   .landing-page.words-en,
   .landing-page.words-nl {
     font-size: 7vw;
@@ -66,7 +75,6 @@
 
   .landing-page {
     padding-top: 120px;
-      margin-bottom: -150px;
   }
 
   .landing-page-video {
