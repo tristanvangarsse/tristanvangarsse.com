@@ -3,8 +3,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (!textElement) return;
 
   // ---- REVEAL SETTINGS ----
-  const LETTER_RATE_MS = 10;
-  const IN_DURATION_MS = 2000;
+  const LETTER_RATE_MS = 5;
+  const IN_DURATION_MS = 900;
   const OFFSET_X = 200;
   const OFFSET_Y = 0;
   const EASING = "cubic-bezier(0.2, 0.8, 0.2, 1)";
