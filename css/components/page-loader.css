@@ -8,7 +8,7 @@
   pointer-events: none;
   z-index: 100;
   background-color: var(--clr-white);
-  animation: page-loader 0.2s ease-in-out 2.3s 1 normal forwards
+  animation: page-loader 0.2s ease-in-out 2.3s 1 normal forwards;
 }
 
 .page-loader .page-loader-wordmark {
@@ -17,13 +17,14 @@
   left: 7%;
   width: clamp(300px, 65%, 900px);
   opacity: 0;
-  animation: page-loader-wordmark 2.3s ease-in-out 0.3s 1 normal forwards
+  animation: page-loader-wordmark 2.3s ease-in-out 0.3s 1 normal forwards;
 
 }
 
 .page-loader-spacer {
   width: 100%;
-  animation: page-loader-spacer 0.7s cubic-bezier(0,.7,.2,1) 2s 1 normal forwards
+  animation: page-loader-spacer 0.7s cubic-bezier(0,.7,.2,1) 2s 1 normal forwards;
+  color: green;
 }
 
 @keyframes page-loader {
