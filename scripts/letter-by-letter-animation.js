@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // ---- REVEAL SETTINGS ----
   const LETTER_RATE_MS = 6;
-  const IN_DURATION_MS = 2000;
+  const IN_DURATION_MS = 1700;
   const OFFSET_X = 200;
   const OFFSET_Y = 0;
   const EASING = "cubic-bezier(0.2, 0.8, 0.2, 1)";
@@ -23,6 +23,9 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (document.fonts?.ready) {
     try { await document.fonts.ready; } catch (_) {}
   }
+
+  // Wait 1 second before starting the build/reveal
+  await new Promise(resolve => setTimeout(resolve, 1700));
 
   const rawText = textElement.textContent;
   textElement.textContent = "";
