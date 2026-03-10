@@ -11,7 +11,7 @@
   animation: page-loader 0.2s ease-in-out 2.3s 1 normal forwards;
 }
 
-.page-loader .page-loader-wordmark {
+.page-loader-wordmark {
   position: absolute;
   top: 30%;
   left: 7%;
@@ -24,7 +24,6 @@
 .page-loader-spacer {
   width: 100%;
   animation: page-loader-spacer 0.7s cubic-bezier(0,.7,.2,1) 2s 1 normal forwards;
-  color: green;
 }
 
 @keyframes page-loader {
