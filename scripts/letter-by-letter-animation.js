@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 
   // Wait 1 second before starting the build/reveal
-  await new Promise(resolve => setTimeout(resolve, 1700));
+  await new Promise(resolve => setTimeout(resolve, 0));
 
   const rawText = textElement.textContent;
   textElement.textContent = "";
