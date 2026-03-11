@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (!textElement) return;
 
   // ---- REVEAL SETTINGS ----
+  const START_DELAY_MS = 100;   // delay before build/reveal starts
   const LETTER_RATE_MS = 6;
   const IN_DURATION_MS = 1700;
   const OFFSET_X = 200;
@@ -25,7 +26,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 
   // Wait 1 second before starting the build/reveal
-  await new Promise(resolve => setTimeout(resolve, 0));
+  await new Promise(resolve => setTimeout(resolve, START_DELAY_MS));
 
   const rawText = textElement.textContent;
   textElement.textContent = "";
