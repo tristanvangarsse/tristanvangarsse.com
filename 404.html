@@ -61,9 +61,6 @@ Design and code by Tristan Van Garsse
 
 <body id="body-anchor">
 
-    <!-- debug mode -->
-  <div class="debug-mode">debug mode</div>
-
     <!-- page loader -->
   <div class="page-loader"></div>
 
@@ -199,7 +196,6 @@ Design and code by Tristan Van Garsse
     </div>
   </footer> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script src="/scripts/back-to-top-smooth-scroll.js"></script> <!-- scrolls smoothly to anchor -->
   <script src="/scripts/initial-scroll-visibility.js"></script> <!-- hides back to top arrow -->
@@ -210,13 +206,6 @@ Design and code by Tristan Van Garsse
   <script src="/scripts/scroll-resize.js"></script> <!-- Resizes div based on scroll -->
   <script src="/scripts/slideshow.js"></script> <!-- Shows slideshow of images -->
   <script src="/scripts/letter-by-letter-animation.js"></script> <!-- Animates letters -->
-  <script>
-    let images = document.querySelectorAll(".lazyload");
-    new LazyLoad(images, {
-        root: null,
-        rootMargin: "100px",
-        threshold: 0
-    });
-  </script>
+  <script src="/scripts/lazyload.js"></script>
 </body>
 </html>
