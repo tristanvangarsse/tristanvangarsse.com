@@ -144,7 +144,7 @@
 }
 
 .showcase .slideshow {
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -398,7 +398,7 @@
   }
 
   .showcase .supporting-image {
-    border-radius: 15px;
+    border-radius: 10px;
     height: 60vh;
     min-height: auto;
   }
