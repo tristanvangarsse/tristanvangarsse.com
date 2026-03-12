@@ -265,13 +265,13 @@
 
 .showcase .supporting-visuals div:nth-child(1) .supporting-image {
   overflow: hidden;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .showcase .supporting-visuals div:nth-child(2) .supporting-image {
   overflow: hidden;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .showcase .supporting-image {
