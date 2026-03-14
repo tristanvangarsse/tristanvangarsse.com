@@ -56,12 +56,15 @@
   }
 
   a.mobile-lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* optional spacing */
     font-size: var(--fs-base);
     font-weight: var(--fw-book);
     margin-bottom: 50px;
     width: min-content;
-    padding: 7px 12px;
-    background-color: rgb(221, 221, 221);
+    padding: 7px 28px 7px 12px;
+    background-color: rgb(233, 233, 233);
     border-radius: 10px;
   }
 

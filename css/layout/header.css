@@ -11,6 +11,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 300;
 }
 
 .header .logomark {
@@ -45,6 +46,16 @@ header nav > a {
 header nav > a:hover,
 header nav > a.current-page {
   color: var(--clr-accent);
+}
+
+.lang-arrow {
+  padding-left: 6px;
+  height: 12px;
+}
+
+.lang-arrow-mobile {
+  padding-left: 4px;
+  height: 10px;
 }
 
 @media only screen and (max-width: 700px) {

@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (!textElement) return;
 
   // ---- REVEAL SETTINGS ----
-  const START_DELAY_MS = 100;   // delay before build/reveal starts
+  const START_DELAY_MS = 100;
   const LETTER_RATE_MS = 6;
   const IN_DURATION_MS = 1700;
   const OFFSET_X = 200;
@@ -12,23 +12,50 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // ---- PHYSICS SETTINGS ----
   const REPEL_RADIUS = 180;          // px
-  const REPEL_STRENGTH = 0.9;        // baseline repel strength
+  const REPEL_STRENGTH = 0.8;        // baseline repel strength
   const REPEL_STRENGTH_SPREAD = 0.7; // each letter gets +/- this amount
   const RETURN_SPRING = 0.08;        // snap-back when mouse is away
   const DAMPING = 0.85;              // velocity damping
-  const MAX_OFFSET = 400;            // clamp max distance from baseline
+  const MAX_OFFSET = 500;            // clamp max distance from baseline
+
+  // ---- DEPTH / WALL SETTINGS ----
+  const DEPTH_RADIUS = 220;          // cursor influence radius for z
+  const DEPTH_STRENGTH = 65;         // how far letters lift off the wall
+  const DEPTH_RETURN = 0.12;         // z spring toward target
+  const DEPTH_DAMPING = 0.82;        // z damping
+  const MAX_Z = 90;                  // hard z clamp
+
+  // ---- SHADOW SETTINGS ----
+  const SHADOW_MAX_OFFSET = 0;      // px
+  const SHADOW_MAX_BLUR = 0;        // px
+  const SHADOW_ALPHA = 0.01;         // max alpha
+  const PERSPECTIVE_STRENGTH = 0.0007;
+
+  // Set to true to cast shadows away from cursor.
+  // Set to false to use a fixed light direction.
+  const SHADOW_FROM_CURSOR = false;
+
+  // Fixed light direction, only used when SHADOW_FROM_CURSOR = false
+  const LIGHT_DIR_X = -0.7;
+  const LIGHT_DIR_Y = -0.7;
 
   const randRange = (min, max) => min + Math.random() * (max - min);
+
+  // Give the container a 3D context
+  textElement.style.perspective = "900px";
+  textElement.style.perspectiveOrigin = "50% 50%";
+  textElement.style.transformStyle = "preserve-3d";
+  textElement.style.visibility = "hidden";
 
   // Wait for fonts
   if (document.fonts?.ready) {
     try { await document.fonts.ready; } catch (_) {}
   }
 
-  // Wait 1 second before starting the build/reveal
+  // Wait before starting the build/reveal
   await new Promise(resolve => setTimeout(resolve, START_DELAY_MS));
 
-  const rawText = textElement.textContent;
+  const rawText = textElement.textContent || "";
   textElement.textContent = "";
   textElement.style.fontFamily =
     '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif';
@@ -50,14 +77,18 @@ window.addEventListener("DOMContentLoaded", async () => {
     outer.style.willChange = "transform, opacity";
     outer.style.opacity = "0";
     outer.style.transform = `translate(${OFFSET_X}px, ${OFFSET_Y}px)`;
+    outer.style.transformStyle = "preserve-3d";
 
-    // Inner: physics owns transform
+    // Inner: physics owns transform + shadow
     const inner = document.createElement("span");
     inner.textContent = ch;
     inner.style.display = "inline-block";
-    inner.style.willChange = "transform";
-    inner.style.transform = "translate(0px, 0px)";
+    inner.style.willChange = "transform, text-shadow, filter";
+    inner.style.transform = "translate3d(0px, 0px, 0px)";
+    inner.style.transformStyle = "preserve-3d";
+    inner.style.backfaceVisibility = "hidden";
     inner.style.fontFamily = "inherit";
+    inner.style.textShadow = "0px 0px 0px rgba(0,0,0,0)";
     if (isHighlighted) inner.classList.add("highlight");
 
     // Baseline weight
@@ -66,29 +97,46 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     outer.appendChild(inner);
 
-    // Final opacity gradient
+    // Final opacity + per-letter color gradient
     const progress = globalIndex / Math.max(1, totalLetters - 1);
     const t = 1 - Math.pow(1 - progress, 2.5);
-    const finalOpacity = Math.max(0, 1 - t);
+
+    // opacity gradient
+    const finalOpacity = Math.max(0.8, 1 - t);
     outer.dataset.finalOpacity = String(finalOpacity);
+
+    // color gradient
+    const hue = 355;
+    const saturation = 70 - Math.pow(t, 3) * 25;
+    const lightness = 60 + t * 30;
+
+    // store final color values
+    inner.dataset.h = String(hue);
+    inner.dataset.s = String(saturation);
+    inner.dataset.l = String(lightness);
+
+    // apply final color immediately
+    inner.style.color = `hsl(${hue} ${saturation}% ${lightness}%)`;
 
     letters.push({
       outer,
       inner,
 
       // physics state
-      x: 0, y: 0,
-      vx: 0, vy: 0,
+      x: 0, y: 0, z: 0,
+      vx: 0, vy: 0, vz: 0,
 
       // base center in viewport coords (measured after reveal)
       baseX: 0, baseY: 0,
       ready: false,
 
-      // per-letter repel strength
+      // per-letter tuning
       repelStrength: Math.max(
         0,
         REPEL_STRENGTH + randRange(-REPEL_STRENGTH_SPREAD, REPEL_STRENGTH_SPREAD)
-      )
+      ),
+      depthStrength: randRange(0.75, 1.15),
+      maxZ: randRange(MAX_Z * 0.65, MAX_Z)
     });
 
     globalIndex++;
@@ -98,6 +146,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   // Build DOM
   lines.forEach((line) => {
     const lineDiv = document.createElement("div");
+    lineDiv.style.transformStyle = "preserve-3d";
+
     const segments = line.split(/\*\*(.*?)\*\*/);
 
     segments.forEach((segment, segmentIndex) => {
@@ -167,7 +217,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   // Physics loop
   let last = performance.now();
   function tick(now) {
-    const dt = Math.min(32, now - last) / 16.666; // ~1 at 60fps, clamped
+    const dt = Math.min(32, now - last) / 16.666;
     last = now;
 
     for (const p of letters) {
@@ -180,37 +230,82 @@ window.addEventListener("DOMContentLoaded", async () => {
       const dy = ly - mouseY;
       const dist = Math.hypot(dx, dy) || 0.0001;
 
-      if (dist < REPEL_RADIUS) {
-        // Repel force goes to 0 at edge; per-letter strength
-        const f = (1 - dist / REPEL_RADIUS) * p.repelStrength;
-        const nx = dx / dist;
-        const ny = dy / dist;
+      const nx = dx / dist;
+      const ny = dy / dist;
 
+      // XY repel
+      if (dist < REPEL_RADIUS) {
+        const f = (1 - dist / REPEL_RADIUS) * p.repelStrength;
         p.vx += nx * f * dt;
         p.vy += ny * f * dt;
-        // no return while inside radius -> "hang"
       } else {
-        // Spring back to baseline
         p.vx += (-p.x) * RETURN_SPRING * dt;
         p.vy += (-p.y) * RETURN_SPRING * dt;
       }
 
-      // Damping + integrate
+      // Z depth: lift off wall near cursor
+      let targetZ = 0;
+      if (dist < DEPTH_RADIUS) {
+        const t = 1 - dist / DEPTH_RADIUS;
+        const eased = t * t * (3 - 2 * t); // smoothstep
+        targetZ = eased * DEPTH_STRENGTH * p.depthStrength;
+      }
+
+      p.vz += (targetZ - p.z) * DEPTH_RETURN * dt;
+
+      // Damping
       p.vx *= Math.pow(DAMPING, dt);
       p.vy *= Math.pow(DAMPING, dt);
+      p.vz *= Math.pow(DEPTH_DAMPING, dt);
 
+      // Integrate
       p.x += p.vx * dt;
       p.y += p.vy * dt;
+      p.z += p.vz * dt;
 
-      // Clamp max offset
+      // Clamp XY
       const od = Math.hypot(p.x, p.y);
       if (od > MAX_OFFSET) {
         const k = MAX_OFFSET / od;
-        p.x *= k; p.y *= k;
-        p.vx *= 0.5; p.vy *= 0.5;
+        p.x *= k;
+        p.y *= k;
+        p.vx *= 0.5;
+        p.vy *= 0.5;
       }
 
-      p.inner.style.transform = `translate(${p.x}px, ${p.y}px)`;
+      // Clamp Z
+      if (p.z < 0) {
+        p.z = 0;
+        p.vz *= 0.4;
+      } else if (p.z > p.maxZ) {
+        p.z = p.maxZ;
+        p.vz *= 0.4;
+      }
+
+      // Render depth
+      const scale = 1 + p.z * PERSPECTIVE_STRENGTH;
+      const zNorm = p.z / p.maxZ;
+
+      let shadowDirX, shadowDirY;
+      if (SHADOW_FROM_CURSOR) {
+        shadowDirX = nx;
+        shadowDirY = ny;
+      } else {
+        const lightLen = Math.hypot(LIGHT_DIR_X, LIGHT_DIR_Y) || 1;
+        shadowDirX = -LIGHT_DIR_X / lightLen;
+        shadowDirY = -LIGHT_DIR_Y / lightLen;
+      }
+
+      const shadowOffsetX = shadowDirX * zNorm * SHADOW_MAX_OFFSET;
+      const shadowOffsetY = shadowDirY * zNorm * SHADOW_MAX_OFFSET;
+      const shadowBlur = 4 + zNorm * SHADOW_MAX_BLUR;
+      const shadowAlpha = SHADOW_ALPHA * (0.35 + 0.65 * zNorm);
+
+      p.inner.style.transform =
+        `translate3d(${p.x}px, ${p.y}px, ${p.z}px) scale(${scale})`;
+
+      p.inner.style.textShadow =
+        `${shadowOffsetX.toFixed(2)}px ${shadowOffsetY.toFixed(2)}px ${shadowBlur.toFixed(2)}px rgba(0,0,0,${shadowAlpha.toFixed(3)})`;
     }
 
     requestAnimationFrame(tick);
@@ -266,8 +361,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     399,398,397,396,395,394,393,392,391,390,389,388,387,386,385,384,383,382,381,380,379,378,377,376,375,
     374,373,372,371,370,369,368,367,366,365,364,363,362,361,360,359,358,357,356,355,354,353,352,351,350,
     349,348,347,346,345,344,343,342,341,340,339,338,337,336,335,334,333,332,331,330,329,328,327,326,325,
-    324,323,322,321,320,319,318,317,316,315,314,313,312,311,310,309,308,307,306,305,304,303,302,301,300,299,298,297,296,295,294,293,292,291,290,289,288,287,286,285,284,283,282,281,280,279,278,277,276,275,274,273,272,271,270,269,268,267,266,265,264,263,262,261,260,259,258,257,256,255,254,253,252,251,250,249,248,247,246,245,244,243,242,241,240,239,238,237,236,235,234,233,232,231,230,229,228,227,226,225,224,223,222,221,220,219,218,217,216,215,214,213,212,211,210,209,208,207,206,205,204,203,202,201,200,199,198,197,196,195,194,193,192,191,190,189,188,187,186,185,184,183,182,181,180,179,178,177,176,175,174,173,172,171,170,169,168,167,166,165,164,163,162,161,160,159,158,157,156,155,154,153,152,151,150,149,148,147,146,145,144,143,142,141,140,139,138,137,136,135,134,133,132,131,130,129,128,127,126,125,124,123,122,121,120,119,118,117,116,115,114,113,112,111,110,109,108,107,106,105,104,103,102,101,100, 101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299
-    ];
+    324,323,322,321,320,319,318,317,316,315,314,313,312,311,310,309,308,307,306,305,304,303,302,301,300,299,298,297,296,295,294,293,292,291,290,289,288,287,286,285,284,283,282,281,280,279,278,277,276,275,274,273,272,271,270,269,268,267,266,265,264,263,262,261,260,259,258,257,256,255,254,253,252,251,250,249,248,247,246,245,244,243,242,241,240,239,238,237,236,235,234,233,232,231,230,229,228,227,226,225,224,223,222,221,220,219,218,217,216,215,214,213,212,211,210,209,208,207,206,205,204,203,202,201,200,199,198,197,196,195,194,193,192,191,190,189,188,187,186,185,184,183,182,181,180,179,178,177,176,175,174,173,172,171,170,169,168,167,166,165,164,163,162,161,160,159,158,157,156,155,154,153,152,151,150,149,148,147,146,145,144,143,142,141,140,139,138,137,136,135,134,133,132,131,130,129,128,127,126,125,124,123,122,121,120,119,118,117,116,115,114,113,112,111,110,109,108,107,106,105,104,103,102,101,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299
+  ];
 
   let wTick = 0;
   function applyWeights() {
